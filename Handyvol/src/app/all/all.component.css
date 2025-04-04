@@ -1,0 +1,95 @@
+/* Основные стили для раздела FAQ */
+.faq-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-section h2 {
+    font-size: 3rem; /* Увеличен размер шрифта для заголовка */
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Стили для каждого элемента FAQ */
+  .faq-item {
+    margin-bottom: 30px; /* Увеличен отступ между элементами */
+  }
+  
+  .faq-question {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 20px; /* Увеличен внутренний отступ */
+    font-size: 1.3rem; /* Увеличен размер шрифта для вопросов */
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Эффекты при наведении на вопрос */
+  .faq-question:hover {
+    background-color: #f2f2f2;
+    border-color: #aaa;
+  }
+  
+  /* Ответ на вопрос */
+  .faq-answer {
+    background-color: #f9f9f9;
+    padding: 20px; /* Увеличен внутренний отступ */
+    font-size: 1.2rem; /* Увеличен размер шрифта для ответов */
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Иконка, показывающая состояние раскрытия вопроса */
+  .faq-question::after {
+    content: "+";
+    font-size: 2rem; /* Увеличен размер иконки */
+    color: #FF5722;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-question.active::after {
+    content: "-";
+    transform: rotate(180deg);
+  }
+  
+  .faq-question.active {
+    background-color: #ffecd4; /* Светлый фон для активного вопроса */
+    border-color: #FF5722;
+  }
+  
+  /* Отступы для каждого вопроса */
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Мобильные устройства */
+  @media (max-width: 768px) {
+    .faq-section {
+      padding: 20px;
+    }
+  
+    .faq-question {
+      font-size: 1.2rem; /* Увеличен размер шрифта для мобильных устройств */
+      padding: 15px; /* Увеличен отступ для мобильных устройств */
+    }
+  
+    .faq-answer {
+      padding: 15px;
+      font-size: 1.1rem; /* Увеличен размер шрифта для ответов на мобильных устройствах */
+    }
+  }
+  

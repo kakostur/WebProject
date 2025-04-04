@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; 
 import { CommonModule } from '@angular/common'; 
 import { FormsModule } from '@angular/forms';  
 
@@ -19,6 +20,12 @@ export class EventManagementComponent {
   };
   
   events: Array<any> = [];
+
+  constructor(private router: Router) {}
+
+  goBack() {
+    this.router.navigate(['/']); 
+  }
 
   onSubmit() {
     this.events.push({ ...this.event });

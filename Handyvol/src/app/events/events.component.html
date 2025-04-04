@@ -1,0 +1,30 @@
+<section class="events-section">
+    <div class="events-container">
+      <h2>Мероприятия</h2>
+      <div class="event-list">
+        <!-- Отображаем карточки мероприятий -->
+        <div class="event-card" *ngFor="let event of events">
+          <img [src]="event.image" alt="Event Image">
+          <h3>{{ event.name }}</h3>
+          
+          <div class="event-info">
+            <div class="event-info-item">
+              <i class="fas fa-calendar-alt"></i> <!-- Иконка для времени -->
+              <span>{{ event.date }}</span>
+            </div>
+            <div class="event-info-item">
+              <i class="fas fa-map-marker-alt"></i> <!-- Иконка для места -->
+              <span>{{ event.location }}</span>
+            </div>
+          </div>
+  
+          <!-- Ссылка на подробности -->
+          <a [routerLink]="['/event', event.id]" class="event-details-link">Подробнее...</a>
+  
+          <!-- Кнопка для записи -->
+          <button (click)="registerForEvent(event.id)" class="btn-register">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,95 @@
+<div class="faq-section">
+    <h2>Часто задаваемые вопросы</h2>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(0)">
+        Как зарегистрироваться на мероприятие?
+      </button>
+      <div *ngIf="activeQuestion === 0" class="faq-answer">
+        Для того чтобы зарегистрироваться на мероприятие, вам нужно нажать на кнопку «Записаться» на странице мероприятия.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(1)">
+        Как отменить свою регистрацию?
+      </button>
+      <div *ngIf="activeQuestion === 1" class="faq-answer">
+        Вы можете отменить регистрацию на мероприятие, перейдя в свою учетную запись и выбрав опцию отмены.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(2)">
+        Как узнать расписание мероприятий?
+      </button>
+      <div *ngIf="activeQuestion === 2" class="faq-answer">
+        Все мероприятия с расписанием можно найти на странице с событиями. Вы также можете подписаться на уведомления о новых мероприятиях.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(3)">
+        Могу ли я изменить время участия в мероприятии?
+      </button>
+      <div *ngIf="activeQuestion === 3" class="faq-answer">
+        Время участия изменить нельзя, но вы можете отменить регистрацию и зарегистрироваться на другой сеанс мероприятия.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(4)">
+        Кто может зарегистрироваться на мероприятие?
+      </button>
+      <div *ngIf="activeQuestion === 4" class="faq-answer">
+        Любой человек может зарегистрироваться на мероприятие, если оно открыто для регистрации. Просто выберите нужное мероприятие и нажмите «Записаться».
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(5)">
+        Нужно ли платить за участие в мероприятиях?
+      </button>
+      <div *ngIf="activeQuestion === 5" class="faq-answer">
+        Некоторые мероприятия могут быть платными, другие — бесплатными. Информацию о стоимости вы найдете на странице мероприятия.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(6)">
+        Как я получу доступ к материалам мероприятия?
+      </button>
+      <div *ngIf="activeQuestion === 6" class="faq-answer">
+        Все участники получат доступ к материалам мероприятия после его завершения на указанный email или через личный кабинет.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(7)">
+        Могу ли я пригласить друзей на мероприятие?
+      </button>
+      <div *ngIf="activeQuestion === 7" class="faq-answer">
+        Да, вы можете пригласить своих друзей на мероприятия, просто отправив им ссылку на страницу мероприятия.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(8)">
+        Как мне отменить мою регистрацию на мероприятие?
+      </button>
+      <div *ngIf="activeQuestion === 8" class="faq-answer">
+        Вы можете отменить регистрацию через ваш профиль на сайте. Найдите мероприятие, на которое вы зарегистрировались, и выберите опцию отмены.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(9)">
+        Как стать волонтером на мероприятии?
+      </button>
+      <div *ngIf="activeQuestion === 9" class="faq-answer">
+        Вы можете стать волонтером, подав заявку на участие в качестве волонтера на странице мероприятия.
+      </div>
+    </div>
+  
+  </div>
+  
