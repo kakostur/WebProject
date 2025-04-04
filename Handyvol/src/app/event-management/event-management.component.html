@@ -1,0 +1,39 @@
+<div class="event-management">
+    <h2>Volunteer Event Management</h2>
+  
+    <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
+      <label for="eventName">Event Name</label>
+      <input id="eventName" name="eventName" [(ngModel)]="event.name" required />
+  
+      <label for="eventDate">Event Date</label>
+      <input id="eventDate" name="eventDate" [(ngModel)]="event.date" type="date" required />
+  
+      <label for="eventDescription">Event Description</label>
+      <textarea id="eventDescription" name="eventDescription" [(ngModel)]="event.description" required></textarea>
+  
+      <label for="eventLocation">Event Location</label>
+      <input id="eventLocation" name="eventLocation" [(ngModel)]="event.location" required />
+  
+      <label for="eventCategory">Event Category</label>
+      <select id="eventCategory" name="eventCategory" [(ngModel)]="event.category">
+        <option value="conference">Conference</option>
+        <option value="workshop">Workshop</option>
+        <option value="seminar">Seminar</option>
+        <option value="meeting">Meeting</option>
+      </select>
+  
+      <button type="submit" [disabled]="!eventForm.form.valid">Add Event</button>
+    </form>
+  
+    <div *ngIf="events.length > 0">
+      <h3>Existing Events</h3>
+      <ul>
+        <li *ngFor="let event of events; let i = index">
+          <span>{{ event.name }} - {{ event.date }} - {{ event.category }}</span>
+          <button (click)="editEvent(i)">Edit</button>
+          <button id="Delete" (click)="deleteEvent(i)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
