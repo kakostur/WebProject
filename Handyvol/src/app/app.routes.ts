@@ -1,20 +1,25 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component'; // Импорт компонента для страницы входа
-import { SignUpComponent } from './signup/signup.component'; // Импорт компонента для страницы регистрации
-import { ProfileComponent } from './profile/profile.component'; // Импортируйте компонент профиля
-import { EventsComponent } from './events/events.component';  // Импорт компонента для мероприятий
-import { AllComponent } from './all/all.component'; 
-import { HeaderComponent } from './header/header.component';  // Импорт компонента Header
-import { FooterComponent } from './footer/footer.component'; 
+import { SignUpComponent } from './signup/signup.component';
+import { EventsComponent } from './events/events.component';
+import { AllComponent } from './all/all.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
+import { ProfileComponent } from './components/auth/profile/profile.component';
+import { EventManagementComponent } from './event-management/event-management.component';
+import { authGuard } from './guards/auth.guard';
+
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },  // Убрал authGuard чтобы главная была доступна без авторизации
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignUpComponent },
-  { path: 'profile', component: ProfileComponent }, // Маршрут на страницу профиля
-  { path: 'events', component: EventsComponent },
-  { path: 'all', component: AllComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [authGuard] },
+  { path: 'events', component: EventsComponent },  // Добавил маршрут к мероприятиям
+  { path: 'all', component: AllComponent },  // Добавил маршрут к FAQ
+  { path: 'event-management', component: EventManagementComponent },  // Добавил маршрут к управлению мероприятиями
+  { path: '**', redirectTo: '/home' }  // Перенаправление на главную при неверном URL
 ];
 
 @NgModule({
@@ -22,7 +27,3 @@ export const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
-
-
-
-

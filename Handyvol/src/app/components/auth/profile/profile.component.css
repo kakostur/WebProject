@@ -1,0 +1,18 @@
+.actions {
+  margin-top: 1.5rem;
+}
+
+.btn-logout {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #357ABD;
+}

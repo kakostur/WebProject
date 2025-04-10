@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/auth/login/login.component';
 import { SignUpComponent } from './signup/signup.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './components/auth/profile/profile.component';
 import { EventsComponent } from './events/events.component';
 import { AllComponent } from './all/all.component';
 import { EventManagementComponent } from './event-management/event-management.component'; 
