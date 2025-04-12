@@ -1,4 +1,3 @@
-// src/app/app.routes.ts
 import { Routes } from '@angular/router';
 import { EventsComponent } from './events/events.component';
 import { AllComponent } from './all/all.component';
