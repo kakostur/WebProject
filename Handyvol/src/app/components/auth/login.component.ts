@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule], 
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -38,9 +38,8 @@ export class LoginComponent {
     const credentials = this.loginForm.value;
 
     this.authService.login(credentials).subscribe({
-      next: (response) => {
+      next: () => {
         this.isSubmitting = false;
-        // Navigate based on user role
         if (this.authService.isOrganizer()) {
           this.router.navigate(['/event-management']);
         } else {
@@ -50,9 +49,6 @@ export class LoginComponent {
       error: (error) => {
         this.isSubmitting = false;
         this.errorMessage = error.message || 'Login failed. Please check your credentials.';
-        // Для тестирования, если API не доступен
-        console.log('Development redirect');
-        setTimeout(() => this.router.navigate(['/events']), 2000);
       }
     });
   }

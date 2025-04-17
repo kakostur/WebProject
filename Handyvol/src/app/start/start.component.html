@@ -1,0 +1,19 @@
+<div class="start-page">
+
+    <app-header></app-header> 
+
+
+    <app-events></app-events>
+
+    <div class="modal" *ngIf="showLoginModal || showRegisterModal">
+      <div class="modal-content">
+        <button class="close" (click)="closeModals()">×</button>
+        <ng-container *ngIf="showLoginModal">
+          <app-login></app-login>
+        </ng-container>
+        <ng-container *ngIf="showRegisterModal">
+          <app-register></app-register>
+        </ng-container>
+      </div>
+    </div>
+</div>

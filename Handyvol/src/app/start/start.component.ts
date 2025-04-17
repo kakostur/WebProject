@@ -2,15 +2,23 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from '../components/auth/login.component';
 import { RegisterComponent } from '../components/auth/register.component';
+import { EventsComponent } from '../events/events.component';
+import { HeaderComponent } from '../header/header.component'; 
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-start',
   standalone: true,
-  imports: [CommonModule, LoginComponent, RegisterComponent], 
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  imports: [CommonModule, LoginComponent, RegisterComponent, EventsComponent, HeaderComponent], 
+  templateUrl: './start.component.html',
+  styleUrls: [
+    './start.component.css', 
+    '../components/auth/login.component.css', 
+    '../components/auth/register.component.css', 
+    '../events/events.component.css',
+    '../header/header.component.css',
+  ]
 })
-export class HeaderComponent {
+export class StartComponent {
   showLoginModal = false;
   showRegisterModal = false;
 

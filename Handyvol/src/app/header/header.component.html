@@ -1,40 +1,35 @@
 <header>
-    <div class="header-container">
-      <!-- Логотип -->
-      <div class="logo">
-        <h1>HandyVol</h1>
+  <div class="header-container">
+    <div class="logo">
+      <h1>HandyVol</h1>
+    </div>
+
+    <nav class="nav-center">
+      <a href="#events-section">Events</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="auth-profile">
+      <div class="auth-buttons">
+        <button class="btn-login" (click)="openLogin()">Login</button>
+        <button class="btn-signup" (click)="openRegister()">Sign Up</button>
       </div>
-  
-      <!-- Центр: Мероприятия -->
-      <div class="nav-center">
-        <a href="#events-section">Мероприятия</a>
-      </div>
-  
-      <!-- Правый угол: Кнопки + Профиль -->
-      <div class="auth-profile">
-        <div class="auth-buttons">
-          <button class="btn-login" (click)="navigateToLogin()">Login</button>
-          <button class="btn-signup" (click)="navigateToSignUp()">Sign Up</button>
-        </div>
-  
-        <div class="profile" (click)="navigateToProfile()">
-          <i class="fas fa-user"></i> <!-- Иконка профиля -->
-        </div>
+      <div class="profile">
+        <i class="fas fa-user"></i>
       </div>
     </div>
-  </header>
-  
-  <!-- Блок с фоном и текстом -->
-  <section class="image-section">
-    <div class="text-content">
-      <div class="square-container">
-        <h1>Добро пожаловать в HandyVol!</h1>
-        <p>Мы помогаем найти волонтеров для различных мероприятий.</p>
-        <button (click)="navigateToSignUp()">Sign Up</button>
-      </div>
-    </div>
-  </section>
-  
-  
-  
-  
+  </div>
+</header>
+
+<div class="modal" *ngIf="showLoginModal || showRegisterModal">
+  <div class="modal-content">
+    <button class="close" (click)="closeModals()">×</button>
+    <ng-container *ngIf="showLoginModal">
+      <app-login></app-login>
+    </ng-container>
+    <ng-container *ngIf="showRegisterModal">
+      <app-register></app-register>
+    </ng-container>
+  </div>
+</div>

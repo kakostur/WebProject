@@ -1,8 +1,19 @@
-import { CanActivateFn } from '@angular/router';
+import { Injectable, Inject } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
+import { AuthService } from '../../components/services/auth.service';
 
-// Простой guard для тестирования
-export const authGuard: CanActivateFn = (route, state) => {
-  // Для тестирования всегда возвращаем true
-  // В реальном приложении здесь должна быть проверка аутентификации
-  return true;
-};
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthGuard implements CanActivate {
+  constructor(@Inject(AuthService) private authService: AuthService, private router: Router) {}
+
+  canActivate(): boolean {
+    if (this.authService.isAuthenticated()) {
+      return true;
+    } else {
+      this.router.navigate(['/login']);
+      return false;
+    }
+  }
+}

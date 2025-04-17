@@ -51,7 +51,7 @@ export class EventsComponent {
       name: 'Благотворительная ярмарка', 
       date: '10 июля 2025', 
       location: 'Центральная площадь',
-      image: 'https://gazetazp.ru/files/file/thumbs/940x650_outbound_e188070d7ec25fe02fd065da69b1bf2a.jpg'  // Публичная ссылка на изображение
+      image: 'https://socialcluster.ru/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdG9SIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6fa7aad1dbf7e289311f9faa6d67465ff3e10c40/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJYUJEQT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--ab488c0176a4266e8864e1a28f592c63c0252413/fXDOP-KU_FM.jpg'  // Публичная ссылка на изображение
     },
     { 
       id: 7, 

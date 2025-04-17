@@ -1,17 +1,16 @@
 import { Routes } from '@angular/router';
-import { EventsComponent } from './events/events.component';
-import { AllComponent } from './all/all.component';
-import { EventManagementComponent } from './event-management/event-management.component';
-import { LoginComponent } from './components/auth/login.component';
-import { RegisterComponent } from './components/auth/register.component';
+import { AuthGuard } from './components/guards/auth.guard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'signup', redirectTo: '/register', pathMatch: 'full' },
-  { path: 'events', component: EventsComponent },
-  { path: 'all', component: AllComponent },
-  { path: 'event-management', component: EventManagementComponent },
-  { path: '**', redirectTo: '/login' }
+  { path: '', redirectTo: '/start', pathMatch: 'full' },
+  { path: 'start', loadComponent: () => import('./start/start.component').then(m => m.StartComponent) }, 
+  { path: 'login', loadComponent: () => import('./components/auth/login.component').then(m => m.LoginComponent) }, 
+  { path: 'register', loadComponent: () => import('./components/auth/register.component').then(m => m.RegisterComponent) }, 
+  { path: 'events', loadComponent: () => import('./events/events.component').then(m => m.EventsComponent) }, 
+  { 
+    path: 'event-management',
+    loadComponent: () => import('./event-management/event-management.component').then(m => m.EventManagementComponent),
+    canActivate: [AuthGuard] 
+  }, 
+  { path: '**', redirectTo: '/start' }
 ];

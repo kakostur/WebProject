@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../services/auth.service'; // Убедись, что путь правильный
 
 @Component({
   selector: 'app-register',
@@ -13,65 +13,29 @@ import { AuthService } from '../services/auth.service';
 })
 export class RegisterComponent {
   registerForm: FormGroup;
-  isSubmitting = false;
-  errorMessage: string | null = null;
-  
-  constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-    private router: Router
-  ) {
+
+  constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
     this.registerForm = this.fb.group({
-      fullName: ['', [Validators.required]],
+      fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required]],
-      userType: ['volunteer', [Validators.required]] // Default to volunteer
-    }, {
-      validators: this.passwordMatchValidator
+      role: ['', Validators.required]
     });
   }
 
-  // Custom validator to check if passwords match
-  passwordMatchValidator(group: FormGroup) {
-    const password = group.get('password')?.value;
-    const confirmPassword = group.get('confirmPassword')?.value;
-    
-    return password === confirmPassword ? null : { passwordMismatch: true };
-  }
+  onSubmit() {
+    if (this.registerForm.valid) {
+      console.log('User registered:', this.registerForm.value);
 
-  onSubmit(): void {
-    if (this.registerForm.invalid) {
-      return;
+      // Сохраняем роль в AuthService
+      this.authService.setRole(this.registerForm.value.role);
+
+      // Делаем редирект через setTimeout (иногда помогает избежать багов)
+      setTimeout(() => {
+        const redirectUrl = this.registerForm.value.role === 'organizer' ? '/event-management' : '/events';
+        this.router.navigate([redirectUrl]);
+      }, 500);
     }
-
-    this.isSubmitting = true;
-    this.errorMessage = null;
-
-    const userData = {
-      fullName: this.registerForm.value.fullName,
-      email: this.registerForm.value.email,
-      password: this.registerForm.value.password,
-      userType: this.registerForm.value.userType
-    };
-
-    this.authService.register(userData).subscribe({
-      next: (response) => {
-        this.isSubmitting = false;
-        // Navigate to login page after successful registration
-        this.router.navigate(['/login']);
-      },
-      error: (error) => {
-        this.isSubmitting = false;
-        this.errorMessage = error.message || 'Registration failed. Please try again.';
-        // Для тестирования, если API не доступен
-        console.log('Development redirect');
-        setTimeout(() => this.router.navigate(['/login']), 2000);
-      }
-    });
-  }
-
-  navigateToLogin(): void {
-    this.router.navigate(['/login']);
   }
 }

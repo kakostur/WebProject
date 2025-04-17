@@ -4,23 +4,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { RegisterComponent } from './register.component';
 import { AuthInterceptor } from '../services/auth.interceptor';
 import { LoginComponent } from './login.component';
-
-
+import { RegisterComponent } from './register.component';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegisterComponent
-  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    LoginComponent, 
+    RegisterComponent, 
     RouterModule.forChild([
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'login', loadComponent: () => import('./login.component').then(m => m.LoginComponent) },
+      { path: 'register', loadComponent: () => import('./register.component').then(m => m.RegisterComponent) }
     ])
   ],
   providers: [
@@ -29,10 +25,6 @@ import { LoginComponent } from './login.component';
       useClass: AuthInterceptor,
       multi: true
     }
-  ],
-  exports: [
-    LoginComponent,
-    RegisterComponent
   ]
 })
-export class AuthModule { }
+export class AuthModule {}
