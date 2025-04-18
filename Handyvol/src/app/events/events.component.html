@@ -1,15 +1,17 @@
+<app-header></app-header>
 <section class="events-section">
+  
     <div class="events-container">
+      
       <h2>Мероприятия</h2>
       <div class="event-list">
-        <!-- Отображаем карточки мероприятий -->
         <div class="event-card" *ngFor="let event of events">
           <img [src]="event.image" alt="Event Image">
           <h3>{{ event.name }}</h3>
           
           <div class="event-info">
             <div class="event-info-item">
-              <i class="fas fa-calendar-alt"></i> <!-- Иконка для времени -->
+              <i class="fas fa-calendar-alt"></i> 
               <span>{{ event.date }}</span>
             </div>
             <div class="event-info-item">

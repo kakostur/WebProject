@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { LoginComponent } from '../components/auth/login.component';
 import { RegisterComponent } from '../components/auth/register.component';
-import { EventsComponent } from '../events/events.component';
 import { HeaderComponent } from '../header/header.component'; 
 
 @Component({
   selector: 'app-start',
   standalone: true,
-  imports: [CommonModule, LoginComponent, RegisterComponent, EventsComponent, HeaderComponent], 
+  imports: [CommonModule, RouterModule, LoginComponent, RegisterComponent, HeaderComponent], 
   templateUrl: './start.component.html',
   styleUrls: [
     './start.component.css', 

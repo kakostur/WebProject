@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Импортируем CommonModule для *ngFor
-import { RouterModule } from '@angular/router'; // Импорт RouterModule
+import { CommonModule } from '@angular/common'; 
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-events',
   standalone: true,
-  imports: [CommonModule, RouterModule],  // Добавляем CommonModule
+  imports: [CommonModule, RouterModule, HeaderComponent], 
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
   
@@ -16,7 +17,7 @@ export class EventsComponent {
       name: 'Волонтерская помощь в приюте', 
       date: '12 апреля 2025', 
       location: 'Городской приют',
-      image: 'https://i.pinimg.com/736x/84/97/bc/8497bc190312a4f07cc7e7451e05cd68.jpg'  // Публичная ссылка на изображение
+      image: 'https://i.pinimg.com/736x/84/97/bc/8497bc190312a4f07cc7e7451e05cd68.jpg'  
     },
     { 
       id: 2, 
@@ -130,6 +131,5 @@ export class EventsComponent {
   }
   registerForEvent(id: number): void {
     console.log('Регистрация на мероприятие с ID:', id);
-    // Логика для регистрации, например, открытие формы или подтверждения
   }
 }
