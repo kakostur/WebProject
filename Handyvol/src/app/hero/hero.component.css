@@ -1,0 +1,28 @@
+/* Global smooth scroll */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Fixed header */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #673ab7;
+    color: white;
+    z-index: 1000;
+    padding: 10px 20px;
+  }
+  
+  /* Add spacing under fixed navbar */
+  .page-container {
+    padding-top: 80px;
+  }
+  
+  /* Section styling */
+  section {
+    scroll-margin-top: 80px;
+    padding: 60px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  

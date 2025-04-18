@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../header/header.component"; 
+
 @Component({
-  selector: 'app-all',
+  selector: 'app-faq',
   standalone: true,  // Указываем, что компонент standalone
-  imports: [CommonModule], 
-  templateUrl: './all.component.html',
-  styleUrl: './all.component.css'
+  imports: [CommonModule, HeaderComponent], 
+  templateUrl: './faq.component.html',
+  styleUrl: './faq.component.css'
 })
-export class AllComponent {
+export class FaqComponent {
   activeQuestion: number | null = null; // Хранит активный вопрос
 
   toggleAnswer(questionIndex: number): void {

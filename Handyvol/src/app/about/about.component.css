@@ -1,38 +1,472 @@
-.about-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px;
-    text-align: center;
+/* ===== Global Styles & Resets ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 40px auto; /* Add margin top/bottom */
+  padding: 0 20px; /* Add padding left/right */
+}
+
+section {
+  margin-bottom: 60px; /* Space between sections */
+}
+
+/* ===== About Us Section Styles ===== */
+.about-section .section-header {
+  margin-bottom: 30px;
+}
+
+.about-section .pre-title {
+  display: inline-flex; /* Use flex to align icon and text */
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.about-section .pre-title-icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #673ab7; /* Purple color like image */
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.about-section h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.about-content {
+  display: flex;
+  gap: 40px; /* Space between left and right columns */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.about-left {
+  flex: 1 1 58%; /* Grow, shrink, basis 58% */
+  min-width: 300px; /* Prevent getting too small */
+}
+
+.about-left img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  object-fit: cover; /* Ensure image covers area nicely */
+  max-height: 400px; /* Limit image height if needed */
+}
+
+.about-left p {
+  font-size: 16px;
+  color: #555;
+}
+
+.about-right {
+  flex: 1 1 38%; /* Grow, shrink, basis 38% */
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between stats and bottom image */
+}
+
+.stat-block {
+  display: flex;
+  align-items: flex-start; /* Align icon top */
+  gap: 15px; /* Space between icon and text */
+}
+
+.stat-icon {
+  font-size: 28px; /* Adjust size of emoji/icon */
+  color: #673ab7; /* Icon color */
+  margin-top: 5px; /* Adjust vertical alignment */
+}
+
+.stat-text h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 2px;
+}
+
+.stat-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.stat-text p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.about-right > img { /* Select only the direct child image */
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 250px; /* Adjust height as needed */
+}
+
+/* ===== Mission/Vision Section Styles (Based on previous CSS) ===== */
+.mission-vision-section {
+  /* Add specific styles if needed, otherwise rely on global section margin */
+}
+
+.mv-container { /* Using the renamed container class */
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* курсор как у кнопки */
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02); /* легкий подъём и увеличение */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* красивая тень */
+  border-color: #d0c8f2; /* мягкий оттенок фиолетового */
+}
+
+.text-card {
+  padding: 30px 25px;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.text-card:hover {
+  background-color: #f9f6ff;
+}
+
+.text-card h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.text-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #673ab7;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  border: none;
+}
+
+.cta-button:hover {
+  background-color: #512da8; /* Darker purple on hover */
+}
+
+.cta-button .arrow {
+  margin-left: 8px;
+  display: inline-block;
+}
+
+.image-card {
+  padding: 0;
+  display: flex; /* Ensure image fills height */
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%; /* Make image fill card height */
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.image-card:hover img {
+  filter: brightness(1.05) contrast(1.1);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 992px) {
+  .about-content {
+    gap: 30px; /* Reduce gap */
   }
-  
-  .about-container h1 {
-    font-size: 2.4rem;
-    font-weight: bold;
-    color: #4a86e8;
+  .about-left, .about-right {
+    flex-basis: 48%; /* Near 50/50 split for tablet */
   }
-  
-  .about-container h2 {
+
+  .mv-container {
+    gap: 20px;
+  }
+
+  .card {
+    flex-basis: calc(50% - 10px); /* Two cards per row on tablet */
+  }
+
+  .image-card {
+    height: 300px; /* Give image fixed height if needed when wrapping */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section h1 {
+    font-size: 30px;
+  }
+  .about-left, .about-right {
+    flex-basis: 100%; /* Stack columns */
+  }
+  .about-right {
+    gap: 25px; /* Adjust gap */
+  }
+  .about-right > img {
+    max-height: 300px; /* Allow image to be taller */
+  }
+
+  .mv-container {
+    flex-direction: column; /* Stack mission/vision cards */
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    max-width: 450px;
+    flex-basis: auto;
+  }
+  .image-card {
+    order: -1; /* Put middle image first when stacked */
+    height: 250px; /* Adjust height */
+  }
+}
+
+@media (max-width: 576px) {
+  .page-container {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .about-section h1 {
+    font-size: 26px;
+  }
+  .about-section .pre-title {
+    font-size: 11px;
+  }
+  .text-card h2 {
+    font-size: 20px;
+  }
+  .text-card p {
+    font-size: 14px;
+  }
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: #d0c8f2;
+  background-color: #f0f0f0; /* добавим явное изменение фона */
+}
+:host {
+  display: block; 
+  background-color: #fff; 
+  padding: 4rem 2rem; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.commitment-section {
+  display: flex;
+  gap: 3rem;
+  align-items: center; 
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.content-column {
+  flex: 1 1 55%; 
+  min-width: 300px; 
+}
+
+.image-column {
+  flex: 1 1 45%;
+  min-width: 280px;
+  text-align: center; 
+}
+
+h2 {
+  font-size: 2rem; 
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+li {
+  font-size: 1rem; 
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 600px; 
+}
+
+.cta-link {
+  display: inline-block;
+  color: #333; 
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+
+  .arrow {
+    margin-left: 0.5em;
+    transition: transform 0.3s ease;
+    display: inline-block; 
+  }
+
+  &:hover {
+    color: #007bff; 
+    .arrow {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #e0e0e0; 
+  margin-top: 1rem; 
+  margin-bottom: 2rem; 
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; 
+  font-size: 0.95rem; 
+  color: #444;
+}
+
+.checkmark-icon {
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  width: 22px; 
+  height: 22px;
+  background-color: #fdecc8;
+  color: #a07d3a; 
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.8rem; 
+  flex-shrink: 0; 
+}
+
+.commitment-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+
+@media (max-width: 992px) {
+  .commitment-section {
+    gap: 2rem;
+  }
+  h2 {
     font-size: 1.8rem;
-    margin-top: 20px;
-    color: #333;
   }
-  
-  .about-container p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
+  p {
+    font-size: 0.95rem;
   }
-  
-  .about-container ul {
-    list-style: none;
-    padding: 0;
+}
+
+
+@media (max-width: 768px) {
+  :host {
+    padding: 2.5rem 1rem;
   }
-  
-  .about-container ul li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    padding: 12px;
-    background: #f8f8f8;
-    border-radius: 6px;
+  .commitment-section {
+    flex-direction: column;
+    text-align: center; 
   }
-  
+
+  .content-column {
+    order: 2;
+    flex-basis: auto;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-column {
+    order: 1; 
+    flex-basis: auto;
+    width: 100%;
+    max-width: 450px; 
+    margin-bottom: 2rem;
+  }
+
+  p {
+     max-width: 100%; 
+  }
+
+  .features-list {
+     grid-template-columns: 1fr;
+     max-width: 300px; 
+     margin: 0 auto; 
+     text-align: left; 
+     gap: 0.8rem;
+  }
+
+  .separator {
+     max-width: 200px;
+     margin-left: auto;
+     margin-right: auto;
+  }
+}

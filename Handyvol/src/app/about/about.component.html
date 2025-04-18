@@ -1,14 +1,74 @@
 <app-header></app-header>
+<div class="page-container">
 
-<div class="about-container">
-    <h1>About HandyVol</h1>
-    <p>
-      HandyVol is a platform that connects volunteers with meaningful events and causes. 
-      Our mission is to create a strong community of individuals who want to make a positive impact. 
-      Whether you're passionate about environmental initiatives, social support, or educational programs, 
-      HandyVol helps you find opportunities to contribute.
-    </p>
-  
+  <!-- ===== About Us Section ===== -->
+  <section class="about-section animate-on-scroll">
+    <div class="section-header animate-on-scroll">
+      <span class="pre-title">
+        <span class="pre-title-icon"></span> OUR STORY
+      </span>
+      <h1>About us</h1>
+    </div>
+
+    <div class="about-content">
+      <div class="about-left animate-on-scroll">
+        <img src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Volunteers serving food">
+        <p>
+          HandyVol is a platform that connects volunteers with meaningful events and causes. Our mission is to create a strong community of individuals who want to make a positive impact. Whether you're passionate about environmental initiatives, social support, or educational programs, HandyVol helps you find opportunities to contribute.
+        </p>
+      </div>
+      <div class="about-right animate-on-scroll">
+        <div class="stat-block animate-on-scroll">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-text">
+            <h3>15,000+</h3>
+            <h4>Volunteers Reached</h4>
+            <p>Connecting passionate individuals with impactful causes worldwide.</p>
+          </div>
+        </div>
+        <div class="stat-block animate-on-scroll">
+          <div class="stat-icon">🌍</div>
+          <div class="stat-text">
+            <h3>120+</h3>
+            <h4>Global Causes Supported</h4>
+            <p>From climate action to education – Handyvol fuels change across the globe.</p>
+          </div>
+        </div>
+        <img src="https://images.pexels.com/photos/6646904/pexels-photo-6646904.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Group of diverse volunteers smiling" class="animate-on-scroll">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Mission/Vision Section ===== -->
+  <section class="mission-vision-section animate-on-scroll">
+    <div class="mv-container">
+      <div class="card text-card animate-on-scroll">
+        <h2>Our Mission</h2>
+        <p>
+          At HandyVol, our mission is to empower individuals to make a difference in their communities by connecting them with meaningful volunteer opportunities. We strive to create a platform that bridges the gap between people eager to help and organizations in need of support, fostering a culture of compassion, collaboration, and positive impact.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Volunteering" class="cta-button">Discover More <span class="arrow">↗</span></a>
+      </div>
+
+      <div class="card image-card animate-on-scroll">
+        <img src="https://images.pexels.com/photos/16198010/pexels-photo-16198010/free-photo-of-volunteers-handing-out-water-bottles.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Volunteers distributing water bottles">
+      </div>
+
+      <div class="card text-card animate-on-scroll">
+        <h2>Our Vision</h2>
+        <p>
+          We believe volunteering should be accessible to everyone. 
+      By creating an easy-to-use platform, we aim to empower individuals 
+      to participate in meaningful causes and inspire action.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Volunteering" class="cta-button">Discover More <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</div>
+<section class="commitment-section">
+  <div class="content-column">
     <h2>Why Join HandyVol?</h2>
     <ul>
       <li><strong>Find Events:</strong> Discover volunteer opportunities that match your interests.</li>
@@ -16,11 +76,44 @@
       <li><strong>Make an Impact:</strong> Your skills and time can change lives and communities.</li>
     </ul>
   
-    <h2>Our Vision</h2>
-    <p>
-      We believe volunteering should be accessible to everyone. 
-      By creating an easy-to-use platform, we aim to empower individuals 
-      to participate in meaningful causes and inspire action.
-    </p>
+    <a href="#" class="cta-link">Collaborate Now <span class="arrow">↗</span></a>
+
+    <hr class="separator">
+
+    <div class="features-list">
+      <!-- Loop through features from the component's TS file -->
+      <div *ngFor="let feature of features" class="feature-item">
+        <span class="checkmark-icon">✓</span>
+        <span class="feature-text">{{ feature }}</span>
+      </div>
+      
+       <div class="feature-item">
+        <span class="checkmark-icon">✓</span>
+        <span class="feature-text">Compassionate Support</span>
+       </div>
+       <div class="feature-item">
+        <span class="checkmark-icon">✓</span>
+        <span class="feature-text">Individual Growth</span>
+       </div>
+       <div class="feature-item">
+        <span class="checkmark-icon">✓</span>
+        <span class="feature-text">Inclusive Community</span>
+       </div>
+       <div class="feature-item">
+        <span class="checkmark-icon">✓</span>
+        <span class="feature-text">Complete Visibility</span>
+       </div>
+       <div class="feature-item">
+        <span class="checkmark-icon">✓</span>
+        <span class="feature-text">Clear Communication</span>
+       </div>
+     
+    </div>
   </div>
-  
+
+  <div class="image-column">
+    <!-- Use property binding for the image source -->
+    <img src="https://assets-global.website-files.com/65f19f9e78bd6991e7ca7a2e/66289589c09477399408fd17_cmt-p-1080.jpg" alt="Group of diverse volunteers smiling" class="commitment-image">
+  </div>
+</section>
+
