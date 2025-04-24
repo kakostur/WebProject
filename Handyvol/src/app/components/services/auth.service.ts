@@ -24,7 +24,16 @@ export class AuthService {
 
   // Метод для получения данных о пользователе (потребуется авторизация)
   getUserInfo(): Observable<any> {
-    return this.http.get(`${this.baseUrl}status/`).pipe(
+    const token = this.getToken();
+    console.log('Получение информации о пользователе, токен:', token);
+    
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    
+    console.log('Заголовки запроса:', headers.get('Authorization'));
+    
+    return this.http.get(`${this.baseUrl}status/`, { headers }).pipe(
       catchError((error) => {
         console.error('Ошибка получения данных пользователя:', error);
         return throwError(() => new Error('Не удалось получить данные пользователя.'));
@@ -34,23 +43,30 @@ export class AuthService {
 
   // Метод для логина
   login(credentials: { username: string; password: string }): Observable<any> {
-    console.log('Отправляемые данные для логина:', credentials);
-    
     return this.http.post(`${this.baseUrl}token/`, credentials, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     }).pipe(
       tap((response: any) => {
-        console.log('Полученный ответ:', response);
+        console.log('Ответ от сервера:', response);
+        
         if (response && response.access) {
           // Сохраняем токен доступа в localStorage
           localStorage.setItem('authToken', response.access);
+          console.log('Токен сохранен в localStorage:', localStorage.getItem('authToken'));
+          
+          // Проверим сразу после сохранения
+          setTimeout(() => {
+            console.log('Токен из localStorage после задержки:', localStorage.getItem('authToken'));
+          }, 100);
+          
+          // Сохраняем refresh токен, если он есть
           if (response.refresh) {
             localStorage.setItem('refreshToken', response.refresh);
           }
         }
       }),
       catchError((error) => {
-        console.error('Детали ошибки:', error);
+        console.error('Login error:', error);
         return throwError(() => error);
       })
     );

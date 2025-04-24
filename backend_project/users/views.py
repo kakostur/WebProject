@@ -44,7 +44,13 @@ class RegisterView(APIView):
 @permission_classes([IsAuthenticated])
 def user_status(request):
     user = request.user
-    return Response({"id": user.id, "username": user.username, "email": user.email, "role": user.role})
+    print(f"User in status view: {user}, authenticated: {user.is_authenticated}")
+    return Response({
+        "id": user.id, 
+        "username": user.username, 
+        "email": user.email, 
+        "role": user.role
+    })
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
@@ -56,3 +62,19 @@ def logout(request):
         return Response(status=status.HTTP_205_RESET_CONTENT)
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+    
+import logging
+logger = logging.getLogger(__name__)
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = EmailTokenObtainPairSerializer
+    
+    def post(self, request, *args, **kwargs):
+        logger.info(f"Получен запрос на авторизацию: {request.data}")
+        try:
+            response = super().post(request, *args, **kwargs)
+            logger.info(f"Успешный ответ: {response.data}")
+            return response
+        except Exception as e:
+            logger.error(f"Ошибка авторизации: {str(e)}", exc_info=True)
+            return Response({"detail": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

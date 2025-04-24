@@ -7,6 +7,7 @@ class User(AbstractUser):
         ("organizer", "Organizer"),
     ]
     role = models.CharField(max_length=50, choices=ROLE_CHOICES, default="volunteer")
+    email = models.EmailField(unique=True)  
 
     def __str__(self):
         return f"{self.username} ({self.role})"

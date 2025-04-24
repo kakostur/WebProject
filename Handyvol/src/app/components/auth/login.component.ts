@@ -36,30 +36,51 @@ export class LoginComponent {
       this.errorMessage = 'Please fill in all required fields.';
       return;
     }
-
+    
     this.isSubmitting = true;
     this.errorMessage = null;
-
+    
     const credentials = {
-      username: this.loginForm.value.email, 
+      username: this.loginForm.value.email,
       password: this.loginForm.value.password
     };
-
+    
+    // Единственный вызов логина
     this.authService.login(credentials).subscribe({
       next: (response) => {
         this.isSubmitting = false;
+        
+        // Сохраняем токен
         this.authStateService.setToken(response.access);
-
+        console.log('Токен сохранен:', response.access);
+        
+        // Получаем информацию о пользователе
         this.authService.getUserInfo().subscribe({
           next: (userInfo) => {
+            console.log('Получена информация о пользователе:', userInfo);
             this.authStateService.setRole(userInfo.role);
-            const targetRoute =
-              userInfo.role === 'organizer' ? '/event-management' : '/events';
-            this.router.navigate([targetRoute]);
+            
+            // Определяем куда перенаправить пользователя
+            const targetRoute = userInfo.role === 'organizer'
+              ? '/event-management'
+              : '/events';
+            
+            console.log('Перенаправление на:', targetRoute);
+            
+            this.router.navigate([targetRoute]).then(success => {
+              console.log(`Навигация ${success ? 'успешна' : 'не удалась'}`);
+            }).catch(err => {
+              console.error('Ошибка навигации:', err);
+            });
           },
           error: (err) => {
             console.error('Ошибка получения данных пользователя:', err);
-            this.router.navigate(['/events']);
+            // При ошибке всё равно перенаправляем на страницу событий
+            this.router.navigate(['/events']).then(success => {
+              console.log(`Навигация при ошибке ${success ? 'успешна' : 'не удалась'}`);
+            }).catch(err => {
+              console.error('Ошибка навигации при ошибке:', err);
+            });
           }
         });
       },
@@ -72,6 +93,7 @@ export class LoginComponent {
     });
   }
 
+  
   navigateToRegister(): void {
     this.router.navigate(['/register']);
   }
