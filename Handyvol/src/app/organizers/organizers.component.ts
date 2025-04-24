@@ -43,21 +43,23 @@ export class OrganizersComponent implements AfterViewInit, OnDestroy {
   moveSlide(direction: number): void {
     const slides = document.querySelector('.organizers-container') as HTMLElement;
     const totalSlides = document.querySelectorAll('.organizer-card').length;
-
+  
     this.currentIndex += direction;
-
+  
     // When we reach the last slide, jump to the first one without leaving space
     if (this.currentIndex >= totalSlides) {
       this.currentIndex = 0;
     }
-
+  
     // When going back, show the last card
     if (this.currentIndex < 0) {
       this.currentIndex = totalSlides - 1;
     }
-
+  
     // Calculate the width of each slide, add margin
     const slideWidth = (document.querySelector('.organizer-card') as HTMLElement).offsetWidth + 30; 
+    slides.style.transition = 'transform 0.5s ease';  // Smooth transition for slide change
     slides.style.transform = `translateX(-${this.currentIndex * slideWidth}px)`;
   }
+  
 }
