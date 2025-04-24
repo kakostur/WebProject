@@ -281,3 +281,177 @@ INFO 2025-04-24 19:20:00,741 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
 INFO 2025-04-24 19:20:00,765 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
 INFO 2025-04-24 19:20:12,508 basehttp "GET /api/events/ HTTP/1.1" 200 2
 INFO 2025-04-25 00:54:06,663 autoreload Watching for file changes with StatReloader
+INFO 2025-04-25 00:55:52,572 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-25 00:55:52,663 views Получен запрос на авторизацию: {'username': 'sultan@gmail.com', 'password': '123456'}
+ERROR 2025-04-25 00:55:54,910 views Ошибка авторизации: No active account found with the given credentials
+Traceback (most recent call last):
+  File "C:\Users\Asus\WebProject\backend_project\users\views.py", line 75, in post
+    response = super().post(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework\serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework_simplejwt\serializers.py", line 73, in validate
+    data = super().validate(attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework_simplejwt\serializers.py", line 57, in validate
+    raise exceptions.AuthenticationFailed(
+rest_framework.exceptions.AuthenticationFailed: No active account found with the given credentials
+ERROR 2025-04-25 00:55:54,987 log Internal Server Error: /api/auth/token/
+ERROR 2025-04-25 00:55:54,988 basehttp "POST /api/auth/token/ HTTP/1.1" 500 63
+INFO 2025-04-25 00:56:01,641 basehttp "GET /admin/users/user/ HTTP/1.1" 302 0
+INFO 2025-04-25 00:56:01,843 basehttp "GET /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 4182
+INFO 2025-04-25 00:56:02,367 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-04-25 00:56:06,345 basehttp "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 4344
+INFO 2025-04-25 00:56:21,267 basehttp "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 4343
+INFO 2025-04-25 00:56:31,037 basehttp "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 4343
+INFO 2025-04-25 00:56:39,470 basehttp "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 4343
+INFO 2025-04-25 00:56:47,940 basehttp "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 4343
+INFO 2025-04-25 00:56:59,691 basehttp "POST /admin/login/?next=/admin/users/user/ HTTP/1.1" 200 4342
+INFO 2025-04-25 00:57:24,229 basehttp "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2025-04-25 00:57:26,259 basehttp "POST /api/auth/register/ HTTP/1.1" 201 42
+INFO 2025-04-25 00:57:39,554 views Получен запрос на авторизацию: {'username': 'm_sultan@kbtu.kz', 'password': '123456'}
+ERROR 2025-04-25 00:57:41,356 views Ошибка авторизации: No active account found with the given credentials
+Traceback (most recent call last):
+  File "C:\Users\Asus\WebProject\backend_project\users\views.py", line 75, in post
+    response = super().post(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework\serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework\serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework_simplejwt\serializers.py", line 73, in validate
+    data = super().validate(attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rest_framework_simplejwt\serializers.py", line 57, in validate
+    raise exceptions.AuthenticationFailed(
+rest_framework.exceptions.AuthenticationFailed: No active account found with the given credentials
+ERROR 2025-04-25 00:57:41,360 log Internal Server Error: /api/auth/token/
+ERROR 2025-04-25 00:57:41,363 basehttp "POST /api/auth/token/ HTTP/1.1" 500 63
+INFO 2025-04-25 00:58:23,932 basehttp "POST /api/auth/register/ HTTP/1.1" 201 42
+INFO 2025-04-25 00:58:43,321 views Получен запрос на авторизацию: {'username': 'sultan@gmail.com', 'password': '123456'}
+INFO 2025-04-25 00:58:45,414 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwNzUyNSwiaWF0IjoxNzQ1NTIxMTI1LCJqdGkiOiJkNWRiNzY3MTgzYzQ0Y2Q2YmFlOWI4ZjIxMzlkZDljNCIsInVzZXJfaWQiOjE3fQ.UMN7svsQcL9SIcawqH91mWVbOUCosdBGtHOqmNY9aL8', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI0NzI1LCJpYXQiOjE3NDU1MjExMjUsImp0aSI6IjRkOGRjMWE5YTQ0MTRkNThiNmFjZDczZWQ3MTVlOTYwIiwidXNlcl9pZCI6MTd9.Bi07BQdkNp5iz5PNzQSQXUdglOk7ob14prAUfYAN-gs'}
+INFO 2025-04-25 00:58:45,417 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 00:58:45,426 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-25 00:58:45,438 basehttp "GET /api/auth/status/ HTTP/1.1" 200 73
+INFO 2025-04-25 00:58:45,467 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-25 00:58:45,482 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:00:55,611 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:01:39,388 basehttp "POST /api/auth/register/ HTTP/1.1" 201 42
+INFO 2025-04-25 01:01:56,221 views Получен запрос на авторизацию: {'username': 'meyrim@gmail.com', 'password': '123456'}
+INFO 2025-04-25 01:01:58,168 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwNzcxOCwiaWF0IjoxNzQ1NTIxMzE4LCJqdGkiOiI2MGI1ZjFmMThiMWU0MWY3YTFkYTVlNzE4MWU0NmU4YiIsInVzZXJfaWQiOjE4fQ.rHWzeB6--g_OZDS_GChCUKI7Te_DVtTqcdtjsK4GAoU', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI0OTE4LCJpYXQiOjE3NDU1MjEzMTgsImp0aSI6IjEyNWJhNmVlZDIyZDRhMGE5YzQyYjE4YjJjMGM4MjJhIiwidXNlcl9pZCI6MTh9.161zSj-c2grwVZh3b7hy8jVnHg6ZtTJCrcKdisf2kEY'}
+INFO 2025-04-25 01:01:58,171 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 01:01:58,186 basehttp "GET /api/auth/status/ HTTP/1.1" 200 75
+INFO 2025-04-25 01:03:03,863 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:03:55,109 views Получен запрос на авторизацию: {'username': 'meyrim@gmail.com', 'password': '123456'}
+INFO 2025-04-25 01:03:57,027 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwNzgzNiwiaWF0IjoxNzQ1NTIxNDM2LCJqdGkiOiI2MWZkZTBiZjY2ODY0ZDM0OTE4M2IxNGU1YjQyNTU5MiIsInVzZXJfaWQiOjE4fQ.2_pEuqEUnreaI5ROWqedkh1naalBcU5gO5nsH4TqeTs', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1MDM2LCJpYXQiOjE3NDU1MjE0MzYsImp0aSI6IjhiMDRlNTljMDFkZjQ1MWZhNDhkOWRkOTA1ZDBlNTJjIiwidXNlcl9pZCI6MTh9.S--9PYcmwa3NkHbhMLsbyc3xHTnN5xkehgSQcAFtH0k'}
+INFO 2025-04-25 01:03:57,030 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 01:03:57,045 basehttp "GET /api/auth/status/ HTTP/1.1" 200 75
+WARNING 2025-04-25 01:05:01,369 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:01,428 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:02,569 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:02,577 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:02,917 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:02,924 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:03,139 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:03,144 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:03,607 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:03,612 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:03,790 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:03,792 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:04,022 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:04,027 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:06,478 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:06,485 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:06,667 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:06,670 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:06,896 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:06,901 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:08,514 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:08,522 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:09,175 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:09,228 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:09,380 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:09,385 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:09,581 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:09,583 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:09,813 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:09,815 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:12,369 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:12,371 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:12,573 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:12,578 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:12,821 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:12,825 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:13,029 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:13,031 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:13,251 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:13,312 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:15,863 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:15,865 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:16,075 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:16,078 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:16,259 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:16,263 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:16,455 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:16,459 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:16,667 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:16,669 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:16,878 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:16,880 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:17,082 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:17,085 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:17,298 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:17,300 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:35,692 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:35,696 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:35,896 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:35,900 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:36,122 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:36,128 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:39,286 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:39,289 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-25 01:05:39,499 log Method Not Allowed: /api/events/
+WARNING 2025-04-25 01:05:39,502 basehttp "POST /api/events/ HTTP/1.1" 405 41
+INFO 2025-04-25 01:10:12,895 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:10:32,538 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:10:37,826 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:15:46,591 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:19:30,112 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:19:36,500 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:20:01,703 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:20:08,562 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:25:11,122 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-25 01:33:05,533 basehttp "GET /api/events/ HTTP/1.1" 200 2
+WARNING 2025-04-25 02:21:36,531 log Unauthorized: /api/events/
+WARNING 2025-04-25 02:21:36,533 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 02:21:39,280 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+WARNING 2025-04-25 02:30:18,994 log Unauthorized: /api/events/
+WARNING 2025-04-25 02:30:18,995 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 02:30:22,223 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+WARNING 2025-04-25 02:30:25,196 log Unauthorized: /api/events/
+WARNING 2025-04-25 02:30:25,197 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 02:45:18,661 log Unauthorized: /api/events/
+WARNING 2025-04-25 02:45:18,661 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 02:45:21,043 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+WARNING 2025-04-25 02:52:24,149 log Unauthorized: /api/events/
+WARNING 2025-04-25 02:52:24,150 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 03:05:52,037 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-25 03:05:52,039 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:05:52,040 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 03:06:03,030 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:06:03,031 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 03:06:15,841 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:06:15,842 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 03:06:17,419 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+WARNING 2025-04-25 03:10:08,152 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:10:08,153 basehttp "GET /api/events/ HTTP/1.1" 401 172
