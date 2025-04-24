@@ -411,3 +411,22 @@ INFO 2025-04-24 22:36:16,992 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
 INFO 2025-04-24 22:36:19,030 basehttp "GET /api/events/ HTTP/1.1" 200 2
 WARNING 2025-04-24 22:36:20,383 log Unauthorized: /api/auth/logout/
 WARNING 2025-04-24 22:36:20,384 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-24 22:45:42,324 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:45:51,763 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:45:51,767 views Получен запрос на авторизацию: {'username': 'barsik@gmail.com', 'password': '123456'}
+INFO 2025-04-24 22:45:51,941 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMTE1MSwiaWF0IjoxNzQ1NTM0NzUxLCJqdGkiOiIwODcxMmM1Zjk1NDg0ZjFkYmM3MjU0ZDNiYjk4Yjk0ZSIsInVzZXJfaWQiOjEyfQ.ARRnYRyJa8cd4TM-PLKRxp14yVValc9a_284-ZuXRtY', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM4MzUxLCJpYXQiOjE3NDU1MzQ3NTEsImp0aSI6Ijc2OTc2YmQ5NWIyOTQyNWZhNjg4ZmRjN2EyNjBmOTZlIiwidXNlcl9pZCI6MTJ9.VorzxSbPuMbHe4TZlCA1hKT0Qo4BGwEUiA2XM_iEMQw'}
+INFO 2025-04-24 22:45:51,941 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:45:51,957 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:45:51,961 basehttp "GET /api/auth/status/ HTTP/1.1" 200 75
+INFO 2025-04-24 22:45:52,015 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:45:52,017 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:45:59,933 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:46:03,255 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:46:16,496 basehttp "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2025-04-24 22:46:16,499 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:46:16,500 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-24 22:46:23,694 views Получен запрос на авторизацию: {'username': 'anaritto@gmail.com', 'password': '123456'}
+INFO 2025-04-24 22:46:23,871 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMTE4MywiaWF0IjoxNzQ1NTM0NzgzLCJqdGkiOiIwODJiNzZiNzRlYTQ0NGE2YWQ0NjBjODM5ZjYxYzY1YSIsInVzZXJfaWQiOjE1fQ.4mEeGkB_KP3wGtpqke10YFvkNqH1ijppLnN53wek7DA', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM4MzgzLCJpYXQiOjE3NDU1MzQ3ODMsImp0aSI6IjFlMzk3NmUzYzk3ZTQxMTI4MTYzOTdjYjhkNzI5NDYyIiwidXNlcl9pZCI6MTV9.sr8S5IItTBjZTNvgZ9ClkT5t89cqwZv2ywTZWQlf5EY'}
+INFO 2025-04-24 22:46:23,872 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:46:23,888 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
+INFO 2025-04-24 22:46:25,830 basehttp "GET /api/events/ HTTP/1.1" 200 2
