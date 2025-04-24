@@ -10,6 +10,7 @@ export const routes: Routes = [
   { path: 'events', loadComponent: () => import('./events/events.component').then(m => m.EventsComponent) },
   { path: 'about', loadComponent: () => import('./about/about.component').then(m => m.AboutComponent) },
   { path: 'faq', loadComponent: () => import('./faq/faq.component').then(m => m.FaqComponent) },
+  { path: 'organizers', loadComponent: () => import('./organizers/organizers.component').then(m => m.OrganizersComponent) },
   {
     path: 'event-management',
     loadComponent: () => import('./event-management/event-management.component').then(m => m.EventManagementComponent),
