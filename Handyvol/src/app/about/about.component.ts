@@ -1,41 +1,46 @@
-import { Component} from '@angular/core';
-import { AfterViewInit,ElementRef} from '@angular/core';
+import { Component, AfterViewInit, ElementRef, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Для директив типа *ngIf и *ngFor
+import { HttpClientModule } from '@angular/common/http'; // Для AuthService
 import { HeaderComponent } from '../header/header.component';
+
 @Component({
   selector: 'app-about',
   standalone: true,
+  imports: [CommonModule, HttpClientModule, HeaderComponent], // Подключаем HttpClientModule
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
-  imports: [HeaderComponent]
+  styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements AfterViewInit {
-images: any;
-assets: any;
+export class AboutComponent implements AfterViewInit, OnDestroy {
+  features: Array<string> = [];
+  private observer: IntersectionObserver | null = null;
 
   constructor(private el: ElementRef) {}
 
-  ngAfterViewInit() {
-    const elements = this.el.nativeElement.querySelectorAll('.animate-on-scroll');
+  ngOnInit(): void {
+    this.features = [
+      'Compassionate Support',
+      'Individual Growth',
+      'Inclusive Community',
+      'Complete Visibility',
+      'Clear Communication'
+    ];
+  }
 
-    const observer = new IntersectionObserver((entries) => {
+  ngAfterViewInit(): void {
+    const elements = this.el.nativeElement.querySelectorAll('.animate-on-scroll');
+    this.observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Animate once
+          this.observer?.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
-    elements.forEach((el: Element) => observer.observe(el));
+    elements.forEach((el: Element) => this.observer?.observe(el));
   }
-  features: string[] = [
-    'Compassionate Support',
-    'Individual Growth',
-    'Inclusive Community',
-    'Complete Visibility',
-    'Clear Communication'
-    // Add more features here if needed
-  ];
+
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
+  }
 }

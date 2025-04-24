@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; 
-import { CommonModule } from '@angular/common'; 
-import { FormsModule } from '@angular/forms';  
+import { Router } from '@angular/router';
+import { EventService } from '../events/event.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-event-management',
-  standalone: true,  
-  imports: [CommonModule, FormsModule], 
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './event-management.component.html',
-  styleUrls: ['./event-management.component.css']
+  styleUrls: ['./event-management.component.css'],
 })
 export class EventManagementComponent {
   event = {
@@ -16,29 +16,53 @@ export class EventManagementComponent {
     date: '',
     description: '',
     location: '',
-    category: ''
+    category: '',
+    photo: null as File | null,
   };
-  
-  events: Array<any> = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private eventService: EventService) {}
 
-  goBack() {
-    this.router.navigate(['/']); 
+  handleFileInput(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files) {
+      this.event.photo = input.files[0];
+      console.log('Selected file:', this.event.photo);
+    }
   }
 
-  onSubmit() {
-    this.events.push({ ...this.event });
-    this.event = { name: '', date: '', description: '', location: '', category: '' };  
+  goBack(): void {
+    this.router.navigate(['/']);
   }
 
-  editEvent(index: number) {
-    const eventToEdit = this.events[index];
-    this.event = { ...eventToEdit };  
-    this.events.splice(index, 1);  
+  onSubmit(): void {
+    if (!this.event.name || !this.event.date || !this.event.location) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    const eventData: { name: string; date: string; location: string; description?: string; category?: string; photo?: File } = {
+      name: this.event.name,
+      date: this.event.date,
+      location: this.event.location,
+      description: this.event.description,
+      category: this.event.category,
+      photo: this.event.photo || undefined,
+    };
+
+    this.eventService.addEvent(eventData).subscribe({
+      next: (response: any) => {
+        console.log('Event added successfully:', response);
+        alert('Event added successfully!');
+        this.resetForm();
+      },
+      error: (error: any) => {
+        console.error('Failed to add event:', error);
+        alert('Failed to add event.');
+      },
+    });
   }
 
-  deleteEvent(index: number) {
-    this.events.splice(index, 1);
+  private resetForm(): void {
+    this.event = { name: '', date: '', description: '', location: '', category: '', photo: null };
   }
 }

@@ -2,38 +2,34 @@
   <div class="login-card">
     <h2>Login</h2>
 
-    <div *ngIf="errorMessage" class="error-message">
-      {{ errorMessage }}
-    </div>
-
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="email">Email</label>
-        <input 
-          type="email" 
-          id="email" 
-          formControlName="email" 
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
           placeholder="Enter your email"
           [ngClass]="{'is-invalid': loginForm.get('email')?.invalid && loginForm.get('email')?.touched}"
-        >
+        />
         <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error-message">
           <span *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</span>
-          <span *ngIf="loginForm.get('email')?.errors?.['email']">Please enter a valid email address</span>
+          <span *ngIf="loginForm.get('email')?.errors?.['email']">Enter a valid email</span>
         </div>
       </div>
 
       <div class="form-group">
         <label for="password">Password</label>
-        <input 
-          type="password" 
-          id="password" 
-          formControlName="password" 
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
           placeholder="Enter your password"
           [ngClass]="{'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched}"
-        >
+        />
         <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error-message">
           <span *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</span>
-          <span *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters</span>
+          <span *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</span>
         </div>
       </div>
 
@@ -41,6 +37,8 @@
         {{ isSubmitting ? 'Logging in...' : 'Login' }}
       </button>
     </form>
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 
     <div class="register-link">
       <p>Don't have an account? <a (click)="navigateToRegister()">Register now</a></p>

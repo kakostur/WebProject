@@ -1,42 +1,38 @@
-<div class="event-management">
-  <div class="back-button-container">
-    <button (click)="goBack()" class="back-button">Back to Main Page</button>
-  </div>
+<div class="event-management-container">
+  <h2>Manage Events</h2>
 
-  <h2>Volunteer Event Management</h2>
-  
-  <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
-    <label for="eventName">Event Name</label>
-    <input id="eventName" name="eventName" [(ngModel)]="event.name" required />
-  
-    <label for="eventDate">Event Date</label>
-    <input id="eventDate" name="eventDate" [(ngModel)]="event.date" type="date" required />
-  
-    <label for="eventDescription">Event Description</label>
-    <textarea id="eventDescription" name="eventDescription" [(ngModel)]="event.description" required></textarea>
-  
-    <label for="eventLocation">Event Location</label>
-    <input id="eventLocation" name="eventLocation" [(ngModel)]="event.location" required />
-  
-    <label for="eventCategory">Event Category</label>
-    <select id="eventCategory" name="eventCategory" [(ngModel)]="event.category">
-      <option value="conference">Conference</option>
-      <option value="workshop">Workshop</option>
-      <option value="seminar">Seminar</option>
-      <option value="meeting">Meeting</option>
-    </select>
-  
-    <button type="submit" [disabled]="!eventForm.form.valid">Add Event</button>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Event Name</label>
+      <input id="name" name="name" [(ngModel)]="event.name" placeholder="Enter event name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="date">Event Date</label>
+      <input id="date" name="date" type="date" [(ngModel)]="event.date" required />
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input id="location" name="location" [(ngModel)]="event.location" placeholder="Enter location" required />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" [(ngModel)]="event.description" placeholder="Enter description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input id="category" name="category" [(ngModel)]="event.category" placeholder="Enter category" />
+    </div>
+
+    <div class="form-group">
+      <label for="photo">Photo</label>
+      <input id="photo" name="photo" type="file" (change)="handleFileInput($event)" />
+    </div>
+
+    <button type="submit" class="btn-primary">Add Event</button>
+    <button type="button" class="btn-secondary" (click)="goBack()">Go Back</button>
   </form>
-  
-  <div *ngIf="events.length > 0">
-    <h3>Existing Events</h3>
-    <ul>
-      <li *ngFor="let event of events; let i = index">
-        <span>{{ event.name }} - {{ event.date }} - {{ event.category }}</span>
-        <button (click)="editEvent(i)">Edit</button>
-        <button id="Delete" (click)="deleteEvent(i)">Delete</button>
-      </li>
-    </ul>
-  </div>
 </div>

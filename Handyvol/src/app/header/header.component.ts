@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from '../components/auth/login.component';
 import { RegisterComponent } from '../components/auth/register.component';
+import { HttpClientModule } from '@angular/common/http'; 
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule, LoginComponent, RegisterComponent], 
+  imports: [HttpClientModule, CommonModule, RouterModule, LoginComponent, RegisterComponent], 
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })

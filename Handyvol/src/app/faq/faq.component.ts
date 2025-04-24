@@ -1,23 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from "../header/header.component"; 
+import { HttpClientModule } from '@angular/common/http'; 
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-faq',
-  standalone: true,  // Указываем, что компонент standalone
-  imports: [CommonModule, HeaderComponent], 
+  standalone: true,
+  imports: [CommonModule, HttpClientModule, HeaderComponent], 
   templateUrl: './faq.component.html',
-  styleUrl: './faq.component.css'
+  styleUrls: ['./faq.component.css']
 })
-export class FaqComponent {
-  activeQuestion: number | null = null; // Хранит активный вопрос
+export class FaqComponent implements OnInit {
+  activeQuestion: number | null = null;
+  faqs: Array<{ id: number; question: string; answer: string }> = [];
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.http.get('http://localhost:8000/api/faq/').subscribe({
+      next: (data: any) => {
+        this.faqs = data;
+        console.log('FAQs loaded:', this.faqs);
+      },
+      error: (error) => {
+        console.error('Error loading FAQs:', error);
+      }
+    });
+  }
 
   toggleAnswer(questionIndex: number): void {
-    // Переключаем видимость ответа для вопроса
-    if (this.activeQuestion === questionIndex) {
-      this.activeQuestion = null; // Скрываем ответ, если вопрос уже активен
-    } else {
-      this.activeQuestion = questionIndex; // Показываем ответ для выбранного вопроса
-    }
+    this.activeQuestion = this.activeQuestion === questionIndex ? null : questionIndex;
   }
 }

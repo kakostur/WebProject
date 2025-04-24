@@ -1,45 +1,52 @@
+//components/services/auth.service.ts
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-  private token: string | null = null;
+  private baseUrl = 'http://localhost:8000/api/auth/';
 
-  getToken(): string | null {
-    return this.token;
-  }
+  constructor(private http: HttpClient) {}
 
   isAuthenticated(): boolean {
-    return !!this.token;
+    return !!localStorage.getItem('authToken');
   }
 
-  isOrganizer(): boolean {
-    return this.getRole() === 'organizer';
-  }
-
-  setRole(role: string) {
-    localStorage.setItem('userRole', role); // Сохранение роли в локальном хранилище
-  }
-
-  getRole(): string | null {
-    return localStorage.getItem('userRole');
-  }
-
-  login(credentials: { email: string, password: string }) {
-    console.log('Attempting to log in:', credentials);
-    return {
-      subscribe: (callbacks: { next: () => void; error: (error: any) => void }) => {
-        setTimeout(() => {
-          this.token = 'mock.jwt.token';
-          callbacks.next();
-        }, 1000);
-      }
+  login(credentials: { email: string; password: string }): Observable<any> {
+    const payload = {
+      username: credentials.email, 
+      password: credentials.password,
     };
-  }
 
-  logout() {
-    this.token = null;
-    localStorage.removeItem('userRole'); // Очищаем роль при выходе
+    return this.http.post(`${this.baseUrl}token/`, payload, {
+      headers: { 'Content-Type': 'application/json' },
+    }).pipe(
+      catchError((error) => {
+        console.error('Login error:', error.error);
+        return throwError(() => new Error(error.error?.detail || 'Login failed'));
+      })
+    );
   }
+  register(userData: { name: string; email: string; password: string; role: string }): Observable<any> {
+    const payload = {
+      username: userData.name,
+      email: userData.email,
+      password: userData.password,
+      role: userData.role,
+    };
+  
+    return this.http.post(`${this.baseUrl}register/`, payload, {
+      headers: { 'Content-Type': 'application/json' },
+    }).pipe(
+      catchError((error) => {
+        console.error('Registration error:', error.error);
+        return throwError(() => error.error?.detail || 'Registration failed');
+      })
+    );
+  }
+  
 }

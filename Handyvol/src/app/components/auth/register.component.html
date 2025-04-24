@@ -1,9 +1,10 @@
+<!-- /components/auth/register.component.html -->
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
   <div>
-    <label for="fullName">Full Name</label>
-    <input id="fullName" formControlName="fullName" type="text" />
-    <div *ngIf="registerForm.get('fullName')?.invalid && registerForm.get('fullName')?.touched" class="error-message">
-      <span *ngIf="registerForm.get('fullName')?.errors?.['required']">Full Name is required</span>
+    <label for="name"> Name</label>
+    <input id="name" formControlName="name" type="text" />
+    <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="error-message">
+      <span *ngIf="registerForm.get('name')?.errors?.['required']"> Name is required</span>
     </div>
   </div>
 

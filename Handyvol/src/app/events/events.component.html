@@ -1,31 +1,17 @@
-<app-header></app-header>
-<section class="events-section">
-  
-    <div class="events-container">
-      
-      <h2>Мероприятия</h2>
-      <div class="event-list">
-        <div class="event-card" *ngFor="let event of events">
-          <img [src]="event.image" alt="Event Image">
-          <h3>{{ event.name }}</h3>
-          
-          <div class="event-info">
-            <div class="event-info-item">
-              <i class="fas fa-calendar-alt"></i> 
-              <span>{{ event.date }}</span>
-            </div>
-            <div class="event-info-item">
-              <i class="fas fa-map-marker-alt"></i> <!-- Иконка для места -->
-              <span>{{ event.location }}</span>
-            </div>
-          </div>
-  
-          <!-- Ссылка на подробности -->
-          <a [routerLink]="['/event', event.id]" class="event-details-link">Подробнее...</a>
-  
-          <!-- Кнопка для записи -->
-          <button (click)="registerForEvent(event.id)" class="btn-register">Записаться</button>
-        </div>
-      </div>
+<div class="events-container">
+  <h2>Upcoming Events</h2>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <div *ngIf="!errorMessage && events.length === 0" class="no-events">No events found.</div>
+
+  <div *ngIf="events.length > 0" class="event-list">
+    <div *ngFor="let event of events" class="event-item">
+      <h3>{{ event.name }}</h3>
+      <p><strong>Date:</strong> {{ event.date }}</p>
+      <p><strong>Location:</strong> {{ event.location }}</p>
+      <p><strong>Description:</strong> {{ event.description }}</p>
+      <p *ngIf="event.category"><strong>Category:</strong> {{ event.category }}</p>
+      <img *ngIf="event.photo" [src]="event.photo" alt="{{ event.name }}" />
     </div>
-  </section>
+  </div>
+</div>
