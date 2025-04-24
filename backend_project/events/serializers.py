@@ -10,7 +10,7 @@ class EventListSerializer(serializers.ModelSerializer):
 class EventDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = '__all__'
+        fields = ['id', 'name', 'date', 'location', 'description']  # Если нужно ограничить поля
 
 class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:
