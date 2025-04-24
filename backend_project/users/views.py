@@ -7,7 +7,28 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from .serializers import RegisterSerializer, UserSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
+class EmailTokenObtainPairSerializer(TokenObtainPairSerializer):
+    username_field = 'username'
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = EmailTokenObtainPairSerializer
+    
+    def post(self, request, *args, **kwargs):
+        print(f"Received login data: {request.data}")
+        try:
+            response = super().post(request, *args, **kwargs)
+            print(f"Response: {response.data}, status: {response.status_code}")
+            if response.status_code == 200:
+                return Response({
+                    'access': response.data.get('access'),
+                    'refresh': response.data.get('refresh'),
+                }, status=status.HTTP_200_OK)
+            return response
+        except Exception as e:
+            print(f"Error during login: {str(e)}")
+            raise  
 
 class RegisterView(APIView):
     permission_classes = [AllowAny] 
@@ -19,16 +40,6 @@ class RegisterView(APIView):
             return Response({"message": "User registered successfully"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class CustomTokenObtainPairView(TokenObtainPairView):
-    def post(self, request, *args, **kwargs):
-        response = super().post(request, *args, **kwargs)
-        if response.status_code == 200:
-            return Response({
-                'access': response.data.get('access'),
-                'refresh': response.data.get('refresh'),
-            }, status=status.HTTP_200_OK)
-        return response
-    
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def user_status(request):

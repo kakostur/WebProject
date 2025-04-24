@@ -76,7 +76,7 @@ export class EventService {
   private getAuthHeaders(multipart = false): HttpHeaders {
     const token = localStorage.getItem('authToken');
     let headers = new HttpHeaders({
-      'Authorization': `Bearer ${token}`,
+      'Authorization': `Bearer ${token}`
     });
     
 

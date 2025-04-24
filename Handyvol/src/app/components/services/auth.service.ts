@@ -27,20 +27,22 @@ export class AuthService {
   }
 
   login(credentials: { username: string; password: string }): Observable<any> {
+    console.log('Отправляемые данные для логина:', credentials);
+    
     return this.http.post(`${this.baseUrl}token/`, credentials, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     }).pipe(
       tap((response: any) => {
+        console.log('Полученный ответ:', response);
         if (response && response.access) {
           localStorage.setItem('authToken', response.access);
-
           if (response.refresh) {
             localStorage.setItem('refreshToken', response.refresh);
           }
         }
       }),
       catchError((error) => {
-        console.error('Login error:', error);
+        console.error('Детали ошибки:', error);
         return throwError(() => error);
       })
     );
