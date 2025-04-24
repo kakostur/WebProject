@@ -280,3 +280,39 @@ INFO 2025-04-24 19:20:00,741 views Успешный ответ: {'refresh': 'eyJ
 INFO 2025-04-24 19:20:00,741 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
 INFO 2025-04-24 19:20:00,765 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
 INFO 2025-04-24 19:20:12,508 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:23:21,631 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 19:24:57,033 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:24:57,118 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:26:54,163 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:31:52,055 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:32:40,229 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:38:32,305 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:38:32,324 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:41:57,674 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:42:16,514 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:43:44,388 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:43:56,317 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:45:45,640 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:45:49,826 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:46:30,549 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:48:36,057 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:48:36,090 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:48:47,447 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:50:20,439 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:51:56,666 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 20:06:15,544 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 20:06:15,572 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 20:13:44,118 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 20:45:51,947 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-24 20:45:51,968 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:45:51,969 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-24 20:49:18,829 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:49:18,831 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-24 20:52:47,493 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:52:47,496 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-24 20:53:00,355 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:53:00,356 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-24 20:53:20,764 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:53:20,765 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-24 20:53:36,565 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:53:36,566 basehttp "GET /api/events/ HTTP/1.1" 401 172
