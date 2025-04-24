@@ -1,15 +1,23 @@
+<!-- /events/events.component.html -->
 <div class="events-container">
   <h2>Upcoming Events</h2>
-
+  
+  <div *ngIf="loading" class="loading-spinner">
+    Loading events...
+  </div>
+  
   <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-  <div *ngIf="!errorMessage && events.length === 0" class="no-events">No events found.</div>
-
+  
+  <div *ngIf="!loading && !errorMessage && events.length === 0" class="no-events">
+    No events found.
+  </div>
+  
   <div *ngIf="events.length > 0" class="event-list">
     <div *ngFor="let event of events" class="event-item">
       <h3>{{ event.name }}</h3>
-      <p><strong>Date:</strong> {{ event.date }}</p>
+      <p><strong>Date:</strong> {{ event.formattedDate || event.date }}</p>
       <p><strong>Location:</strong> {{ event.location }}</p>
-      <p><strong>Description:</strong> {{ event.description }}</p>
+      <p *ngIf="event.description"><strong>Description:</strong> {{ event.description }}</p>
       <p *ngIf="event.category"><strong>Category:</strong> {{ event.category }}</p>
       <img *ngIf="event.photo" [src]="event.photo" alt="{{ event.name }}" />
     </div>

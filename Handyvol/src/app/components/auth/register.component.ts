@@ -31,7 +31,7 @@ export class RegisterComponent {
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
         confirmPassword: ['', Validators.required],
-        role: ['', Validators.required],
+        role: ['volunteer', Validators.required], // Установим значение по умолчанию
       },
       { validators: this.passwordMatchValidator }
     );
@@ -44,19 +44,46 @@ export class RegisterComponent {
   }
 
   onSubmit(): void {
-    if (this.registerForm.invalid) return;
+    if (this.registerForm.invalid) {
+      this.errorMessage = 'Please correct all errors before submitting.';
+      return;
+    }
+    
     this.isSubmitting = true;
-    const userData = this.registerForm.value;
+    this.errorMessage = null;
+    
+    const userData = {
+      name: this.registerForm.value.name,
+      email: this.registerForm.value.email,
+      password: this.registerForm.value.password,
+      role: this.registerForm.value.role
+    };
 
     this.authService.register(userData).subscribe({
       next: () => {
         this.isSubmitting = false;
-        alert('Registration successful!');
+        alert('Registration successful! Please login.');
         this.router.navigate(['/login']);
       },
       error: (error) => {
         this.isSubmitting = false;
-        this.errorMessage = error.message || 'Registration failed. Please try again.';
+        
+        if (error.error) {
+          // Формируем сообщение из ошибок сервера
+          if (typeof error.error === 'object') {
+            let errorMsg = '';
+            for (const key in error.error) {
+              if (error.error.hasOwnProperty(key)) {
+                errorMsg += `${key}: ${error.error[key]}\n`;
+              }
+            }
+            this.errorMessage = errorMsg || 'Registration failed. Please try again.';
+          } else {
+            this.errorMessage = error.error || 'Registration failed. Please try again.';
+          }
+        } else {
+          this.errorMessage = 'Registration failed. Please try again.';
+        }
       },
     });
   }

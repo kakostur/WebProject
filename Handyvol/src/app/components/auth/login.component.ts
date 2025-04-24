@@ -36,27 +36,41 @@ export class LoginComponent {
       this.errorMessage = 'Please fill in all required fields.';
       return;
     }
-  
-    const credentials = this.loginForm.value;
-  
+
+    this.isSubmitting = true;
+    this.errorMessage = null;
+
+    const credentials = {
+      username: this.loginForm.value.email, 
+      password: this.loginForm.value.password
+    };
+
     this.authService.login(credentials).subscribe({
       next: (response) => {
-        this.authStateService.setToken(response.access); 
-        this.authStateService.setRole(response.role);
-  
-        const targetRoute =
-          this.authStateService.getRole() === 'organizer'
-            ? '/event-management'
-            : '/events';
-        this.router.navigate([targetRoute]);
+        this.isSubmitting = false;
+        this.authStateService.setToken(response.access);
+
+        this.authService.getUserInfo().subscribe({
+          next: (userInfo) => {
+            this.authStateService.setRole(userInfo.role);
+            const targetRoute =
+              userInfo.role === 'organizer' ? '/event-management' : '/events';
+            this.router.navigate([targetRoute]);
+          },
+          error: (err) => {
+            console.error('Ошибка получения данных пользователя:', err);
+            this.router.navigate(['/events']);
+          }
+        });
       },
       error: (error) => {
-        this.errorMessage = error.error?.non_field_errors || 'Login failed. Please check your credentials.';
+        this.isSubmitting = false;
+        this.errorMessage = error.error?.non_field_errors?.[0] ||
+                           error.error?.detail ||
+                           'Login failed. Please check your credentials.';
       },
     });
   }
-  
-  
 
   navigateToRegister(): void {
     this.router.navigate(['/register']);

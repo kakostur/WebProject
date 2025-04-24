@@ -10,6 +10,8 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 
 class RegisterView(APIView):
+    permission_classes = [AllowAny] 
+    
     def post(self, request):
         serializer = RegisterSerializer(data=request.data)
         if serializer.is_valid():

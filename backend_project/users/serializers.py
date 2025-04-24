@@ -10,8 +10,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class RegisterSerializer(serializers.ModelSerializer):
-    role = serializers.ChoiceField(choices=["volunteer", "organizer"], required=True)
-
     class Meta:
         model = User
         fields = ('username', 'email', 'password', 'role')
@@ -23,4 +21,6 @@ class RegisterSerializer(serializers.ModelSerializer):
             password=validated_data['password'],
             role=validated_data['role']
         )
+        user.is_active = True
+        user.save()
         return user
