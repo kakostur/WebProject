@@ -2,88 +2,166 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #dee7f3, #eaedf3);
-  padding: 50px;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #9b299b, #35328e);
+  padding: 0 20px;
+  position: relative;
 }
 
 .register-card {
-  max-width: 450px;
+  max-width: 360px; /* Было 400px */
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1.5rem; /* Было 2.5rem */
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #d3d3d3; /* Добавлен светло-серый бордер */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.register-card:hover {
+  transform: scale(1.02);
+}
+
+/* Крестик закрытия */
+.close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close:hover {
+  transform: rotate(90deg);
 }
 
 h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.6rem;
-  color: #0056b3;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* Уменьшен отступ */
   text-align: left;
-  width: 100%;
-}
-
-label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #0056b3;
 }
 
 input {
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 5px;
+  padding: 0.9rem;
+  border-radius: 6px;
   font-size: 1rem;
-  border: 2px solid #d3d3d3; /* Светло-серая граница */
+  border: 1px solid #ccc;
   box-sizing: border-box;
-  background: #f0f8ff;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 input:focus {
-  border-color: #0056b3;
-  background: #f5f9ff;
   outline: none;
+  border-color: #fec6ef;
+  background-color: #fef8fc;
 }
 
-.btn-primary {
-  width: 100% !important;
-  padding: 1rem !important;
-  font-size: 1.2rem !important; 
-  font-weight: 600 !important;
-  background: linear-gradient(135deg, #007bff, #0056b3) !important;
-  border: none !important;
-  border-radius: 8px !important;
-  color: white !important;
-  cursor: pointer !important;
-  transition: background 0.3s, transform 0.2s !important;
+input.is-invalid {
+  border-color: #e74c3c;
 }
 
-.btn-primary:hover {
-  background: #0046a0 !important;
-  transform: scale(1.08) !important;
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 4px;
 }
 
-
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  background: transparent;
+button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  background: #8d0f9b;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
   border: none;
-  color: #333;
-  transform: none !important; 
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 1rem;
 }
 
+button[type="submit"]:hover:enabled {
+  background: #8a4c98;
+  transform: scale(1.05);
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #8d0f9b;
+  margin-bottom: 0.8rem;
+}
+
+/* Радио кнопки */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+.radio-item input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #8d0f9b;
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.radio-item input[type="radio"]:checked::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #8d0f9b;
+  border-radius: 50%;
+  animation: scaleIn 0.2s ease-in-out;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
