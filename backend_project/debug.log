@@ -167,3 +167,116 @@ INFO 2025-04-24 19:05:30,662 views Успешный ответ: {'refresh': 'eyJ
 INFO 2025-04-24 19:05:30,663 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
 INFO 2025-04-24 19:05:30,682 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
 INFO 2025-04-24 19:05:30,714 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:08:03,354 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 19:08:15,403 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:08:15,584 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODA5NSwiaWF0IjoxNzQ1NTIxNjk1LCJqdGkiOiI1NDAyOTdmODJjNTc0ZWE1YjI2NmM5ZWEzNjc4ODlkYyIsInVzZXJfaWQiOjEzfQ.3OW3yS1ON2R7o9_TNPLkgsp5ZofYMncDzM5lbHdQDtc', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1Mjk1LCJpYXQiOjE3NDU1MjE2OTUsImp0aSI6IjJlNjljY2FiMTI3YjQ2ZGM4ODhjNGYxOTNiYjkwNWM3IiwidXNlcl9pZCI6MTN9.g-QGkRrPsDxbeh_TMb0dkkiuGnz0BLXxZPV9CLgR36I'}
+INFO 2025-04-24 19:08:15,584 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:08:15,604 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:08:15,607 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:08:15,669 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:10:55,359 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:10:55,366 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:10:55,548 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI1NSwiaWF0IjoxNzQ1NTIxODU1LCJqdGkiOiJkODM5MWQ5ZWNmZDA0ZGJlOTVmZjM3NDYyMTIyNTgzZCIsInVzZXJfaWQiOjEzfQ.-4QAWrZXph6NP0EwhFkECXIib1xZBDE9g6MJ0bVh83k', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDU1LCJpYXQiOjE3NDU1MjE4NTUsImp0aSI6Ijk3YTk1MzQzNjFkODRjNzQ5YTUzOGQwNzY5NTliZDlmIiwidXNlcl9pZCI6MTN9.z0N3w4apKhPMtXXMBXNoRECACR9ETlhj9w2jL3T4R8Q'}
+INFO 2025-04-24 19:10:55,548 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:10:55,575 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:10:56,636 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:10:56,811 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI1NiwiaWF0IjoxNzQ1NTIxODU2LCJqdGkiOiJjMzkxMzM2MmIzNWU0MjNlOTRkOTQyNjViYWQwNWRkMyIsInVzZXJfaWQiOjEzfQ.mf8gDNnvNiKkUqu6NRu3NcKHo6CcLs66gJy3oidkQPs', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDU2LCJpYXQiOjE3NDU1MjE4NTYsImp0aSI6IjFkMWYyNzNmZjUxZDRlYTE5MzI1NDVjOGZmODY4ZDNmIiwidXNlcl9pZCI6MTN9.YLeqL1ibxpWWcWkdgZRPIg7xUYix9zMJUCGLMipb1eA'}
+INFO 2025-04-24 19:10:56,811 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:10:56,835 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:10:57,549 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:10:57,734 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI1NywiaWF0IjoxNzQ1NTIxODU3LCJqdGkiOiI5ZDQ0YjE0NmFiZDQ0NzU3YmFkNjFkMDVjMWU1ODE4ZiIsInVzZXJfaWQiOjEzfQ.nbHqbEPVRaiTY8ANqMuJJlZBLRErnuegDO67kUrhqCo', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDU3LCJpYXQiOjE3NDU1MjE4NTcsImp0aSI6IjNhMWE0ZDc5MWIxYzQzNTc5NTdjY2JmOWNkMWNiMDMwIiwidXNlcl9pZCI6MTN9.bpzbEw2af35zdMWbEzEWihTA5O8kFRrMPghbj2C-wLQ'}
+INFO 2025-04-24 19:10:57,735 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:10:57,759 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:10:58,543 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:10:58,728 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI1OCwiaWF0IjoxNzQ1NTIxODU4LCJqdGkiOiJmY2IzNjU3YjU2Y2E0M2Q1YjBiNDhmNjA3MTBhZWIwZiIsInVzZXJfaWQiOjEzfQ.DjXCpZVjZA0DsN55JtMoRZFB-c3akYOWi63CXz-aUFA', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDU4LCJpYXQiOjE3NDU1MjE4NTgsImp0aSI6IjZhNDM4Y2VhMmNmZTRkNjJhY2QzZTIxOGQ4NTYyM2EzIiwidXNlcl9pZCI6MTN9.zdUM8_klGitlEPO72h2A5MAZPhO_2XBhCiK81bitUUU'}
+INFO 2025-04-24 19:10:58,728 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:10:58,752 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:10:59,654 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:10:59,836 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI1OSwiaWF0IjoxNzQ1NTIxODU5LCJqdGkiOiI0MGJkNDBhNjZiOGY0YTNmYWUzOWZjNzU3YTYxN2VmZCIsInVzZXJfaWQiOjEzfQ.XI7LUoWrOGij5--5L1mbuDKT1KwsNmZoXp6VlFRo8_M', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDU5LCJpYXQiOjE3NDU1MjE4NTksImp0aSI6IjM4NzNmNjk3N2E3YjQ1MmI5MjhjMmY1MjRjZTBjMTg1IiwidXNlcl9pZCI6MTN9.8hIOoMdtSDkml9SPZMWv8oz53XbduBlzZhgIS18vfa4'}
+INFO 2025-04-24 19:10:59,836 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:10:59,858 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:10:59,878 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:11:00,029 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI2MCwiaWF0IjoxNzQ1NTIxODYwLCJqdGkiOiJhZTViODdlOTdiMjA0N2RmOWI0MTI3MDFjODU5NzA0YiIsInVzZXJfaWQiOjEzfQ.p3vXpkJBPOExWRGWOu5F32KalQnZLT4fPgm81PlCl9E', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDYwLCJpYXQiOjE3NDU1MjE4NjAsImp0aSI6ImQwNWFlNmI5ZTBkOTRiNDU5YzAzNDkyYzU1ZWRhZmRjIiwidXNlcl9pZCI6MTN9.VUwxZKjsyylApHA4VVaUn5W97-m6Q3Qn5QEg2kVaoZU'}
+INFO 2025-04-24 19:11:00,029 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:11:00,049 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:11:03,442 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:11:03,620 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI2MywiaWF0IjoxNzQ1NTIxODYzLCJqdGkiOiI2NmI2NmQwYTI3NDA0ZDZlOTBmODIxYjg4OTYxZWI1MiIsInVzZXJfaWQiOjEzfQ.QDXMqnvTvN7RnQR0oYLh6VhFtG4MlLutgnK4hOBDB70', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDYzLCJpYXQiOjE3NDU1MjE4NjMsImp0aSI6IjFiY2FiZTUxOGEwMjRmMDNiNTBjNjJlMDY4MmNhMzMwIiwidXNlcl9pZCI6MTN9.Z826-CH85wrynfPeUpoJdJU3LW_Zp5-W9-1YrGTGaDg'}
+INFO 2025-04-24 19:11:03,620 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:11:03,636 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:11:08,309 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:11:08,483 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI2OCwiaWF0IjoxNzQ1NTIxODY4LCJqdGkiOiJjMTk1MzU3YmIzNWI0YmMwOGEwOGZjMGZjYzc1NzUxOCIsInVzZXJfaWQiOjEzfQ.__KnNCqQrL6oXHRbxsHGjadQaczq9C_2OyQcdwZ9y-w', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDY4LCJpYXQiOjE3NDU1MjE4NjgsImp0aSI6ImJlNjk5MTc0YzA0YTRjNzlhNTlkYjllMmZkN2EyNGQ2IiwidXNlcl9pZCI6MTN9.sxVBXnaqmAWAhXP8a8fj4jJP5FbbxM1GebWbAYoEbew'}
+INFO 2025-04-24 19:11:08,484 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:11:08,506 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:11:09,325 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:11:09,507 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI2OSwiaWF0IjoxNzQ1NTIxODY5LCJqdGkiOiI3OGM2NTZiMjMzMjg0YmIyYTczOWI4OTM4ZmE2M2JkNCIsInVzZXJfaWQiOjEzfQ.y7KZjLwZGCMu_8HThcQpnlnP13ikb77TE7c-gUwOGiA', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDY5LCJpYXQiOjE3NDU1MjE4NjksImp0aSI6ImQxYWRjNjA5MjNmYzQ1MWE4M2VmYTgzOTc5NWJjNDhkIiwidXNlcl9pZCI6MTN9.wagR3gZ9nnGp3GUp1wgATn138-EZPT4hvXpdjW6i5uc'}
+INFO 2025-04-24 19:11:09,507 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:11:09,526 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:11:13,420 basehttp "GET /admin/users/user/ HTTP/1.1" 200 12944
+INFO 2025-04-24 19:11:13,524 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-04-24 19:11:15,830 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:11:15,833 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:11:20,442 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:11:20,632 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI4MCwiaWF0IjoxNzQ1NTIxODgwLCJqdGkiOiI4ODM0Nzc5ODU3MTY0NTk1OWFjMmQwYWU1YWViMDk1OSIsInVzZXJfaWQiOjEzfQ.uMvoi0CQYFX9ZNL19BL0_4WAWaNCC6cNGpQXGCLHjSY', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDgwLCJpYXQiOjE3NDU1MjE4ODAsImp0aSI6IjFiMDA3NWZhNjg0ZTQyZjk5YWM0ZmU4NmVhZjNjMzRjIiwidXNlcl9pZCI6MTN9.bkKMA7W3ubjhqOpPAbRdbViaTJ8LXyd-8p4fpM_eoWA'}
+INFO 2025-04-24 19:11:20,633 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:11:20,658 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+INFO 2025-04-24 19:11:21,758 views Получен запрос на авторизацию: {'username': 'chop@pet.kz', 'password': '123456'}
+INFO 2025-04-24 19:11:21,938 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODI4MSwiaWF0IjoxNzQ1NTIxODgxLCJqdGkiOiI5NzM3MmEzOTYyMWQ0MzMxYTBiYmI5OWEwNTY5MDBjMCIsInVzZXJfaWQiOjEzfQ.JxfwYiI03wkHymgaRqDIUfNoPG8Rr6DfTsugQkNNbNY', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NDgxLCJpYXQiOjE3NDU1MjE4ODEsImp0aSI6ImYwNzMzMDBiZDM2OTRmNjViNWE5N2MwNWE1ZTg4MjkzIiwidXNlcl9pZCI6MTN9._ZY7vx3X6DV237wGewfXFlaA-Wn4o1mFea3T807F8tE'}
+INFO 2025-04-24 19:11:21,938 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:11:21,959 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
+WARNING 2025-04-24 19:12:03,849 log Bad Request: /api/auth/register/
+WARNING 2025-04-24 19:12:03,850 basehttp "POST /api/auth/register/ HTTP/1.1" 400 42
+WARNING 2025-04-24 19:12:06,694 log Bad Request: /api/auth/register/
+WARNING 2025-04-24 19:12:06,694 basehttp "POST /api/auth/register/ HTTP/1.1" 400 42
+INFO 2025-04-24 19:12:15,772 basehttp "GET /admin/users/user/ HTTP/1.1" 200 12944
+INFO 2025-04-24 19:12:15,822 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-04-24 19:12:17,736 basehttp "GET /admin/users/user/ HTTP/1.1" 200 12944
+INFO 2025-04-24 19:12:17,772 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-04-24 19:12:26,118 basehttp "POST /api/auth/register/ HTTP/1.1" 201 42
+INFO 2025-04-24 19:12:36,768 views Получен запрос на авторизацию: {'username': 'stul@kbtu.kz', 'password': '123456'}
+INFO 2025-04-24 19:12:36,950 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODM1NiwiaWF0IjoxNzQ1NTIxOTU2LCJqdGkiOiJmY2IzMDE3MWJkYTI0ZDQyOTA0ZDg3Y2IxMmY2ZDg0NSIsInVzZXJfaWQiOjE0fQ.ViCiBZtdI4OcrjNY_dyK578U0J9JfK4uiy0AjJ_BsxM', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NTU2LCJpYXQiOjE3NDU1MjE5NTYsImp0aSI6IjBiZWZhYjYyY2I0MTRhYzk4MjZiNmY0Y2Q2MzUxOWZhIiwidXNlcl9pZCI6MTR9.UUVyRmO3WL52j86NidQ2CiaghryP3CeE_0CA9hgK1_Y'}
+INFO 2025-04-24 19:12:36,951 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:12:36,976 basehttp "GET /api/auth/status/ HTTP/1.1" 200 73
+INFO 2025-04-24 19:12:37,028 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:12:45,838 views Получен запрос на авторизацию: {'username': 'stul@kbtu.kz', 'password': '123456'}
+INFO 2025-04-24 19:12:46,022 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODM2NiwiaWF0IjoxNzQ1NTIxOTY2LCJqdGkiOiIxNzMxN2ZmOGYyZGQ0ZGYwOTI0MzE3MzU3YThkMWMyYiIsInVzZXJfaWQiOjE0fQ.7Tgx1UdGSNQqHwTp-fWVzT5CRBWp9jSZ1zXYVWowKCk', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NTY2LCJpYXQiOjE3NDU1MjE5NjYsImp0aSI6IjE0YTJmOGU2OTEyNTQ4NmE5NzcwY2QwMjY2YzZkZjczIiwidXNlcl9pZCI6MTR9.uzMo9H3DVj3_vABfXF7yrs6EVQrscFf8v8sltwYyTTU'}
+INFO 2025-04-24 19:12:46,023 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:12:46,047 basehttp "GET /api/auth/status/ HTTP/1.1" 200 73
+INFO 2025-04-24 19:12:47,128 views Получен запрос на авторизацию: {'username': 'stul@kbtu.kz', 'password': '123456'}
+INFO 2025-04-24 19:12:47,311 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODM2NywiaWF0IjoxNzQ1NTIxOTY3LCJqdGkiOiI5ZWJiMjVjNzc2MjY0OTk0YTIzYTJhMzVlMDdjMDdmNiIsInVzZXJfaWQiOjE0fQ.3L5k6GHmpA2NweuIX9t2yc1Izx2l3WHRTpWtZjFH6oA', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1NTY3LCJpYXQiOjE3NDU1MjE5NjcsImp0aSI6IjE1YWNmZWJkNWE1ZDQ2NGI4YmQ3NmVmZWVhZTFmZDZiIiwidXNlcl9pZCI6MTR9.tCum-xMjCXFFpzESUJlodSK_hl8If3KC6Ns4DRsxwSM'}
+INFO 2025-04-24 19:12:47,311 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:12:47,332 basehttp "GET /api/auth/status/ HTTP/1.1" 200 73
+INFO 2025-04-24 19:16:26,793 basehttp "GET /admin/users/user/ HTTP/1.1" 200 13230
+INFO 2025-04-24 19:16:26,889 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-04-24 19:18:49,658 views Получен запрос на авторизацию: {'username': 'karakat@gmail.com', 'password': '123456'}
+INFO 2025-04-24 19:18:50,079 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODczMCwiaWF0IjoxNzQ1NTIyMzMwLCJqdGkiOiI5ZmExZTAwYTg5MTc0MGIzODliOTVjMWY5NmQ2YmU3MiIsInVzZXJfaWQiOjJ9.p8p6vc6c7WQdeOmjDd5HxodZM_UrmFwHEijBKHBoNzY', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1OTMwLCJpYXQiOjE3NDU1MjIzMzAsImp0aSI6Ijc3MTE1ODlmOGFmZjQ4YzViOTI0ZjVjZDRkZTBlYzE4IiwidXNlcl9pZCI6Mn0.NzT6wiWDqGkBnhLDEWoUMemP1u6VXbk9DgPvKVAOuFY'}
+INFO 2025-04-24 19:18:50,080 basehttp "POST /api/auth/token/ HTTP/1.1" 200 483
+INFO 2025-04-24 19:18:50,107 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:18:50,110 basehttp "GET /api/auth/status/ HTTP/1.1" 200 76
+INFO 2025-04-24 19:18:53,642 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:18:59,591 views Получен запрос на авторизацию: {'username': 'karakat@gmail.com', 'password': '123456'}
+INFO 2025-04-24 19:18:59,770 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODczOSwiaWF0IjoxNzQ1NTIyMzM5LCJqdGkiOiJiMTM0MWRmYWMyODA0ODQ0OTEwMzFiMjJlOTYwZGY3NiIsInVzZXJfaWQiOjJ9.DlS6CrU1-np2ZbHPzIB-hXoeT3szX3aqgY6cnJlAVnQ', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1OTM5LCJpYXQiOjE3NDU1MjIzMzksImp0aSI6IjE3YTRhMGNmOWVhOTQxMjNhMDBjOGJlM2Y1M2VlY2Q5IiwidXNlcl9pZCI6Mn0.dk2isquXCWBDiQkmk8dTjjh-eQD3Mh4m_P483QVJhA0'}
+INFO 2025-04-24 19:18:59,771 basehttp "POST /api/auth/token/ HTTP/1.1" 200 483
+INFO 2025-04-24 19:18:59,797 basehttp "GET /api/auth/status/ HTTP/1.1" 200 76
+INFO 2025-04-24 19:19:00,924 views Получен запрос на авторизацию: {'username': 'karakat@gmail.com', 'password': '123456'}
+INFO 2025-04-24 19:19:01,108 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODc0MSwiaWF0IjoxNzQ1NTIyMzQxLCJqdGkiOiI5OTFhZTViYWMxZmQ0OWNmYjgzZDQ1NTA3OGU3NWQwOCIsInVzZXJfaWQiOjJ9.CFf8asTuHFdr6Usc9M9C0fTLcW9n4vuAcIOidi56c18', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1OTQxLCJpYXQiOjE3NDU1MjIzNDEsImp0aSI6IjkyMWZhY2U0OTljNzQ5NGI5MWEyYzk1ZmJkZmViZWRhIiwidXNlcl9pZCI6Mn0.IsOAJscoJBxnn57XKN65WCF74EMmyLCA4HsW25gr8Y4'}
+INFO 2025-04-24 19:19:01,108 basehttp "POST /api/auth/token/ HTTP/1.1" 200 483
+INFO 2025-04-24 19:19:01,129 basehttp "GET /api/auth/status/ HTTP/1.1" 200 76
+INFO 2025-04-24 19:19:02,072 views Получен запрос на авторизацию: {'username': 'karakat@gmail.com', 'password': '123456'}
+INFO 2025-04-24 19:19:02,252 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODc0MiwiaWF0IjoxNzQ1NTIyMzQyLCJqdGkiOiI4MWVhNjFhYzI5ZjA0MTAzYTM3ZDBlMjc3MDU0MDQzZCIsInVzZXJfaWQiOjJ9.DydDWRr83rUw-GQfb4gMduwckkskZ-kKFu0Rhtes8SM', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1OTQyLCJpYXQiOjE3NDU1MjIzNDIsImp0aSI6ImFiNWI3NzEyZDgzMDQ4NmJiOTY3OTBkODNlZGEyNjI3IiwidXNlcl9pZCI6Mn0.G1zlFMWjy4exr_RTEoRBly92oNaxX06XBffoJXWPElY'}
+INFO 2025-04-24 19:19:02,253 basehttp "POST /api/auth/token/ HTTP/1.1" 200 483
+INFO 2025-04-24 19:19:02,273 basehttp "GET /api/auth/status/ HTTP/1.1" 200 76
+INFO 2025-04-24 19:19:02,914 views Получен запрос на авторизацию: {'username': 'karakat@gmail.com', 'password': '123456'}
+INFO 2025-04-24 19:19:03,081 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODc0MywiaWF0IjoxNzQ1NTIyMzQzLCJqdGkiOiJjNGI2ODdhMDFmYjE0ZmRlOGUyNmZmODlkMGQxMjFmMSIsInVzZXJfaWQiOjJ9.VkhLxCsP4izBIF9jjw6JdLis4bmnrjcteJX1NfPelFY', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1OTQzLCJpYXQiOjE3NDU1MjIzNDMsImp0aSI6IjZjODVlY2MzNmUxMjQwZTdiNjdlYmE2ODY4ZWFmODViIiwidXNlcl9pZCI6Mn0.PbVZFVdSeM6-a6Wgq-nqyR9jli4w_aSJy0WkrjVDaZc'}
+INFO 2025-04-24 19:19:03,082 basehttp "POST /api/auth/token/ HTTP/1.1" 200 483
+INFO 2025-04-24 19:19:03,092 basehttp "GET /api/auth/status/ HTTP/1.1" 200 76
+INFO 2025-04-24 19:19:15,150 views Получен запрос на авторизацию: {'username': 'karakat@gmail.com', 'password': '123456'}
+INFO 2025-04-24 19:19:15,325 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODc1NSwiaWF0IjoxNzQ1NTIyMzU1LCJqdGkiOiIyY2IyODAxMTJiZDc0ODRmYTk1NDU4NmM2Y2MwYjc4ZiIsInVzZXJfaWQiOjJ9.uPMEhV1-ppslO-TRxer3JwjlkajHPDdVqmsOMglu_Bg', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI1OTU1LCJpYXQiOjE3NDU1MjIzNTUsImp0aSI6ImViZTdkYjEwYzlmYzRkZWJiZmQwOGIzZjRmN2RhM2NiIiwidXNlcl9pZCI6Mn0.vkL4Ery7ZwmwirAY617wQ5dkZtgj6kIjnTWsm6vSE58'}
+INFO 2025-04-24 19:19:15,326 basehttp "POST /api/auth/token/ HTTP/1.1" 200 483
+INFO 2025-04-24 19:19:15,351 basehttp "GET /api/auth/status/ HTTP/1.1" 200 76
+INFO 2025-04-24 19:19:51,693 basehttp "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:19:51,881 basehttp "POST /api/auth/register/ HTTP/1.1" 201 42
+INFO 2025-04-24 19:20:00,559 views Получен запрос на авторизацию: {'username': 'anaritto@gmail.com', 'password': '123456'}
+INFO 2025-04-24 19:20:00,741 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODgwMCwiaWF0IjoxNzQ1NTIyNDAwLCJqdGkiOiJmM2U2MGUwMjNjZjM0MzA1OTc5M2VkYjMxYjgwYWFmMyIsInVzZXJfaWQiOjE1fQ.8nJhOrcaRLNlCst9Y0rqBaa3A8SO2GgvVJKe5hMINyE', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI2MDAwLCJpYXQiOjE3NDU1MjI0MDAsImp0aSI6ImExY2JmZTEzY2VjYjRmNmI5MGJmYzBhMzU5Y2MzYzkzIiwidXNlcl9pZCI6MTV9.GZGZKeMuysk3OSMEU1CssTLD9UCbixwJjqlgxc8PLN8'}
+INFO 2025-04-24 19:20:00,741 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:20:00,765 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
+INFO 2025-04-24 19:20:12,508 basehttp "GET /api/events/ HTTP/1.1" 200 2
