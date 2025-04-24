@@ -356,3 +356,58 @@ INFO 2025-04-24 22:01:10,227 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
 WARNING 2025-04-24 22:01:10,241 log Unauthorized: /api/events/
 WARNING 2025-04-24 22:01:10,241 basehttp "GET /api/events/ HTTP/1.1" 401 172
 INFO 2025-04-24 22:01:15,408 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:03:02,450 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:20:08,016 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:26:15,444 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:26:44,740 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:28:52,145 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-24 22:28:52,173 log Unauthorized: /api/events/
+WARNING 2025-04-24 22:28:52,173 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-24 22:33:36,118 basehttp "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2025-04-24 22:33:36,129 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:33:36,129 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-24 22:33:39,423 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:33:39,437 views Получен запрос на авторизацию: {'username': 'anaritto@gmail.com', 'password': '123456'}
+INFO 2025-04-24 22:33:39,628 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMDQxOSwiaWF0IjoxNzQ1NTM0MDE5LCJqdGkiOiJkNDg2Mzk4NDBhYWM0NWU2YTg3MDM3ZmFmZDZlN2ExNiIsInVzZXJfaWQiOjE1fQ.ZFGfLtyPqLfC_RKv6hYyEZZJwtzObvEVpzOJ6CSLxp0', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM3NjE5LCJpYXQiOjE3NDU1MzQwMTksImp0aSI6IjQ4Y2Y1YWRhY2Q0ZDQzYWU4ZjczMGRmMmRiNWJkNGJhIiwidXNlcl9pZCI6MTV9._MrNfBSOoVrNYOJKSSL4PG65rfSLWNKTuxGeI218H3k'}
+INFO 2025-04-24 22:33:39,628 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:33:39,640 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:33:39,644 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
+INFO 2025-04-24 22:33:42,872 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:33:46,199 basehttp "GET /api/events/ HTTP/1.1" 200 2
+WARNING 2025-04-24 22:33:47,147 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:33:47,148 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-24 22:33:48,850 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:33:48,851 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-24 22:33:49,450 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:33:49,451 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-24 22:33:49,664 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:33:49,665 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-24 22:33:49,880 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:33:49,881 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-24 22:33:50,650 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:33:50,651 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-24 22:33:59,620 views Получен запрос на авторизацию: {'username': 'anaritto@gmail.com', 'password': '123456'}
+INFO 2025-04-24 22:33:59,802 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMDQzOSwiaWF0IjoxNzQ1NTM0MDM5LCJqdGkiOiIxOTJiOGNiNDAxODg0NGNkODkzZDhiZTUzM2RhZTUzZCIsInVzZXJfaWQiOjE1fQ.F8Vp0xTuenWNXiQ_eo9n8DrQYOfWOKfJj3bbJb-fTmA', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM3NjM5LCJpYXQiOjE3NDU1MzQwMzksImp0aSI6ImYyNzY2ZmEyNjFjMTQxNWE5ZmY5N2NhOWU1ZDIwYTQzIiwidXNlcl9pZCI6MTV9.6Zdww7xUE-F4x60I_drd691Cg_cVRC3AFUU57uuwITw'}
+INFO 2025-04-24 22:33:59,803 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:33:59,821 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
+INFO 2025-04-24 22:34:01,349 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:34:34,106 basehttp "GET /api/events/ HTTP/1.1" 200 2
+WARNING 2025-04-24 22:34:34,967 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:34:34,968 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-24 22:34:38,125 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:34:38,125 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-24 22:35:55,959 views Получен запрос на авторизацию: {'username': 'anaritto@gmail.com', 'password': '123456'}
+INFO 2025-04-24 22:35:56,137 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMDU1NiwiaWF0IjoxNzQ1NTM0MTU2LCJqdGkiOiIyNmNiNzA0NmIyYTM0MGRjOWE4OGVmZDcxNWU1NDQ3ZCIsInVzZXJfaWQiOjE1fQ.vb6FmJp1jnjk5omaSBicW9B6B7KGaVxS_e1WDdCs4XY', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM3NzU2LCJpYXQiOjE3NDU1MzQxNTYsImp0aSI6ImRmZTY2ZWRjMjEzYTRmZGFiNjU0MTgzZTc2ZDlkN2EzIiwidXNlcl9pZCI6MTV9.djo4f2jNG-nDi4Mj7NSroKwtnfiqvYqXj0Rbln6Epz4'}
+INFO 2025-04-24 22:35:56,137 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:35:56,152 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
+INFO 2025-04-24 22:35:57,650 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:35:59,178 basehttp "GET /api/events/ HTTP/1.1" 200 2
+WARNING 2025-04-24 22:36:00,078 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:36:00,079 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-24 22:36:16,798 views Получен запрос на авторизацию: {'username': 'anaritto@gmail.com', 'password': '123456'}
+INFO 2025-04-24 22:36:16,975 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMDU3NiwiaWF0IjoxNzQ1NTM0MTc2LCJqdGkiOiIxYjAzNDM3ZjhiYmQ0MDUxODBjNzk3YWVhNDkzNjZhYiIsInVzZXJfaWQiOjE1fQ.DoBGVxHGE_lhTtx-FNUzWwFsB53-B6d-U1UdwdfeNV8', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM3Nzc2LCJpYXQiOjE3NDU1MzQxNzYsImp0aSI6IjVhOGUzOGQyZmYwMzQ2NmRiZGZhNjNlNjllZGZmMmYzIiwidXNlcl9pZCI6MTV9.n71yMzQeo626LOK5VQvuvWaIXXZeGEnR_EAWx558c3I'}
+INFO 2025-04-24 22:36:16,976 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:36:16,992 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
+INFO 2025-04-24 22:36:19,030 basehttp "GET /api/events/ HTTP/1.1" 200 2
+WARNING 2025-04-24 22:36:20,383 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-24 22:36:20,384 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
