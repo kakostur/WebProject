@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http'; 
 import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-faq',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, HeaderComponent], 
+  imports: [CommonModule, HttpClientModule, HeaderComponent, FooterComponent], 
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.css']
 })

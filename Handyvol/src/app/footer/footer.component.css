@@ -1,0 +1,117 @@
+/* Body needs space below for footer */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Container wrapper to push footer down */
+  .main-content {
+    flex: 1;
+  }
+  
+  /* Footer styles */
+  .custom-footer {
+    background-color: #3c1874;
+    color: white;
+    padding: 30px 0 10px;
+    font-family: 'Segoe UI', sans-serif;
+    width: 100%;
+  }
+  
+  .custom-footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .custom-footer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+  }
+  
+  .custom-footer a:hover {
+    color: #f9b000;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 18px;
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background-color: #f9b000;
+  }
+  
+  .custom-footer input.form-control {
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-footer button.btn {
+    border-radius: 4px;
+    padding: 6px;
+    background-color: transparent;
+    border: 1px solid #f9b000;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-footer button.btn:hover {
+    background-color: #f9b000;
+    color: black;
+  }
+  
+  .custom-footer small {
+    color: #ccc;
+    font-size: 17px;
+  }
+  
+  .custom-footer .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .custom-footer .col-md-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .custom-footer .text-center {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .custom-footer .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  

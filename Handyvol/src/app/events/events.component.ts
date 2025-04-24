@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EventService } from './event.service';
 import { HeaderComponent } from "../header/header.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-events',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css'],
 })

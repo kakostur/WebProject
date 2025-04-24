@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent, FormsModule, HttpClientModule], 
+  imports: [CommonModule, RouterModule, HeaderComponent, FormsModule, HttpClientModule, FooterComponent], 
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })

@@ -11,6 +11,7 @@ export const routes: Routes = [
   { path: 'about', loadComponent: () => import('./about/about.component').then(m => m.AboutComponent) },
   { path: 'faq', loadComponent: () => import('./faq/faq.component').then(m => m.FaqComponent) },
   { path: 'organizers', loadComponent: () => import('./organizers/organizers.component').then(m => m.OrganizersComponent) },
+  { path: 'footer', loadComponent: () => import('./footer/footer.component').then(m => m.FooterComponent) },
   {
     path: 'event-management',
     loadComponent: () => import('./event-management/event-management.component').then(m => m.EventManagementComponent),

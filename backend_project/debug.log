@@ -280,3 +280,4 @@ INFO 2025-04-24 19:20:00,741 views Успешный ответ: {'refresh': 'eyJ
 INFO 2025-04-24 19:20:00,741 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
 INFO 2025-04-24 19:20:00,765 basehttp "GET /api/auth/status/ HTTP/1.1" 200 79
 INFO 2025-04-24 19:20:12,508 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-25 00:54:06,663 autoreload Watching for file changes with StatReloader
