@@ -339,3 +339,20 @@ WARNING 2025-04-24 21:14:18,755 basehttp "GET /api/events/ HTTP/1.1" 401 172
 INFO 2025-04-24 21:25:22,564 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
 WARNING 2025-04-24 21:25:22,574 log Unauthorized: /api/events/
 WARNING 2025-04-24 21:25:22,574 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-24 21:30:50,812 autoreload Watching for file changes with StatReloader
+WARNING 2025-04-24 21:32:24,669 log Unauthorized: /api/events/
+WARNING 2025-04-24 21:32:24,670 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-24 21:44:54,100 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-24 21:44:54,129 log Unauthorized: /api/events/
+WARNING 2025-04-24 21:44:54,129 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-24 21:45:09,043 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+WARNING 2025-04-24 21:45:16,897 log Unauthorized: /api/events/
+WARNING 2025-04-24 21:45:16,898 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-24 21:45:24,296 log Unauthorized: /api/events/
+WARNING 2025-04-24 21:45:24,297 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-24 21:45:27,700 log Unauthorized: /api/events/
+WARNING 2025-04-24 21:45:27,701 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-24 22:01:10,227 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-24 22:01:10,241 log Unauthorized: /api/events/
+WARNING 2025-04-24 22:01:10,241 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-24 22:01:15,408 basehttp "GET /api/faq/ HTTP/1.1" 200 2
