@@ -462,3 +462,5 @@ WARNING 2025-04-25 03:15:18,807 basehttp "GET /api/events/ HTTP/1.1" 401 172
 WARNING 2025-04-25 03:17:00,249 log Unauthorized: /api/events/
 WARNING 2025-04-25 03:17:00,251 basehttp "GET /api/events/ HTTP/1.1" 401 172
 INFO 2025-04-25 03:17:03,421 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+WARNING 2025-04-25 03:38:17,092 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:38:17,094 basehttp "GET /api/events/ HTTP/1.1" 401 172

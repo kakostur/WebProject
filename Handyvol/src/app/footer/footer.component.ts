@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-
+import { RegisterComponent } from '../components/auth/register.component';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from '../components/auth/login.component';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [RouterModule,RegisterComponent,CommonModule, LoginComponent],
   standalone: true,
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
@@ -19,5 +22,22 @@ export class FooterComponent {
     } else {
       console.log('Please enter an email');
     }
+  }
+  showLoginModal = false;
+  showRegisterModal = false;
+
+  openLogin() {
+    this.showLoginModal = true;
+    this.showRegisterModal = false;
+  }
+
+  openRegister() {
+    this.showLoginModal = false;
+    this.showRegisterModal = true;
+  }
+
+  closeModals() {
+    this.showLoginModal = false;
+    this.showRegisterModal = false;
   }
 }

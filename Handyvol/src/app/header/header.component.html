@@ -24,25 +24,15 @@
   </div>
 </header>
 
-<!-- Modal for Login/Register -->
-<div class="modal-background" *ngIf="showLoginModal || showRegisterModal"></div>
-<div class="modal" *ngIf="showLoginModal || showRegisterModal">
-  <button class="close" (click)="closeModals()">×</button>
-  <ng-container *ngIf="showLoginModal">
-    <app-login></app-login>
-  </ng-container>
-  <ng-container *ngIf="showRegisterModal">
-    <app-register></app-register>
-  </ng-container>
-</div>
 
 <!-- Hero Section -->
 <section class="hero-section">
   <div class="hero-left">
     <h1>Leave your mark on the world by joining us as a valued supporter.</h1>
     <p>At Handyvol,we are a global community committed to creating lasting change through charity, fundraising, and support for nonprofits and NGOs.</p>
-    <button class="btn-signup" (click)="openRegister()">Join us ↗</button>
-
+    <div class="auth-buttons">
+      <button class="btn-signup" (click)="openRegister()">Join us ↗</button>
+    </div>
     <div class="stats">
       <div class="stat-card">
         <strong>10,000+</strong>
@@ -58,4 +48,14 @@
     <img src="https://images.pexels.com/photos/6646914/pexels-photo-6646914.jpeg" alt="Volunteers" />
   </div>
 </section>
-
+<!-- Modal for Login/Register -->
+<div class="modal-background" *ngIf="showLoginModal || showRegisterModal"></div>
+<div class="modal" *ngIf="showLoginModal || showRegisterModal">
+  <button class="close" (click)="closeModals()">×</button>
+  <ng-container *ngIf="showLoginModal">
+    <app-login></app-login>
+  </ng-container>
+  <ng-container *ngIf="showRegisterModal">
+    <app-register></app-register>
+  </ng-container>
+</div>

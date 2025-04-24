@@ -43,7 +43,7 @@
   
   button {
     padding: 15px;
-    background: #3982d1;
+    background:#673ab7;
     color: white;
     border: none;
     border-radius: 5px;
@@ -52,6 +52,6 @@
   }
   
   button:hover {
-    background: #0056b3;
+    background:#1b093b;
   }
   

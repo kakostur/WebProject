@@ -27,18 +27,26 @@
             <li><a href="#">FAQ</a></li>
           </ul>
         </div>
-  
+        <div class="modal-background" *ngIf="showLoginModal || showRegisterModal"></div>
+        <div class="modal" *ngIf="showLoginModal || showRegisterModal">
+          <button class="close" (click)="closeModals()">×</button>
+          <ng-container *ngIf="showLoginModal">
+            <app-login></app-login>
+          </ng-container>
+          <ng-container *ngIf="showRegisterModal">
+            <app-register></app-register>
+          </ng-container>
+        </div>
         <!-- Newsletter -->
         <div class="col-md-4 mb-4">
           <h5>Newsletter</h5>
           <form>
             <input type="email" class="form-control mb-2" placeholder="Enter your email" required />
-            <button type="submit" class="btn btn-warning w-100">Subscribe</button>
+            <button type="submit" class="btn btn-warning w-100" (click)="openRegister()">Subscribe</button>
           </form>
           <small class="d-block mt-2">We respect your inbox. No spam.</small>
         </div>
       </div>
-  
       <div class="text-center pt-3 border-top mt-4">
         <p class="mb-0">© 2025 Handyvol. All rights reserved.</p>
       </div>
