@@ -1,14 +1,22 @@
 <app-header></app-header>
-<div class="faq-section">
-  <h2>Frequently Asked Questions</h2>
-  <div *ngFor="let faq of faqs; let i = index" class="faq-item">
-    <button class="faq-question" (click)="toggleAnswer(i)">
-      {{ faq.question }}
-    </button>
-    <div *ngIf="activeQuestion === i" class="faq-answer">
-      {{ faq.answer }}
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+  
+    <div *ngIf="faqs.length > 0; else noFaqs">
+      <div *ngFor="let faq of faqs; let i = index" class="faq-item">
+        <button class="faq-question" (click)="toggleAnswer(i)">
+          {{ faq.question }}
+          <span class="icon" [class.open]="activeQuestion === i">+</span>
+        </button>
+        <div *ngIf="activeQuestion === i" class="faq-answer">
+          {{ faq.answer }}
+        </div>
+      </div>
     </div>
+  
+    <ng-template #noFaqs>
+      <p>No FAQs available at the moment. Please check back later.</p>
+    </ng-template>
   </div>
-  <p *ngIf="faqs.length === 0">No FAQs available at the moment. Please check back later.</p>
-</div>
+  
 <app-footer></app-footer>
