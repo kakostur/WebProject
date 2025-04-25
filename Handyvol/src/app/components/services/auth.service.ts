@@ -8,18 +8,21 @@ import { SKIP_AUTH_INTERCEPTOR } from './auth.tokens';
   providedIn: 'root',
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8000/api/auth/'; 
+  private baseUrl = 'http://localhost:8000/api/auth/';  // URL для вашего бэкенда
 
   constructor(private http: HttpClient) {}
 
+  // Метод для получения токена из localStorage
   getToken(): string | null {
     return localStorage.getItem('authToken');
   }
 
+  // Метод для проверки, авторизован ли пользователь
   isAuthenticated(): boolean {
-    return !!localStorage.getItem('authToken'); 
+    return !!localStorage.getItem('authToken');  // Проверка наличия authToken в localStorage
   }
 
+  // Метод для получения данных о пользователе (потребуется авторизация)
   getUserInfo(): Observable<any> {
     const token = this.getToken();
     console.log('Получение информации о пользователе, токен:', token);
@@ -38,6 +41,7 @@ export class AuthService {
     );
   }
 
+  // Метод для логина
   login(credentials: { username: string; password: string }): Observable<any> {
     return this.http.post(`${this.baseUrl}token/`, credentials, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -46,13 +50,16 @@ export class AuthService {
         console.log('Ответ от сервера:', response);
         
         if (response && response.access) {
+          // Сохраняем токен доступа в localStorage
           localStorage.setItem('authToken', response.access);
           console.log('Токен сохранен в localStorage:', localStorage.getItem('authToken'));
           
+          // Проверим сразу после сохранения
           setTimeout(() => {
             console.log('Токен из localStorage после задержки:', localStorage.getItem('authToken'));
           }, 100);
           
+          // Сохраняем refresh токен, если он есть
           if (response.refresh) {
             localStorage.setItem('refreshToken', response.refresh);
           }
@@ -65,9 +72,10 @@ export class AuthService {
     );
   }
 
+  // Метод для регистрации
   register(userData: { name: string; email: string; password: string; role: string }): Observable<any> {
     const payload = {
-      username: userData.name,  
+      username: userData.name,  // Используйте правильные имена полей
       email: userData.email,
       password: userData.password,
       role: userData.role,
@@ -81,7 +89,7 @@ export class AuthService {
     }).pipe(
       catchError((error) => {
         console.error('Ошибка при регистрации:', error);
-        return throwError(() => error);  
+        return throwError(() => error);  // Возврат ошибки для дальнейшей обработки
       })
     );
   }
@@ -90,12 +98,19 @@ export class AuthService {
     const refreshToken = localStorage.getItem('refreshToken');
     return this.http.post(`${this.baseUrl}logout/`, { refresh: refreshToken }).pipe(
       tap(() => {
+        // Удаляем токены из localStorage при выходе
         localStorage.removeItem('authToken');
         localStorage.removeItem('refreshToken');
+        localStorage.removeItem('userRole');
+        console.log('Выход из системы успешно выполнен');
       }),
       catchError((error) => {
         console.error('Ошибка при выходе из системы:', error);
-        return throwError(() => error);  
+        // Удаляем токены даже в случае ошибки
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('refreshToken');
+        localStorage.removeItem('userRole');
+        return throwError(() => error); // Возврат ошибки для дальнейшей обработки
       })
     );
   }
