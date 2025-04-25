@@ -1,26 +1,42 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #9b299b;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  background: linear-gradient(135deg, #f5f5f5, #e3e3e3);
-  padding: 20px;
+  min-height: 100vh;
+  background: #9b299b;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
+
 .login-card {
-  max-width: 380px; /* Login modal is smaller */
+  max-width: 400px; 
   width: 100%;
-  padding: 2rem;
+  padding: 2.5rem;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+.login-card:hover {
+  transform: scale(1.02); 
 }
 
 h2 {
   margin-bottom: 1.5rem;
-  font-size: 1.6rem;
+  font-size: 2rem; 
   color: #333;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: bold;
 }
 
 .form-group {
@@ -30,30 +46,76 @@ h2 {
 
 input {
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 6px;
   font-size: 1rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9000ff;
+  background-color: #e7f1ff;
+}
+
+
+input.is-invalid {
+  border-color: #e74c3c; 
 }
 
 .btn-primary {
   width: 100%;
-  padding: 0.85rem;
-  background: #007bff;
-  font-size: 1rem;
-  font-weight: 500;
+  padding: 1rem;
+  background: #8d0f9b;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .btn-primary:hover {
-  background: #0056b3;
+  background: #963fb5;
+  transform: scale(1.05);
 }
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
 .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
+  top: 14px;
+  right: 16px;
+  font-size: 22px;
+  font-weight: bold;
   background: transparent;
   border: none;
   color: #333;
-  transform: none !important; 
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close:hover {
+  transform: rotate(90deg);
 }

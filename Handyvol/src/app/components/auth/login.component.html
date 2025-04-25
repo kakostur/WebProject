@@ -1,5 +1,7 @@
 <div class="login-container">
   <div class="login-card">
+    <button class="close" (click)="router.navigate(['/register'])">×</button>
+
     <h2>Login</h2>
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">

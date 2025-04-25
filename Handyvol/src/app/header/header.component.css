@@ -241,3 +241,53 @@ body {
   }
 }
 
+/* Стили для кнопки выхода из системы */
+.btn-logout {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-right: 20px;
+  background-color: #ff5252;
+  color: white;
+}
+
+.btn-logout:hover {
+  background-color: #e03636;
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* Стили для кнопки управления мероприятиями */
+.btn-manage {
+  margin-right: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-manage:hover {
+  background-color: #3d8b40;
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* Обновление медиа-запроса для мобильных устройств */
+@media (max-width: 768px) {
+  .btn-logout,
+  .btn-manage {
+    width: 100%;
+    text-align: center;
+  }
+}

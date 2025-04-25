@@ -13,26 +13,37 @@
       <a routerLink="/about">About us</a>
       <a routerLink="/organizers">Organizations</a>
       <a routerLink="/events">Events</a>
+      <a routerLink="/news">News</a>
       <a routerLink="/faq">FAQ</a>
       <a routerLink="/contact">Contact</a>
     </nav>
 
     <div class="auth-buttons">
-      <button class="btn-login" (click)="openLogin()">Login</button>
-      <button class="btn-signup" (click)="openRegister()">Sign Now</button>
+      <!-- Если пользователь НЕ авторизован -->
+      <ng-container *ngIf="!isLoggedIn">
+        <a routerLink="/login"><button class="btn-login">Login</button></a>
+        <a routerLink="/register"><button class="btn-signup">Sign Now</button></a>
+      </ng-container>
+      
+      <!-- Если пользователь авторизован -->
+      <ng-container *ngIf="isLoggedIn">
+        <button class="btn-logout" (click)="logout()">Logout</button>
+        
+        <!-- Дополнительные кнопки для авторизованных пользователей -->
+        <a *ngIf="userRole === 'organizer'" routerLink="/event-management">
+          <button class="btn-manage">Manage Events</button>
+        </a>
+      </ng-container>
     </div>
   </div>
 </header>
-
 
 <!-- Hero Section -->
 <section class="hero-section">
   <div class="hero-left">
     <h1>Leave your mark on the world by joining us as a valued supporter.</h1>
     <p>At Handyvol,we are a global community committed to creating lasting change through charity, fundraising, and support for nonprofits and NGOs.</p>
-    <div class="auth-buttons">
-      <button class="btn-signup" (click)="openRegister()">Join us ↗</button>
-    </div>
+    <a routerLink="/register"><button class="btn-signup">Join us ↗</button></a>
     <div class="stats">
       <div class="stat-card">
         <strong>10,000+</strong>
@@ -48,14 +59,4 @@
     <img src="https://images.pexels.com/photos/6646914/pexels-photo-6646914.jpeg" alt="Volunteers" />
   </div>
 </section>
-<!-- Modal for Login/Register -->
-<div class="modal-background" *ngIf="showLoginModal || showRegisterModal"></div>
-<div class="modal" *ngIf="showLoginModal || showRegisterModal">
-  <button class="close" (click)="closeModals()">×</button>
-  <ng-container *ngIf="showLoginModal">
-    <app-login></app-login>
-  </ng-container>
-  <ng-container *ngIf="showRegisterModal">
-    <app-register></app-register>
-  </ng-container>
-</div>
+
