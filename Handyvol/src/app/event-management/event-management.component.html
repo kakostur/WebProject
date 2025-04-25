@@ -1,38 +1,35 @@
+<!-- event-management.component.html -->
 <div class="event-management-container">
-  <h2>Manage Events</h2>
-
+  <h2>{{ isEditing ? 'Edit Event' : 'Create New Event' }}</h2>
+  <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="name">Event Name</label>
-      <input id="name" name="name" [(ngModel)]="event.name" placeholder="Enter event name" required />
+      <label for="name">Name</label>
+      <input type="text" id="name" [(ngModel)]="event.name" name="name" required class="form-control">
     </div>
-
     <div class="form-group">
-      <label for="date">Event Date</label>
-      <input id="date" name="date" type="date" [(ngModel)]="event.date" required />
+      <label for="date">Date</label>
+      <input type="datetime-local" id="date" [(ngModel)]="event.date" name="date" required class="form-control">
     </div>
-
     <div class="form-group">
       <label for="location">Location</label>
-      <input id="location" name="location" [(ngModel)]="event.location" placeholder="Enter location" required />
+      <input type="text" id="location" [(ngModel)]="event.location" name="location" required class="form-control">
     </div>
-
     <div class="form-group">
       <label for="description">Description</label>
-      <textarea id="description" name="description" [(ngModel)]="event.description" placeholder="Enter description"></textarea>
+      <textarea id="description" [(ngModel)]="event.description" name="description" rows="4" class="form-control"></textarea>
     </div>
-
     <div class="form-group">
       <label for="category">Category</label>
-      <input id="category" name="category" [(ngModel)]="event.category" placeholder="Enter category" />
+      <input type="text" id="category" [(ngModel)]="event.category" name="category" class="form-control">
     </div>
-
-    <div class="form-group">
-      <label for="photo">Photo</label>
-      <input id="photo" name="photo" type="file" (change)="handleFileInput($event)" />
+    <div class="form-actions">
+      <button type="submit" class="btn-primary">
+        {{ isEditing ? 'Update Event' : 'Add Event' }}
+      </button>
+      <button *ngIf="isEditing" type="button" class="btn-danger" (click)="deleteEvent()">Delete Event</button>
+      <button type="button" class="btn-secondary" (click)="goBack()">Go Back</button>
     </div>
-
-    <button type="submit" class="btn-primary">Add Event</button>
-    <button type="button" class="btn-secondary" (click)="goBack()">Go Back</button>
   </form>
 </div>

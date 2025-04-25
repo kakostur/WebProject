@@ -1,89 +1,67 @@
-///events/event.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+
+export interface Event {
+  id: number;
+  name: string;
+  date: string;
+  location: string;
+  description: string;
+  created_by: number;
+  category?: string;
+}
+
+export interface EventCreate {
+  name: string;
+  date: string;
+  location: string;
+  description: string;
+  category?: string;
+}
 
 @Injectable({
   providedIn: 'root',
 })
 export class EventService {
-  private baseUrl = 'http://localhost:8000/api/events/';
-  
-  constructor(private http: HttpClient) {}
-  
-  getEvents(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl, {
-      headers: this.getAuthHeaders(),
-    }).pipe(
-      catchError(error => {
-        console.error('Error fetching events:', error);
-        return throwError(() => error);
-      })
-    );
-  }
-  
-  getEvent(id: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}${id}/`, {
-      headers: this.getAuthHeaders(),
-    }).pipe(
-      catchError(error => {
-        console.error(`Error fetching event ${id}:`, error);
-        return throwError(() => error);
-      })
-    );
-  }
-  
-  addEvent(event: { 
-    name: string; 
-    date: string; 
-    location: string; 
-    description?: string; 
-    category?: string; 
-    photo?: File 
-  }): Observable<any> {
-    const formData = new FormData();
-    formData.append('name', event.name);
-    formData.append('date', event.date);
-    formData.append('location', event.location);
-    
-    if (event.description) formData.append('description', event.description);
-    if (event.category) formData.append('category', event.category);
-    if (event.photo) formData.append('photo', event.photo);
-    
-    return this.http.post(`${this.baseUrl}`, formData, { 
-      headers: this.getAuthHeaders(true) 
-    }).pipe(
-      catchError(error => {
-        console.error('Error creating event:', error);
-        return throwError(() => error);
-      })
-    );
-  }
-  
-  registerForEvent(eventId: number): Observable<any> {
-    return this.http.post(`${this.baseUrl}${eventId}/register/`, {}, {
-      headers: this.getAuthHeaders(),
-    }).pipe(
-      catchError(error => {
-        console.error(`Error registering for event ${eventId}:`, error);
-        return throwError(() => error);
-      })
-    );
-  }
-  
-  private getAuthHeaders(multipart = false): HttpHeaders {
-    const token = localStorage.getItem('authToken');
-    let headers = new HttpHeaders({
-      'Authorization': `Bearer ${token}`
-    });
-    
+  private apiUrl = 'http://localhost:8000/api/events/';  // URL с завершающим слэшем
 
-    if (!multipart) {
-      headers = headers.set('Content-Type', 'application/json');
-    }
-    
-    return headers;
+  constructor(private http: HttpClient) {}
+
+  // Получить все события
+  getEvents(): Observable<Event[]> {
+    return this.http.get<Event[]>(this.apiUrl, { headers: this.createHeaders() });
   }
+
+  // Получить одно событие по ID
+  getEvent(id: number): Observable<Event> {
+    return this.http.get<Event>(`${this.apiUrl}${id}/`, { headers: this.createHeaders() });
+  }
+
+  // Добавить событие
+  addEvent(event: EventCreate): Observable<Event> {
+    return this.http.post<Event>(this.apiUrl, event, { headers: this.createHeaders() });
+  }
+
+  // Обновить событие
+  updateEvent(id: number, event: EventCreate): Observable<Event> {
+    return this.http.put<Event>(`${this.apiUrl}${id}/`, event, { headers: this.createHeaders() });
+  }
+
+  // Удалить событие
+  deleteEvent(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}${id}/`, { headers: this.createHeaders() });
+  }
+
+  private createHeaders(): HttpHeaders {
+    const token = localStorage.getItem('authToken');
+    if (!token) {
+      console.error('Authorization token missing');
+    }
+    return new HttpHeaders({
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    });
+  }
+  
 }

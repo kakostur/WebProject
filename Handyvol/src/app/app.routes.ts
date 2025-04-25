@@ -1,3 +1,4 @@
+//app.routes.ts
 import { Routes } from '@angular/router';
 import { AuthGuard } from './components/guards/auth.guard';
 
@@ -10,8 +11,13 @@ export const routes: Routes = [
   { path: 'events', loadComponent: () => import('./events/events.component').then(m => m.EventsComponent) },
   { path: 'about', loadComponent: () => import('./about/about.component').then(m => m.AboutComponent) },
   { path: 'faq', loadComponent: () => import('./faq/faq.component').then(m => m.FaqComponent) },
-  {
+  { 
     path: 'event-management',
+    loadComponent: () => import('./event-management/event-management.component').then(m => m.EventManagementComponent),
+    canActivate: [AuthGuard]
+  },
+  { 
+    path: 'event-management/:id', 
     loadComponent: () => import('./event-management/event-management.component').then(m => m.EventManagementComponent),
     canActivate: [AuthGuard]
   },

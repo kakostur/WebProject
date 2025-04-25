@@ -167,3 +167,641 @@ INFO 2025-04-24 19:05:30,662 views Успешный ответ: {'refresh': 'eyJ
 INFO 2025-04-24 19:05:30,663 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
 INFO 2025-04-24 19:05:30,682 basehttp "GET /api/auth/status/ HTTP/1.1" 200 68
 INFO 2025-04-24 19:05:30,714 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:22:14,524 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 19:22:47,979 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 19:23:14,518 views Получен запрос на авторизацию: {'username': '12@gmail.com', 'password': '121212'}
+INFO 2025-04-24 19:23:14,893 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwODk5NCwiaWF0IjoxNzQ1NTIyNTk0LCJqdGkiOiI1ZDdjNWJjNjE5Zjk0NzcyOThiMjdmYTQ1MjIxZjYzNyIsInVzZXJfaWQiOjh9.FRzmZQD35AtC3Zv5m7VX_m4FioNDwTZ1nVISHwZijOA', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI2MTk0LCJpYXQiOjE3NDU1MjI1OTQsImp0aSI6IjM3MGM0M2YzMjVmMDQ1ZTRiNmY1ZDE5MjY3ZTljNjBiIiwidXNlcl9pZCI6OH0.K61KIftm_3cpZg95orDWLVwFGu8DeGgHiNQZYuUqM1Y'}
+INFO 2025-04-24 19:23:14,894 basehttp "POST /api/auth/token/ HTTP/1.1" 200 483
+INFO 2025-04-24 19:23:14,904 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:23:14,907 basehttp "GET /api/auth/status/ HTTP/1.1" 200 66
+INFO 2025-04-24 19:23:14,948 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:23:14,960 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:24:21,472 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:24:24,105 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-24 19:24:51,243 basehttp "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:24:51,656 basehttp "POST /api/auth/register/ HTTP/1.1" 201 42
+INFO 2025-04-24 19:25:05,773 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 19:25:05,775 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 19:25:06,142 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYwOTEwNiwiaWF0IjoxNzQ1NTIyNzA2LCJqdGkiOiIwMGI4MDNiNWRlODY0OWY2YjAxMWRjZjc2ZjM3NTJlNCIsInVzZXJfaWQiOjE0fQ.SxZgBh8gxs8gnkHNrATH6phh2R1nCuAzdonaz2RHEYE', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTI2MzA2LCJpYXQiOjE3NDU1MjI3MDYsImp0aSI6Ijk3OTMwN2RmZjkxNTQyOWQ5OTZjMjIwZjA0ZmM3NGIxIiwidXNlcl9pZCI6MTR9.5aaS4FpvlI6sRIuUmm52-XxqOLG14l8myLdgrWDHYCA'}
+INFO 2025-04-24 19:25:06,143 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 19:25:06,151 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+WARNING 2025-04-24 19:26:23,110 log Method Not Allowed: /api/events/
+WARNING 2025-04-24 19:26:23,116 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-24 19:26:39,752 log Method Not Allowed: /api/events/
+WARNING 2025-04-24 19:26:39,756 basehttp "POST /api/events/ HTTP/1.1" 405 41
+INFO 2025-04-24 19:34:00,477 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-24 19:34:00,496 log Method Not Allowed: /api/events/
+WARNING 2025-04-24 19:34:00,496 basehttp "POST /api/events/ HTTP/1.1" 405 41
+WARNING 2025-04-24 19:34:12,945 log Method Not Allowed: /api/events/
+WARNING 2025-04-24 19:34:12,947 basehttp "POST /api/events/ HTTP/1.1" 405 41
+INFO 2025-04-24 20:45:49,841 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 20:45:49,858 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 20:45:50,237 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxMzk1MCwiaWF0IjoxNzQ1NTI3NTUwLCJqdGkiOiJjMDM5NTYxOWQ2MWU0OGMxYjM3YTZiYmUzNWNlZWZiYyIsInVzZXJfaWQiOjE0fQ.xwORVtj6AbzJlofXhgW8nOeSIW5M-RCMaMjLek7hMx4', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTMxMTUwLCJpYXQiOjE3NDU1Mjc1NTAsImp0aSI6ImM4OTY2ZDZmMzNjMjQ1OTBhNmZmYTZkYzAxMTI1ODQzIiwidXNlcl9pZCI6MTR9.vbRNV3wyVgFQECtTpKkgPQZAB3PewOt8UUOnBSBmhYw'}
+INFO 2025-04-24 20:45:50,237 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 20:45:50,251 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 20:45:50,257 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 20:46:05,585 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 20:46:36,527 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 20:46:36,899 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxMzk5NiwiaWF0IjoxNzQ1NTI3NTk2LCJqdGkiOiJiNmJmNzVkYWZjOWE0MTM0YmY2ZjgxZjA2YzE3Y2VhZiIsInVzZXJfaWQiOjE0fQ.Ocgwo4cx5fFvSWMcNYK0Llvu40mJGGQVJ5Dw1oG7Qsc', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTMxMTk2LCJpYXQiOjE3NDU1Mjc1OTYsImp0aSI6IjQ2YjdmZDU0OWRmMDRjYzk5ZDgzNGJjMjAyMTZjZjljIiwidXNlcl9pZCI6MTR9.ZR4jacD6YtYP-k8p9sRT44NIjPOyDNush9_DqF_Ejrs'}
+INFO 2025-04-24 20:46:36,899 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 20:46:36,913 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+WARNING 2025-04-24 20:48:05,769 log Not Found: /
+WARNING 2025-04-24 20:48:05,771 basehttp "GET / HTTP/1.1" 404 3144
+WARNING 2025-04-24 20:48:06,643 log Not Found: /apple-touch-icon-precomposed.png
+WARNING 2025-04-24 20:48:06,649 log Not Found: /apple-touch-icon.png
+WARNING 2025-04-24 20:48:06,654 log Not Found: /favicon.ico
+WARNING 2025-04-24 20:48:06,654 basehttp "GET /apple-touch-icon.png HTTP/1.1" 404 3222
+WARNING 2025-04-24 20:48:06,654 basehttp "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 3258
+WARNING 2025-04-24 20:48:06,655 basehttp "GET /favicon.ico HTTP/1.1" 404 3195
+WARNING 2025-04-24 20:48:21,585 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:48:21,586 basehttp "GET /api/events/ HTTP/1.1" 401 5056
+INFO 2025-04-24 20:48:21,617 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-04-24 20:48:21,646 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-04-24 20:48:21,650 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-04-24 20:48:21,651 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-04-24 20:48:21,651 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-04-24 20:48:21,653 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-04-24 20:48:21,654 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-04-24 20:48:21,654 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-04-24 20:48:21,657 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-04-24 20:48:21,657 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-04-24 20:48:21,658 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-04-24 20:48:21,693 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-04-24 20:48:38,266 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-24 20:48:54,722 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 20:48:55,094 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxNDEzNSwiaWF0IjoxNzQ1NTI3NzM1LCJqdGkiOiIxNWI1OWM4OGM5NWM0NWEwYjFjZmRhMGNlZDlkNTFlYiIsInVzZXJfaWQiOjE0fQ.VAtpFrfvrLRPIXPuVx_-AU1zDTLn5OxABpigXaynAt4', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTMxMzM1LCJpYXQiOjE3NDU1Mjc3MzUsImp0aSI6ImFmNzJlMGU4ZjQzNTQ4M2ZiN2Q2MzA3MjRkZDU1NmFkIiwidXNlcl9pZCI6MTR9.9AzGuv62o-UOSJkKpP_q-9kfTG2a8wkx0p8o3ujhJng'}
+INFO 2025-04-24 20:48:55,095 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 20:48:55,104 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 20:56:38,890 basehttp "GET /api/events HTTP/1.1" 301 0
+WARNING 2025-04-24 20:56:38,901 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:56:38,901 basehttp "GET /api/events/ HTTP/1.1" 401 58
+WARNING 2025-04-24 20:56:40,223 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:56:40,224 basehttp "GET /api/events/ HTTP/1.1" 401 58
+WARNING 2025-04-24 20:56:41,132 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:56:41,132 basehttp "GET /api/events/ HTTP/1.1" 401 58
+INFO 2025-04-24 20:57:30,805 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 20:57:30,811 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 20:57:31,189 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxNDY1MSwiaWF0IjoxNzQ1NTI4MjUxLCJqdGkiOiI5ZTMzMmIwZmYxNmY0NWU5OWUyYzUxOTgzMGUxZDVhYyIsInVzZXJfaWQiOjE0fQ.eHiAd1Kp6XFwsHkAq2sye_MXILg13HMbT2dbgU33B0s', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTMxODUxLCJpYXQiOjE3NDU1MjgyNTEsImp0aSI6ImJlOTZlYTFjNTNkNTRiN2RhZWNkODMzMTNiYjc3ZTdiIiwidXNlcl9pZCI6MTR9.CPy92i33ZRqxos95Lvh7p6qbmu0hNnHiCN5ASFpQfOg'}
+INFO 2025-04-24 20:57:31,190 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 20:57:31,205 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 20:57:31,211 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+WARNING 2025-04-24 20:57:31,266 log Unauthorized: /api/events/
+WARNING 2025-04-24 20:57:31,267 basehttp "GET /api/events/ HTTP/1.1" 401 58
+INFO 2025-04-24 20:59:08,200 basehttp "OPTIONS /api/events HTTP/1.1" 200 0
+INFO 2025-04-24 20:59:08,203 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 20:59:08,245 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 20:59:30,476 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 20:59:31,484 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 20:59:34,637 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 20:59:35,660 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:06:05,704 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:06:06,476 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:08:47,449 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:09:10,087 basehttp "OPTIONS /api/events HTTP/1.1" 200 0
+INFO 2025-04-24 21:09:10,099 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 21:09:10,284 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:09:10,960 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:10:41,961 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:10:57,062 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:10:57,931 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:15:45,773 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:15:59,001 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/urls.py changed, reloading.
+INFO 2025-04-24 21:15:59,609 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:16:04,376 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:16:05,149 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:16:05,853 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:16:06,408 basehttp "GET /api/events/ HTTP/1.1" 200 2
+ERROR 2025-04-24 21:17:57,060 log Internal Server Error: /api/events
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/events/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-24 21:17:57,065 basehttp "POST /api/events HTTP/1.1" 500 68419
+INFO 2025-04-24 21:19:16,748 basehttp "GET /api/events HTTP/1.1" 301 0
+WARNING 2025-04-24 21:19:16,780 log Unauthorized: /api/events/
+WARNING 2025-04-24 21:19:16,780 basehttp "GET /api/events/ HTTP/1.1" 401 5056
+WARNING 2025-04-24 21:19:20,392 log Unauthorized: /api/events/
+WARNING 2025-04-24 21:19:20,393 basehttp "GET /api/events/ HTTP/1.1" 401 5056
+INFO 2025-04-24 21:30:27,726 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/models.py changed, reloading.
+INFO 2025-04-24 21:30:28,302 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:30:57,316 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/serializers.py changed, reloading.
+INFO 2025-04-24 21:30:57,848 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:30:59,061 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/serializers.py changed, reloading.
+INFO 2025-04-24 21:30:59,367 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:31:00,564 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/serializers.py changed, reloading.
+INFO 2025-04-24 21:31:00,870 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:31:08,243 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/serializers.py changed, reloading.
+INFO 2025-04-24 21:31:08,629 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:31:17,054 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/urls.py changed, reloading.
+INFO 2025-04-24 21:31:17,403 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:31:21,694 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/urls.py changed, reloading.
+INFO 2025-04-24 21:31:22,024 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:31:33,561 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/views.py changed, reloading.
+INFO 2025-04-24 21:31:34,064 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:32:11,709 basehttp "OPTIONS /api/events HTTP/1.1" 200 0
+INFO 2025-04-24 21:32:11,728 basehttp "GET /api/events HTTP/1.1" 301 0
+INFO 2025-04-24 21:32:11,732 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 21:32:11,893 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:32:29,255 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:32:29,992 basehttp "GET /api/events/ HTTP/1.1" 200 2
+ERROR 2025-04-24 21:32:51,132 log Internal Server Error: /api/events
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/events/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-24 21:32:51,134 basehttp "POST /api/events HTTP/1.1" 500 68419
+INFO 2025-04-24 21:36:42,713 basehttp "GET /admin/ HTTP/1.1" 200 8384
+INFO 2025-04-24 21:36:42,990 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-04-24 21:36:43,024 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-04-24 21:36:43,031 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-04-24 21:36:45,694 basehttp "GET /admin/ HTTP/1.1" 200 8384
+INFO 2025-04-24 21:36:54,054 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:36:57,382 basehttp "GET /admin/ HTTP/1.1" 200 10062
+INFO 2025-04-24 21:37:03,729 basehttp "GET /admin/events/event/ HTTP/1.1" 200 11963
+INFO 2025-04-24 21:37:03,750 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-24 21:37:03,752 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,752 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,752 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,755 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,757 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,759 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,759 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,759 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,759 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,760 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-04-24 21:37:03,761 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-04-24 21:37:03,801 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-04-24 21:37:03,802 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-04-24 21:43:00,489 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/views.py changed, reloading.
+INFO 2025-04-24 21:43:01,088 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:43:16,727 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/serializers.py changed, reloading.
+INFO 2025-04-24 21:43:17,178 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:43:30,815 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/urls.py changed, reloading.
+INFO 2025-04-24 21:43:31,319 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:44:44,064 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 21:44:44,073 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 21:44:44,437 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxNzQ4NCwiaWF0IjoxNzQ1NTMxMDg0LCJqdGkiOiJlZmRjZmJlYjJkZDI0Nzg4YTZhOTYyY2QyY2E5YzMzNCIsInVzZXJfaWQiOjE0fQ.WchDWlWI0F3TeHFJ8drRriFFhYx9UyMO1X2SN07mYUk', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM0Njg0LCJpYXQiOjE3NDU1MzEwODQsImp0aSI6IjBjOWQ1NTUxYWQ3ODQyMDU5YjMzOWY0MDgxODkyN2U0IiwidXNlcl9pZCI6MTR9.s7_EMhpz5s1O9vxbs9m1xcOEqSVuftHNKBBvf5OwDPg'}
+INFO 2025-04-24 21:44:44,438 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 21:44:44,452 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 21:44:44,459 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 21:44:44,527 basehttp "OPTIONS /api/events HTTP/1.1" 200 0
+INFO 2025-04-24 21:44:44,551 basehttp "GET /api/events HTTP/1.1" 301 0
+INFO 2025-04-24 21:44:44,555 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 21:44:44,577 basehttp "GET /api/events/ HTTP/1.1" 200 2
+ERROR 2025-04-24 21:44:55,903 log Internal Server Error: /api/events
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/events/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-24 21:44:55,904 basehttp "POST /api/events HTTP/1.1" 500 68419
+INFO 2025-04-24 21:47:59,580 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/views.py changed, reloading.
+INFO 2025-04-24 21:48:00,204 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:48:06,618 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/serializers.py changed, reloading.
+INFO 2025-04-24 21:48:07,083 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:48:28,677 basehttp "GET /api/events HTTP/1.1" 301 0
+INFO 2025-04-24 21:48:28,754 basehttp "GET /api/events/ HTTP/1.1" 200 2
+INFO 2025-04-24 21:48:56,144 basehttp "GET /api/events/ HTTP/1.1" 200 2
+ERROR 2025-04-24 21:49:06,908 log Internal Server Error: /api/events
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/events/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-24 21:49:06,910 basehttp "POST /api/events HTTP/1.1" 500 68419
+INFO 2025-04-24 21:52:28,911 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/views.py changed, reloading.
+INFO 2025-04-24 21:52:29,494 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:53:06,002 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/models.py changed, reloading.
+INFO 2025-04-24 21:53:06,508 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:53:22,275 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/serializers.py changed, reloading.
+INFO 2025-04-24 21:53:22,718 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 21:59:45,751 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/users/urls.py changed, reloading.
+INFO 2025-04-24 21:59:46,328 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:01:43,023 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:02:33,679 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/serializers.py changed, reloading.
+INFO 2025-04-24 22:02:34,154 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:02:38,066 views Получен запрос на авторизацию: {'username': '34', 'password': '343434'}
+INFO 2025-04-24 22:02:38,432 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxODU1OCwiaWF0IjoxNzQ1NTMyMTU4LCJqdGkiOiIyMWExNzFhNzMxNjA0NTgzODExODJmZWQ1ZTE4Y2FhZSIsInVzZXJfaWQiOjE0fQ.blYypbLc_xpRjCN6aOXtBGzsma2YgVh_H2LvDcrh1jE', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM1NzU4LCJpYXQiOjE3NDU1MzIxNTgsImp0aSI6IjY5NTRjOGFkNTdlYTQzODI5ZWJhNTk2NzNlMGIxZGY0IiwidXNlcl9pZCI6MTR9.Scf8WFLJbCXrScCHxvaKHoQaUsq_WGIUNBdU9hJIDsY'}
+INFO 2025-04-24 22:02:38,432 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:04:29,472 views Received data: {'name': 'Sample Event', 'date': '2025-04-25T10:00:00Z', 'location': 'Sample Location', 'description': 'Sample description', 'category': 'Sample category'}
+ERROR 2025-04-24 22:04:29,520 log Internal Server Error: /api/events/
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table events_event has no column named category
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/views.py", line 28, in post
+    serializer.save()
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table events_event has no column named category
+ERROR 2025-04-24 22:04:29,524 basehttp "POST /api/events/?Authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM1NzU4LCJpYXQiOjE3NDU1MzIxNTgsImp0aSI6IjY5NTRjOGFkNTdlYTQzODI5ZWJhNTk2NzNlMGIxZGY0IiwidXNlcl9pZCI6MTR9.Scf8WFLJbCXrScCHxvaKHoQaUsq_WGIUNBdU9hJIDsY HTTP/1.1" 500 199407
+INFO 2025-04-24 22:05:33,682 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:06:53,792 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/models.py changed, reloading.
+INFO 2025-04-24 22:06:54,278 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:08:18,297 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/views.py changed, reloading.
+INFO 2025-04-24 22:08:18,750 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:08:37,635 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/urls.py changed, reloading.
+INFO 2025-04-24 22:08:38,077 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:08:42,386 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/events/urls.py changed, reloading.
+INFO 2025-04-24 22:08:42,716 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:09:18,844 views Received data: {'name': 'Sample Event', 'date': '2025-04-25T10:00:00Z', 'location': 'Sample Location', 'description': 'Sample description', 'category': 'Sample category'}
+INFO 2025-04-24 22:09:18,851 basehttp "POST /api/events/?Authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM1NzU4LCJpYXQiOjE3NDU1MzIxNTgsImp0aSI6IjY5NTRjOGFkNTdlYTQzODI5ZWJhNTk2NzNlMGIxZGY0IiwidXNlcl9pZCI6MTR9.Scf8WFLJbCXrScCHxvaKHoQaUsq_WGIUNBdU9hJIDsY HTTP/1.1" 201 169
+INFO 2025-04-24 22:09:26,014 basehttp "OPTIONS /api/events HTTP/1.1" 200 0
+INFO 2025-04-24 22:09:26,044 basehttp "GET /api/events HTTP/1.1" 301 0
+INFO 2025-04-24 22:09:26,048 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:09:26,125 basehttp "GET /api/events/ HTTP/1.1" 200 91
+ERROR 2025-04-24 22:09:39,079 log Internal Server Error: /api/events
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/events/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-24 22:09:39,081 basehttp "POST /api/events HTTP/1.1" 500 68419
+INFO 2025-04-24 22:09:48,350 basehttp "GET /api/events HTTP/1.1" 301 0
+INFO 2025-04-24 22:09:48,389 basehttp "GET /api/events/ HTTP/1.1" 200 91
+INFO 2025-04-24 22:09:52,877 basehttp "GET /admin/events/event/ HTTP/1.1" 200 13828
+INFO 2025-04-24 22:09:52,893 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-04-24 22:10:57,665 log Internal Server Error: /api/events
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/events/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-24 22:10:57,666 basehttp "POST /api/events HTTP/1.1" 500 68419
+INFO 2025-04-24 22:13:40,377 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:13:59,976 basehttp "GET /api/events HTTP/1.1" 301 0
+INFO 2025-04-24 22:14:00,040 basehttp "GET /api/events/ HTTP/1.1" 200 91
+ERROR 2025-04-24 22:14:08,684 log Internal Server Error: /api/events
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/events/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2025-04-24 22:14:08,686 basehttp "POST /api/events HTTP/1.1" 500 68419
+INFO 2025-04-24 22:15:40,926 basehttp "GET /api/events/ HTTP/1.1" 200 91
+INFO 2025-04-24 22:16:01,750 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 22:16:06,083 basehttp "GET /api/events/ HTTP/1.1" 200 91
+INFO 2025-04-24 22:16:18,698 views Received data: {'id': 0, 'name': 'asd', 'date': '2025-05-09T03:16', 'location': 'sad', 'description': 'SVS', 'created_by': 0, 'category': 'asdf'}
+INFO 2025-04-24 22:16:18,705 basehttp "POST /api/events/ HTTP/1.1" 201 122
+INFO 2025-04-24 22:16:18,715 basehttp "GET /api/events/ HTTP/1.1" 200 160
+INFO 2025-04-24 22:16:50,037 basehttp "GET /admin/events/event/ HTTP/1.1" 200 14227
+INFO 2025-04-24 22:16:50,055 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-24 22:19:21,362 basehttp "GET /api/events/ HTTP/1.1" 200 160
+INFO 2025-04-24 22:19:47,069 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:19:47,078 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 22:19:47,436 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxOTU4NywiaWF0IjoxNzQ1NTMzMTg3LCJqdGkiOiI5N2YwZjFlMmFmODU0M2Q5YmYyMDI5MDE3MGFkNjRkNSIsInVzZXJfaWQiOjE0fQ.oAg-uBwtaf-4hAGCnayo-wOybMOrPwOzYZkUWBC2xQU', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM2Nzg3LCJpYXQiOjE3NDU1MzMxODcsImp0aSI6ImJmZjY5MTNiMWIzNzQwZjJhYTdmYTk3ODA1NzkwZDhjIiwidXNlcl9pZCI6MTR9.iZ_8luDVG_5UHjMQmyQ_Y00FWYhP64a9otUZMNgxMy8'}
+INFO 2025-04-24 22:19:47,437 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:19:47,451 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:19:47,458 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 22:21:03,189 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:21:03,207 basehttp "GET /api/events/ HTTP/1.1" 200 160
+INFO 2025-04-24 22:21:23,586 views Получен запрос на авторизацию: {'username': '34@gmaik.com', 'password': '343434'}
+ERROR 2025-04-24 22:21:23,947 views Ошибка авторизации: No active account found with the given credentials
+Traceback (most recent call last):
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/users/views.py", line 75, in post
+    response = super().post(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework_simplejwt/serializers.py", line 73, in validate
+    data = super().validate(attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/karakattursynbaeva/Desktop/WebProject/backend_project/venv/lib/python3.12/site-packages/rest_framework_simplejwt/serializers.py", line 57, in validate
+    raise exceptions.AuthenticationFailed(
+rest_framework.exceptions.AuthenticationFailed: No active account found with the given credentials
+ERROR 2025-04-24 22:21:23,956 log Internal Server Error: /api/auth/token/
+ERROR 2025-04-24 22:21:23,956 basehttp "POST /api/auth/token/ HTTP/1.1" 500 63
+INFO 2025-04-24 22:21:35,904 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 22:21:36,251 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxOTY5NiwiaWF0IjoxNzQ1NTMzMjk2LCJqdGkiOiJhOGRjODdmZjFmYTg0MjgzYWRjMWU1OWJlMmNmZmY2ZSIsInVzZXJfaWQiOjE0fQ.sPe_8wqT3HZ8hWKbmCNdlCya2hW4BD4vNu7nOWmM4r8', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM2ODk2LCJpYXQiOjE3NDU1MzMyOTYsImp0aSI6ImY3MzllOTQxZTIyZTQ5NmQ4YzQwNzNiNGY0NmJhYjE0IiwidXNlcl9pZCI6MTR9.XwGps7uubgMtjx9a4kLiBIAPfGXMzr_FSD8YBgX4XsE'}
+INFO 2025-04-24 22:21:36,252 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:21:36,271 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 22:21:53,571 views Received data: {'id': 0, 'name': 'sswed', 'date': '2025-04-27T03:21', 'location': 'wefar', 'description': 'sDF', 'created_by': 0, 'category': 'sfffedf'}
+INFO 2025-04-24 22:21:53,580 basehttp "POST /api/events/ HTTP/1.1" 201 129
+INFO 2025-04-24 22:21:53,587 basehttp "GET /api/events/ HTTP/1.1" 200 233
+INFO 2025-04-24 22:23:24,676 basehttp "GET /api/events/ HTTP/1.1" 200 233
+INFO 2025-04-24 22:23:44,490 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 22:23:44,869 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYxOTgyNCwiaWF0IjoxNzQ1NTMzNDI0LCJqdGkiOiI3Y2E2NDdlMzZjMGU0ZGMyOTU3ZjkxZWE5ZTQ4NDc2MSIsInVzZXJfaWQiOjE0fQ.UqO2dpigWiFtba-w3gOqeCsZGCrVxrWG7MhauguANaU', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM3MDI0LCJpYXQiOjE3NDU1MzM0MjQsImp0aSI6IjJlYzgwN2U5MWM3MTQxOGNhY2Y2YTYzNDlhNDIxN2I2IiwidXNlcl9pZCI6MTR9.0bPrWQHEPCYzipCAWMAbWR5i6ljNHjqC3Dp5EG5zTGU'}
+INFO 2025-04-24 22:23:44,872 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:23:44,888 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 22:23:52,403 views Received data: {'id': 0, 'name': 'xcdvfg', 'date': '2025-04-19T03:23', 'location': 'asdsfbdg', 'description': 'ascdvfbg', 'created_by': 0, 'category': 'axsdf'}
+INFO 2025-04-24 22:23:52,410 basehttp "POST /api/events/ HTTP/1.1" 201 136
+INFO 2025-04-24 22:23:52,418 basehttp "GET /api/events/ HTTP/1.1" 200 310
+INFO 2025-04-24 22:24:25,055 basehttp "GET /admin/events/event/ HTTP/1.1" 200 15046
+INFO 2025-04-24 22:24:25,113 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-24 22:25:02,926 basehttp "GET /admin/events/registration/ HTTP/1.1" 200 10904
+INFO 2025-04-24 22:25:03,003 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-24 22:25:05,024 basehttp "GET /admin/events/event/ HTTP/1.1" 200 15046
+INFO 2025-04-24 22:25:05,039 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-24 22:38:47,527 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:38:47,549 basehttp "GET /api/events/ HTTP/1.1" 200 310
+INFO 2025-04-24 22:38:48,569 basehttp "GET /api/events/ HTTP/1.1" 200 310
+INFO 2025-04-24 22:39:09,207 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:39:09,214 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 22:39:09,582 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMDc0OSwiaWF0IjoxNzQ1NTM0MzQ5LCJqdGkiOiIyYTJiMWY4ZmUwMTE0ZWViYmZjMDIyYTA0MTYyMGE0OCIsInVzZXJfaWQiOjE0fQ.-ReanwPQVzQBB2sFpSxCr5Ymp__qKpvJh-8NmKLOhbM', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM3OTQ5LCJpYXQiOjE3NDU1MzQzNDksImp0aSI6ImNlNThiMWFkOGJjNzQ5ZjQ4YzM3YzhiMjYyN2I4ZTYzIiwidXNlcl9pZCI6MTR9.9bl4XxSg501r_f5jdcwuoQvXhVbRmr2R5osh23gYuss'}
+INFO 2025-04-24 22:39:09,585 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:39:09,596 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:39:09,599 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 22:39:18,699 views Received data: {'id': 0, 'name': 'qswdefrgt', 'date': '2025-04-12T03:39', 'location': 'swdefr', 'description': 'sdwewfr', 'created_by': 0, 'category': 'swder'}
+INFO 2025-04-24 22:39:18,707 basehttp "POST /api/events/ HTTP/1.1" 201 136
+INFO 2025-04-24 22:39:20,236 basehttp "GET /api/events/ HTTP/1.1" 200 388
+INFO 2025-04-24 22:41:38,392 basehttp "GET /api/events/ HTTP/1.1" 200 388
+INFO 2025-04-24 22:42:15,264 basehttp "GET /api/events/ HTTP/1.1" 200 388
+INFO 2025-04-24 22:42:30,406 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 22:42:30,766 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMDk1MCwiaWF0IjoxNzQ1NTM0NTUwLCJqdGkiOiIyNTJmY2JjZTE5ZjM0YWQzODRjMWQxMDA5ODc4NzkwNCIsInVzZXJfaWQiOjE0fQ.BdNaLxXWpvRQGQ_ShpenOLmOsi3JyU7CMNp6QA-pCqw', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM4MTUwLCJpYXQiOjE3NDU1MzQ1NTAsImp0aSI6IjczMDdlMmUxODBhZDQzNWJiMzc3NmUyMTdlNDkzZDYzIiwidXNlcl9pZCI6MTR9.box5Z8BY9CjNF224b23DUweWscc5fSQs7mo3UqkZ8ck'}
+INFO 2025-04-24 22:42:30,766 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:42:30,777 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 22:42:38,600 views Received data: {'id': 0, 'name': 'axs', 'date': '2025-04-27T03:42', 'location': 'asd', 'description': 'xascd', 'created_by': 0, 'category': 'sad'}
+INFO 2025-04-24 22:42:38,610 basehttp "POST /api/events/ HTTP/1.1" 201 123
+INFO 2025-04-24 22:42:38,621 basehttp "GET /api/events/ HTTP/1.1" 200 457
+INFO 2025-04-24 22:42:38,644 basehttp "GET /api/events/ HTTP/1.1" 200 457
+INFO 2025-04-24 22:46:06,211 basehttp "GET /api/events/ HTTP/1.1" 200 457
+INFO 2025-04-24 22:46:10,371 basehttp "GET /api/faq/ HTTP/1.1" 200 2
+INFO 2025-04-24 22:54:59,066 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:54:59,083 basehttp "GET /api/events/ HTTP/1.1" 200 457
+INFO 2025-04-24 22:55:14,809 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:55:14,812 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 22:55:15,179 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMTcxNSwiaWF0IjoxNzQ1NTM1MzE1LCJqdGkiOiJkYmExMDFmM2MyZTQ0MmU3ODU5ZmU2Y2UzYjhlYzM2OCIsInVzZXJfaWQiOjE0fQ.RYC5nrIF-vbgl0i16OqtuyYMKTKVWO6Ctoo8EuUuXe0', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTM4OTE1LCJpYXQiOjE3NDU1MzUzMTUsImp0aSI6ImJmZjc2NjE1YjFlNTRhZmQ4OGIxMmQyZmNlM2RkZjZkIiwidXNlcl9pZCI6MTR9.H0D9Zro4VO-NBYdOZ_G6gG0-XKRjR8taOUwup8TUE_c'}
+INFO 2025-04-24 22:55:15,180 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 22:55:15,188 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 22:55:15,192 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 22:55:24,390 views Received data: {'id': 0, 'name': 'def', 'date': '2025-05-25T03:55', 'location': 'dwwd', 'description': 'dwdww', 'created_by': 0, 'category': 'dwww'}
+INFO 2025-04-24 22:55:24,400 basehttp "POST /api/events/ HTTP/1.1" 201 125
+INFO 2025-04-24 22:55:24,409 basehttp "GET /api/events/ HTTP/1.1" 200 527
+INFO 2025-04-24 22:55:24,431 basehttp "GET /api/events/ HTTP/1.1" 200 527
+INFO 2025-04-24 22:55:32,983 basehttp "GET /admin/events/event/ HTTP/1.1" 200 16263
+INFO 2025-04-24 22:55:33,002 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-24 23:00:00,789 basehttp "GET /api/events/ HTTP/1.1" 200 527
+INFO 2025-04-24 23:17:12,907 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:17:12,932 basehttp "GET /api/events/ HTTP/1.1" 200 527
+INFO 2025-04-24 23:17:26,035 autoreload Watching for file changes with StatReloader
+INFO 2025-04-24 23:17:31,380 basehttp "GET /api/events/ HTTP/1.1" 200 527
+INFO 2025-04-24 23:17:52,303 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:17:52,307 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 23:17:52,672 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMzA3MiwiaWF0IjoxNzQ1NTM2NjcyLCJqdGkiOiJjNjYxNWM2ZmQ3MTg0MDk2ODlhM2RjMjkzM2ZlM2VkOSIsInVzZXJfaWQiOjE0fQ.yQTY06EFiFMg7c8z7jZnvyMd9QjVKEchfyBPCcjPha8', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTQwMjcyLCJpYXQiOjE3NDU1MzY2NzIsImp0aSI6ImQ4YTU4YmM5NDg3MDRhODRiZTgyMjBiMWM4NzM4NDcyIiwidXNlcl9pZCI6MTR9.AYU-MKBcdNIfVCu2-SwrqDT_SxcCOn56ST84XDX4YHw'}
+INFO 2025-04-24 23:17:52,673 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 23:17:52,681 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:17:52,685 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 23:18:00,634 views Received data: {'id': 0, 'name': 'xxwd', 'date': '2025-04-12T04:17', 'location': 'wdwqdw', 'description': 'dqwdwd', 'created_by': 0, 'category': 'qwdqwdw'}
+INFO 2025-04-24 23:18:00,645 basehttp "POST /api/events/ HTTP/1.1" 201 132
+INFO 2025-04-24 23:18:00,651 basehttp "GET /api/events/ HTTP/1.1" 200 600
+INFO 2025-04-24 23:18:00,664 basehttp "GET /api/events/ HTTP/1.1" 200 600
+INFO 2025-04-24 23:18:31,125 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 23:18:31,502 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMzExMSwiaWF0IjoxNzQ1NTM2NzExLCJqdGkiOiI5ODYzYTM3YTRlODg0YWE0YTNkN2RmOGU4NDdmOTQ5MSIsInVzZXJfaWQiOjE0fQ.RTsVM7_EQ8MuDWAp61i4uhQoyhGjBJRNWcyw9E4kUuw', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTQwMzExLCJpYXQiOjE3NDU1MzY3MTEsImp0aSI6ImFjNmRlNmZkM2Y1MjRhYmM4Y2Y4MmNiYWQ0ZGQwNzI1IiwidXNlcl9pZCI6MTR9.2MmPUiOUs2MRyMOAGsSOWmOFMOF7MFwkEiqFs-LXrs8'}
+INFO 2025-04-24 23:18:31,503 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 23:18:31,519 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 23:18:52,875 views Received data: {'id': 0, 'name': 'frgtyh', 'date': '2025-04-16T04:18', 'location': 'werty', 'description': 'erty', 'created_by': 0, 'category': 'rwgteqefe'}
+INFO 2025-04-24 23:18:52,881 basehttp "POST /api/events/ HTTP/1.1" 201 133
+INFO 2025-04-24 23:18:52,891 basehttp "GET /api/events/ HTTP/1.1" 200 674
+INFO 2025-04-24 23:18:52,918 basehttp "GET /api/events/ HTTP/1.1" 200 674
+INFO 2025-04-24 23:27:04,886 views Received data: {'id': 0, 'name': 'axlax', 'date': '2025-04-20T04:26', 'location': 'xmx;x', 'description': 'xsnswkd', 'created_by': 0, 'category': 'wdcfv '}
+INFO 2025-04-24 23:27:04,891 basehttp "POST /api/events/ HTTP/1.1" 201 132
+INFO 2025-04-24 23:27:04,909 basehttp "GET /api/events/ HTTP/1.1" 200 748
+INFO 2025-04-24 23:27:04,989 basehttp "GET /api/events/ HTTP/1.1" 200 748
+INFO 2025-04-24 23:30:36,924 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:30:36,948 views Received data: {'id': 0, 'name': 'defr', 'date': '2025-04-19T04:30', 'location': 'QSWER', 'description': 'cscs', 'created_by': 0, 'category': 'cascsa'}
+INFO 2025-04-24 23:30:36,952 basehttp "POST /api/events/ HTTP/1.1" 201 129
+INFO 2025-04-24 23:30:36,967 basehttp "GET /api/events/ HTTP/1.1" 200 821
+INFO 2025-04-24 23:30:37,009 basehttp "GET /api/events/ HTTP/1.1" 200 821
+INFO 2025-04-24 23:30:55,881 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:30:55,883 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 23:30:56,248 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyMzg1NiwiaWF0IjoxNzQ1NTM3NDU2LCJqdGkiOiIxZjQxYWZjNWUzODI0NzJhOGRmNjE3MTAzNzg1ZDExYiIsInVzZXJfaWQiOjE0fQ.Cq1g5QvRFDRdwVfc43BrzhphHE_WQ0y3kU0t_ngYyoQ', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTQxMDU2LCJpYXQiOjE3NDU1Mzc0NTYsImp0aSI6IjMyZWFlYzlkZDIyODRmMDU5MGU0ODAwNmUxYmU2Y2Y2IiwidXNlcl9pZCI6MTR9.atLXDGTxWDCKAlH21UKleq5NIs2w7EIks17XW_n0GWI'}
+INFO 2025-04-24 23:30:56,248 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 23:30:56,264 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:30:56,271 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 23:30:59,629 basehttp "GET /api/events/ HTTP/1.1" 200 821
+INFO 2025-04-24 23:33:11,013 basehttp "GET /api/events/ HTTP/1.1" 200 821
+INFO 2025-04-24 23:33:17,698 basehttp "GET /api/events/ HTTP/1.1" 200 821
+INFO 2025-04-24 23:33:18,636 basehttp "GET /api/events/ HTTP/1.1" 200 821
+INFO 2025-04-24 23:33:32,246 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 23:33:32,618 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyNDAxMiwiaWF0IjoxNzQ1NTM3NjEyLCJqdGkiOiI0ZmFjZjgwMzdiOTc0ZDYxODRmZDg3NzMxM2QxYWIxNyIsInVzZXJfaWQiOjE0fQ.dw9YIaoOQ4Lzy1Wny0zU6BnVKiuUCti7Yi7wMyZdqXA', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTQxMjEyLCJpYXQiOjE3NDU1Mzc2MTIsImp0aSI6IjBhOWZjNjMxMTA3NjQ0OTdhNDRmOTRlMWI1N2FmMzViIiwidXNlcl9pZCI6MTR9.n5uI6hwbbHznmic-1PSw5GCjcj6cRpYYCCdTeyzL7io'}
+INFO 2025-04-24 23:33:32,618 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 23:33:32,635 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 23:33:39,441 views Received data: {'id': 0, 'name': 'cs', 'date': '2025-04-05T04:33', 'location': 'xs', 'description': 'xs', 'created_by': 0, 'category': 'xs'}
+INFO 2025-04-24 23:33:39,448 basehttp "POST /api/events/ HTTP/1.1" 201 118
+INFO 2025-04-24 23:33:39,458 basehttp "GET /api/events/ HTTP/1.1" 200 889
+INFO 2025-04-24 23:33:39,478 basehttp "GET /api/events/ HTTP/1.1" 200 889
+INFO 2025-04-24 23:40:23,694 views Received data: {'id': 0, 'name': 'ss', 'date': '2025-04-20T04:40', 'location': 'ss', 'description': 'ss', 'created_by': 0, 'category': 'ss'}
+INFO 2025-04-24 23:40:23,705 basehttp "POST /api/events/ HTTP/1.1" 201 118
+INFO 2025-04-24 23:40:23,718 basehttp "GET /api/events/ HTTP/1.1" 200 957
+INFO 2025-04-24 23:40:38,854 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:40:38,869 basehttp "GET /api/events/ HTTP/1.1" 200 957
+INFO 2025-04-24 23:40:40,631 basehttp "GET /api/events/ HTTP/1.1" 200 957
+INFO 2025-04-24 23:48:29,965 basehttp "GET /api/events/ HTTP/1.1" 200 957
+INFO 2025-04-24 23:48:31,468 basehttp "GET /api/events/ HTTP/1.1" 200 957
+INFO 2025-04-24 23:48:45,447 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:48:45,453 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-24 23:48:45,825 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTYyNDkyNSwiaWF0IjoxNzQ1NTM4NTI1LCJqdGkiOiIyODA0MjhhZjI3OGM0ZjE3ODlmZmIyOGI4YTAzZmUxNiIsInVzZXJfaWQiOjE0fQ.yVUFn2IVU5-KtSsfLYhNb0IaOHnvxXObK1bXl1FQGF0', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTQyMTI1LCJpYXQiOjE3NDU1Mzg1MjUsImp0aSI6Ijk2MjZmNzRiMWU1MDQzYWQ4OTkyZDFlZmE5YzVhYzZiIiwidXNlcl9pZCI6MTR9.T2msp5mlrmXCPNbfWZwb0FFqo6Uy-rQCG6LRdZ0Np6g'}
+INFO 2025-04-24 23:48:45,825 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-24 23:48:45,839 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:48:45,844 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-24 23:48:53,789 views Received data: {'id': 0, 'name': 'dd', 'date': '2025-04-20T04:48', 'location': 'dd', 'description': 'dd', 'created_by': 0, 'category': 'dd'}
+INFO 2025-04-24 23:48:53,798 basehttp "POST /api/events/ HTTP/1.1" 201 118
+INFO 2025-04-24 23:48:53,822 basehttp "GET /api/events/ HTTP/1.1" 200 1025
+INFO 2025-04-24 23:53:00,418 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-24 23:53:00,431 basehttp "GET /api/events/ HTTP/1.1" 200 1025
+INFO 2025-04-24 23:54:04,407 basehttp "GET /api/events/ HTTP/1.1" 200 1025
+INFO 2025-04-24 23:54:26,104 basehttp "GET /api/events/ HTTP/1.1" 200 1025
+INFO 2025-04-24 23:54:27,085 basehttp "GET /api/events/ HTTP/1.1" 200 1025
+INFO 2025-04-24 23:54:50,233 views Received data: {'id': 0, 'name': 'xcdfg', 'date': '2025-04-26T04:54', 'location': 'afeaf', 'description': 'fnwfw', 'created_by': 0, 'category': 'fwfwfn'}
+INFO 2025-04-24 23:54:50,242 basehttp "POST /api/events/ HTTP/1.1" 201 131
+INFO 2025-04-25 04:18:20,239 autoreload /Users/karakattursynbaeva/Desktop/WebProject/backend_project/myproject/urls.py changed, reloading.
+INFO 2025-04-25 04:18:20,842 autoreload Watching for file changes with StatReloader
+INFO 2025-04-25 04:26:40,022 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-25 04:26:40,042 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:26:40,043 basehttp "POST /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 04:27:25,910 autoreload Watching for file changes with StatReloader
+WARNING 2025-04-25 04:27:39,786 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:27:39,786 basehttp "POST /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:31:09,377 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:31:09,379 basehttp "POST /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 04:38:20,154 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-25 04:38:20,164 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:38:20,164 basehttp "POST /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:38:23,252 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:38:23,253 basehttp "POST /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:38:23,922 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:38:23,923 basehttp "POST /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:38:24,104 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:38:24,105 basehttp "POST /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 04:39:19,510 basehttp "GET /admin/events/event/ HTTP/1.1" 200 19505
+INFO 2025-04-25 04:39:19,719 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,722 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,723 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-25 04:39:19,723 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,723 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,724 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,725 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,725 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,727 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,728 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,728 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,728 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,785 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,785 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-04-25 04:39:19,785 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+WARNING 2025-04-25 04:39:31,482 log Not Found: /api/events/event/
+WARNING 2025-04-25 04:39:31,483 basehttp "GET /api/events/event/ HTTP/1.1" 404 3709
+WARNING 2025-04-25 04:39:39,042 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:39:39,043 basehttp "GET /api/events/ HTTP/1.1" 401 5062
+WARNING 2025-04-25 04:39:41,232 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:39:41,233 basehttp "GET /api/events/ HTTP/1.1" 401 5062
+WARNING 2025-04-25 04:39:44,725 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:39:44,726 basehttp "GET /api/events/?format=json HTTP/1.1" 401 58
+WARNING 2025-04-25 04:39:51,289 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:39:51,290 basehttp "GET /api/events/ HTTP/1.1" 401 5062
+WARNING 2025-04-25 04:39:52,994 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:39:52,995 basehttp "GET /api/events/?format=api HTTP/1.1" 401 5095
+WARNING 2025-04-25 04:39:54,835 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:39:54,836 basehttp "GET /api/events/?format=json HTTP/1.1" 401 58
+WARNING 2025-04-25 04:44:07,092 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:44:07,093 basehttp "POST /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 04:44:51,902 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-25 04:44:51,907 views Получен запрос на авторизацию: {'username': '34@gmail.com', 'password': '343434'}
+INFO 2025-04-25 04:44:52,281 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTY0MjY5MiwiaWF0IjoxNzQ1NTU2MjkyLCJqdGkiOiI1MmEwNmRlYjc1YWM0OWM2YTI2ODY2MzZmNzM1MzU2MSIsInVzZXJfaWQiOjE0fQ.QunP_tAodfXaii-f6lOO_UW8EVSAgeYjV4pI75GhbGk', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTU5ODkyLCJpYXQiOjE3NDU1NTYyOTIsImp0aSI6ImM1MmUzZmM4NjYwNTQ3YjViZTAwNjZiN2ZmYjQ2OGIyIiwidXNlcl9pZCI6MTR9.pceZ4UHo81epHlZCaPdLPv0ZfeqJoAGMZVXxfQV5EMI'}
+INFO 2025-04-25 04:44:52,282 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 04:44:52,295 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-25 04:44:52,299 basehttp "GET /api/auth/status/ HTTP/1.1" 200 67
+INFO 2025-04-25 04:45:00,777 views Received data: {'id': 0, 'name': 'ssdwrg', 'date': '2025-04-11T09:44', 'location': 'fqefq', 'description': 'fwqfq', 'created_by': 0, 'category': 'fwqfq'}
+INFO 2025-04-25 04:45:00,784 basehttp "POST /api/events/ HTTP/1.1" 201 131
+INFO 2025-04-25 04:45:02,336 basehttp "GET /api/events/ HTTP/1.1" 200 1174

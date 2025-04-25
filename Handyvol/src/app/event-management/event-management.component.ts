@@ -1,9 +1,8 @@
-//event-management/event-management.component.ts
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { EventService } from '../events/event.service';
-import { FormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { EventService, Event as EventModel, EventCreate } from '../events/event.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-event-management',
@@ -12,101 +11,115 @@ import { CommonModule } from '@angular/common';
   templateUrl: './event-management.component.html',
   styleUrls: ['./event-management.component.css'],
 })
-export class EventManagementComponent {
-  event = {
+export class EventManagementComponent implements OnInit {
+  event: EventModel = {
+    id: 0,
     name: '',
     date: '',
-    description: '',
     location: '',
+    description: '',
+    created_by: 0,
     category: '',
-    photo: null as File | null,
   };
-  
-  isSubmitting = false;
-  errorMessage: string | null = null;
-  successMessage: string | null = null;
 
-  constructor(private router: Router, private eventService: EventService) {}
+  isEditing = false;
+  successMessage = '';
+  errorMessage = '';
+  loading = false;
 
-  handleFileInput(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length) {
-      this.event.photo = input.files[0];
-      console.log('Selected file:', this.event.photo);
+  constructor(
+    private eventService: EventService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    const eventId = this.route.snapshot.paramMap.get('id');
+    if (eventId) {
+      this.isEditing = true;
+      this.loadEvent(+eventId); // Загружаем событие для редактирования
     }
   }
 
-  goBack(): void {
-    this.router.navigate(['/events']);
-  }
-
-  onSubmit(): void {
-    if (!this.event.name || !this.event.date || !this.event.location) {
-      this.errorMessage = 'Please fill in all required fields.';
-      return;
-    }
-    
-    this.isSubmitting = true;
-    this.errorMessage = null;
-    this.successMessage = null;
-    
-    // Преобразовать дату в ISO формат для передачи на сервер
-    let formattedDate: string;
-    try {
-      // Если пользователь предоставил только дату (без времени)
-      if (this.event.date.indexOf('T') === -1) {
-        formattedDate = new Date(this.event.date + 'T00:00:00').toISOString();
-      } else {
-        formattedDate = new Date(this.event.date).toISOString();
+  loadEvent(id: number): void {
+    this.loading = true;
+    this.eventService.getEvent(id).subscribe({
+      next: (event) => {
+        this.event = { ...event, date: this.formatDateForInput(event.date) };
+        this.loading = false;
+      },
+      error: (error) => {
+        console.error('Error loading event:', error);
+        this.errorMessage = 'Failed to load event details.';
+        this.loading = false;
       }
-    } catch (e) {
-      // В случае ошибки используем строку как есть
-      formattedDate = this.event.date;
-    }
-
-    const eventData = {
-      name: this.event.name,
-      date: formattedDate,
-      location: this.event.location,
-      description: this.event.description,
-      category: this.event.category,
-      photo: this.event.photo || undefined,
-    };
-
-    this.eventService.addEvent(eventData).subscribe({
-      next: (response: any) => {
-        this.isSubmitting = false;
-        console.log('Event added successfully:', response);
-        this.successMessage = 'Event added successfully!';
-        this.resetForm();
-      },
-      error: (error: any) => {
-        this.isSubmitting = false;
-        console.error('Failed to add event:', error);
-        
-        if (error.error && typeof error.error === 'object') {
-          let errorMsg = '';
-          for (const key in error.error) {
-            if (error.error.hasOwnProperty(key)) {
-              errorMsg += `${key}: ${error.error[key]}\n`;
-            }
-          }
-          this.errorMessage = errorMsg || 'Failed to add event.';
-        } else {
-          this.errorMessage = error.error?.detail || 'Failed to add event.';
-        }
-      },
     });
   }
 
-  private resetForm(): void {
-    this.event = { 
-      name: '', 
-      date: '', 
-      description: '', 
-      location: '', 
-      category: '', 
-      photo: null 
-    };
+  formatDateForInput(dateString: string): string {
+    try {
+      const date = new Date(dateString);
+      return date.toISOString().slice(0, 16); // Формат для input типа datetime-local
+    } catch (e) {
+      return '';
+    }
+  }
+
+  onSubmit(): void {
+    console.log('Submitting data:', this.event);  // Логирование данных перед отправкой
+    this.loading = true;
+    const eventData: EventCreate = { ...this.event };
+  
+    if (this.isEditing) {
+      this.eventService.updateEvent(this.event.id, eventData).subscribe({
+        next: () => {
+          this.successMessage = 'Event successfully updated!';
+          this.redirectToMain('/events');
+        },
+        error: (error) => {
+          console.error('Failed to update event:', error);
+          this.errorMessage = `Failed to update event: ${error.message || 'Unknown error'}`;
+          this.loading = false;
+        }
+      });
+    } else {
+      this.eventService.addEvent(eventData).subscribe({
+        next: () => {
+          this.successMessage = 'Event successfully added!';
+          this.redirectToMain('/events');
+        },
+        error: (error) => {
+          console.error('Failed to add event:', error);
+          this.errorMessage = `Failed to add event: ${error.message || 'Unknown error'}`;
+          this.loading = false;
+        }
+      });
+    }
+  }
+
+  deleteEvent(): void {
+    if (confirm('Are you sure you want to delete this event?')) {
+      this.loading = true;
+      this.eventService.deleteEvent(this.event.id).subscribe({
+        next: () => {
+          this.successMessage = 'Event successfully deleted!';
+          this.redirectToMain('/events');
+        },
+        error: (error) => {
+          console.error('Failed to delete event:', error);
+          this.errorMessage = `Failed to delete event: ${error.message || 'Unknown error'}`;
+          this.loading = false;
+        }
+      });
+    }
+  }
+
+  redirectToMain(route: string): void {
+    setTimeout(() => this.router.navigate([route]), 1500);
+  }
+
+  goBack(): void {
+    // Навигация назад на страницу со всеми событиями
+    this.router.navigate(['/events']);
   }
 }

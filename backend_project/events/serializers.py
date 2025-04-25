@@ -1,16 +1,15 @@
 from rest_framework import serializers
 from .models import Event, Registration
-from users.models import User 
 
 class EventListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = '__all__'
+        fields = ['id', 'name', 'date', 'location']  
 
 class EventDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ['id', 'name', 'date', 'location', 'description']  # Если нужно ограничить поля
+        fields = '__all__'  
 
 class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:

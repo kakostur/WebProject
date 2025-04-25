@@ -1,138 +1,100 @@
-.event-management {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
-  }
-  
-.back-button-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+/* Общие стили для формы */
+.event-management-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.back-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
+/* Заголовок */
+.event-management-container h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #5e2a8c;  /* Темный фиолетовый */
+  margin-bottom: 20px;
+}
+
+/* Успешное сообщение */
+.success-message {
+  color: #f39c12;  /* Желтый */
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+  color: #e74c3c;  /* Красный для ошибок */
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Стили для всех полей формы */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Стили для кнопок */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
   padding: 10px 20px;
+  font-size: 16px;
+  border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-.back-button:hover {
-  background-color: #0056b3;
+button:hover {
+  transform: translateY(-3px);
 }
 
-  h1 {
-    text-align: center;
-    color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 25px;
-    font-weight: 600;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  label {
-    font-size: 16px;
-    font-weight: 500;
-    color: #34495e;
-  }
-  
-  input, textarea, select {
-    padding: 12px;
-    font-size: 14px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  input:focus, textarea:focus, select:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  select {
-    font-size: 16px;
-    padding: 14px;
-    border-radius: 8px;
-    border: 2px solid #ddd;
-  }
-  
-  button {
-    padding: 12px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  button:disabled {
-    background-color: #d3d3d3;
-    cursor: not-allowed;
-  }
-  
-  button:hover:not(:disabled) {
-    background-color: #218838;
-    transform: scale(1.05); 
-  }
-  
-  h3 {
-    color: #2c3e50;
-    margin-top: 40px;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f8f9fa;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  #Delete {
-    background-color: #e74c3c; 
-    font-size: 14px;
-  }
-  
-  button.delete-btn:hover {
-    background-color: #c0392b;
-  }
-  
-  button + button {
-    margin-left: 12px;
-  }
-  
+.btn-primary {
+  background-color: #5e2a8c;  /* Темный фиолетовый */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #4c1b7d;  /* Более темный фиолетовый */
+}
+
+.btn-danger {
+  background-color: #e74c3c;  /* Красный */
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;  /* Более темный красный */
+}
+
+.btn-secondary {
+  background-color: #f39c12;  /* Желтый */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #e67e22;  /* Более темный желтый */
+}

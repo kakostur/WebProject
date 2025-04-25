@@ -1,4 +1,3 @@
-# /events/models.py
 from django.db import models
 from users.models import User
 
@@ -8,6 +7,7 @@ class Event(models.Model):
     location = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True) 
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    category = models.CharField(max_length=100, blank=True, null=True)  
 
     def __str__(self):
         return self.name
