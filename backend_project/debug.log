@@ -1153,3 +1153,151 @@ WARNING 2025-04-25 08:08:13,418 basehttp "GET /api/events/ HTTP/1.1" 401 172
 WARNING 2025-04-25 08:13:22,508 log Unauthorized: /api/events/
 WARNING 2025-04-25 08:13:22,509 basehttp "GET /api/events/ HTTP/1.1" 401 172
 >>>>>>> 7c185a98e2dc7d2b641f999971b5ca0cca0078e4
+INFO 2025-04-25 05:53:03,255 autoreload Watching for file changes with StatReloader
+WARNING 2025-04-25 05:53:04,387 log Unauthorized: /api/events/
+WARNING 2025-04-25 05:53:04,387 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 06:02:55,243 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-25 06:02:55,262 log Unauthorized: /api/events/
+WARNING 2025-04-25 06:02:55,263 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 06:03:18,581 log Unauthorized: /api/events/
+WARNING 2025-04-25 06:03:18,583 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 06:03:26,173 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-25 06:03:26,183 views Получен запрос на авторизацию: {'username': 'anaritto@gmail.com', 'password': '123456'}
+ERROR 2025-04-25 06:03:26,379 views Ошибка авторизации: No active account found with the given credentials
+Traceback (most recent call last):
+  File "/Users/anaraarman/WebProject-5/backend_project/users/views.py", line 75, in post
+    response = super().post(request, *args, **kwargs)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework_simplejwt/serializers.py", line 73, in validate
+    data = super().validate(attrs)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework_simplejwt/serializers.py", line 57, in validate
+    raise exceptions.AuthenticationFailed(
+rest_framework.exceptions.AuthenticationFailed: No active account found with the given credentials
+ERROR 2025-04-25 06:03:26,383 log Internal Server Error: /api/auth/token/
+ERROR 2025-04-25 06:03:26,384 basehttp "POST /api/auth/token/ HTTP/1.1" 500 63
+INFO 2025-04-25 06:03:57,889 basehttp "GET /admin/users/user/ HTTP/1.1" 200 14052
+INFO 2025-04-25 06:03:58,011 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-04-25 06:04:15,120 views Получен запрос на авторизацию: {'username': 'anaritto@gmail.com', 'password': '123456'}
+ERROR 2025-04-25 06:04:15,305 views Ошибка авторизации: No active account found with the given credentials
+Traceback (most recent call last):
+  File "/Users/anaraarman/WebProject-5/backend_project/users/views.py", line 75, in post
+    response = super().post(request, *args, **kwargs)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework_simplejwt/serializers.py", line 73, in validate
+    data = super().validate(attrs)
+  File "/Users/anaraarman/Library/Python/3.9/lib/python/site-packages/rest_framework_simplejwt/serializers.py", line 57, in validate
+    raise exceptions.AuthenticationFailed(
+rest_framework.exceptions.AuthenticationFailed: No active account found with the given credentials
+ERROR 2025-04-25 06:04:15,306 log Internal Server Error: /api/auth/token/
+ERROR 2025-04-25 06:04:15,306 basehttp "POST /api/auth/token/ HTTP/1.1" 500 63
+INFO 2025-04-25 06:04:21,235 views Получен запрос на авторизацию: {'username': 'barsik@gmail.com', 'password': '123456'}
+INFO 2025-04-25 06:04:21,405 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTY0NzQ2MSwiaWF0IjoxNzQ1NTYxMDYxLCJqdGkiOiJiNGYzNGJiMDNlZWQ0Y2I5YmY0ZWM0NjVjN2IyOWMyMSIsInVzZXJfaWQiOjEyfQ.frxiar6DDp4RATUerYsF2ifSMB6PguvhFLABXXgUd74', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTY0NjYxLCJpYXQiOjE3NDU1NjEwNjEsImp0aSI6IjlhNWQ2NmY0MGJjOTQzNGQ4OTc4NGI2ZGFiNWI0YTU5IiwidXNlcl9pZCI6MTJ9.FyLVu0QGGDl-WTi02FjliiUH2M5B25jSm-YEJrH3gNQ'}
+INFO 2025-04-25 06:04:21,406 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 06:04:21,416 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-25 06:04:21,421 basehttp "GET /api/auth/status/ HTTP/1.1" 200 75
+INFO 2025-04-25 06:04:21,617 basehttp "GET /api/events/ HTTP/1.1" 200 1174
+INFO 2025-04-25 06:04:30,845 views Получен запрос на авторизацию: {'username': 'barsik@gmail.com', 'password': '123456'}
+INFO 2025-04-25 06:04:31,020 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTY0NzQ3MSwiaWF0IjoxNzQ1NTYxMDcxLCJqdGkiOiJiNmU3YjUxYTA5ZDU0MGQ3YTExODJmMzYxMDkyNDdmZCIsInVzZXJfaWQiOjEyfQ.8Vgo_0oKhbsxx5qGKrCyRD17uP_6DH9k19TzQKX_Uvs', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTY0NjcxLCJpYXQiOjE3NDU1NjEwNzEsImp0aSI6IjVkMTc4NTI1ZjU1NzQ1ZmQ5NGI4NjcyZGM0YmM5YjI0IiwidXNlcl9pZCI6MTJ9.nkvX5L4SaV38PwPyyWuBnA5iZs65kAeACmN69b-hn18'}
+INFO 2025-04-25 06:04:31,021 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 06:04:31,036 basehttp "GET /api/auth/status/ HTTP/1.1" 200 75
+INFO 2025-04-25 06:04:31,117 basehttp "GET /api/events/ HTTP/1.1" 200 1174
+INFO 2025-04-25 06:07:23,670 basehttp "GET /api/events/ HTTP/1.1" 200 1174
+INFO 2025-04-25 06:08:00,813 basehttp "GET /api/events/ HTTP/1.1" 200 1174
+INFO 2025-04-25 06:08:02,982 basehttp "GET /api/events/ HTTP/1.1" 200 1174
+INFO 2025-04-25 06:08:04,249 basehttp "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2025-04-25 06:08:04,254 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:08:04,254 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:08:05,778 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:08:05,779 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:08:07,197 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:08:07,198 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:08:08,412 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:08:08,413 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:08:09,527 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:08:09,528 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:08:14,982 basehttp "GET /api/events/ HTTP/1.1" 200 1174
+INFO 2025-04-25 06:08:18,445 basehttp "GET /api/events/ HTTP/1.1" 200 1174
+WARNING 2025-04-25 06:09:26,697 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:09:26,698 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:09:43,955 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:09:43,957 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:09:57,506 views Получен запрос на авторизацию: {'username': 'barsik@gmail.com', 'password': '123456'}
+INFO 2025-04-25 06:09:57,695 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTY0Nzc5NywiaWF0IjoxNzQ1NTYxMzk3LCJqdGkiOiIxYzU3NGI4NjkyNTM0MmY2YjI2OGEyOTY2ZTA3MGZiNCIsInVzZXJfaWQiOjEyfQ.0RSlKImk_JWo4fR7ULl6UlEMNM_q1lax5xmFrLeACWU', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTY0OTk3LCJpYXQiOjE3NDU1NjEzOTcsImp0aSI6ImU2ZDYyZDRmOTU0MDQ2ZmY5NWMxODUxZTIxNmVmMzk5IiwidXNlcl9pZCI6MTJ9.qe2SySFExE4g0wxj0jaAbmOmZKHBZsPz_8vpWgQgAlA'}
+INFO 2025-04-25 06:09:57,695 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 06:09:57,705 basehttp "GET /api/auth/status/ HTTP/1.1" 200 75
+INFO 2025-04-25 06:09:57,778 basehttp "GET /api/events/ HTTP/1.1" 200 1174
+WARNING 2025-04-25 06:09:59,294 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:09:59,295 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:10:22,738 basehttp "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2025-04-25 06:10:22,927 basehttp "POST /api/auth/register/ HTTP/1.1" 201 42
+INFO 2025-04-25 06:10:28,925 views Получен запрос на авторизацию: {'username': 'kofe@gmail.com', 'password': '123456'}
+INFO 2025-04-25 06:10:29,105 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTY0NzgyOSwiaWF0IjoxNzQ1NTYxNDI5LCJqdGkiOiJhMDJhYTViMDYxYzc0NzEyYTQ5NmVmNTI4NDY2ZmFmNiIsInVzZXJfaWQiOjE1fQ.0DqaUiFMgNAQ_87Hnz5yFZ7t4IhivTAEt3y5NiXPP10', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTY1MDI5LCJpYXQiOjE3NDU1NjE0MjksImp0aSI6IjJkYjUwNjQwODhhYjRjMDA5NWQ2ZDQwZWUxMTY4MjFmIiwidXNlcl9pZCI6MTV9.qO72FGyjhyvXQK2nFQDfCvMkmIj_aHpKj5T-K0eBBGU'}
+INFO 2025-04-25 06:10:29,106 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 06:10:29,122 basehttp "GET /api/auth/status/ HTTP/1.1" 200 71
+INFO 2025-04-25 06:11:02,292 views Received data: {'id': 0, 'name': 'Anara', 'date': '2025-04-18T11:10', 'location': 'Almaty Tole bi 59', 'description': 'COurse intro', 'created_by': 0, 'category': 'meet'}
+INFO 2025-04-25 06:11:02,301 basehttp "POST /api/events/ HTTP/1.1" 201 148
+INFO 2025-04-25 06:11:03,925 basehttp "GET /api/events/ HTTP/1.1" 200 1260
+INFO 2025-04-25 06:11:13,789 basehttp "GET /api/events/ HTTP/1.1" 200 1260
+WARNING 2025-04-25 06:11:14,967 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:11:14,967 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:11:25,819 basehttp "GET /api/events/ HTTP/1.1" 200 1260
+WARNING 2025-04-25 06:11:35,017 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:11:35,018 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:12:14,630 basehttp "GET /api/events/ HTTP/1.1" 200 1260
+INFO 2025-04-25 06:12:27,298 basehttp "GET /api/events/ HTTP/1.1" 200 1260
+WARNING 2025-04-25 06:12:31,131 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:12:31,132 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:13:52,536 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+INFO 2025-04-25 06:13:52,554 basehttp "GET /api/events/ HTTP/1.1" 200 1260
+WARNING 2025-04-25 06:17:31,396 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:17:31,397 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:17:35,056 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:17:35,057 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:17:39,394 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:17:39,395 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:17:42,277 basehttp "GET /api/events/ HTTP/1.1" 200 1260
+WARNING 2025-04-25 06:17:43,153 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:17:43,153 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:17:50,745 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:17:50,747 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:19:11,143 basehttp "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+WARNING 2025-04-25 06:19:11,147 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:19:11,147 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:19:32,959 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:19:32,960 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+INFO 2025-04-25 06:19:40,150 basehttp "OPTIONS /api/auth/token/ HTTP/1.1" 200 0
+INFO 2025-04-25 06:19:40,153 views Получен запрос на авторизацию: {'username': 'kofe@gmail.com', 'password': '123456'}
+INFO 2025-04-25 06:19:40,334 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTY0ODM4MCwiaWF0IjoxNzQ1NTYxOTgwLCJqdGkiOiJjNmYxMWZkNDYxMWQ0Nzg0ODZjMmU4ZDRiOTFiODQwYiIsInVzZXJfaWQiOjE1fQ.uA9RAaq6qFVnXUpQR7nRl-aZAiniCK9XV8OjgEFc4dw', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTY1NTgwLCJpYXQiOjE3NDU1NjE5ODAsImp0aSI6IjJlZGQzNTU1NDkyZDQ0OThhZGU0YWRlMTI1NjU1NjYzIiwidXNlcl9pZCI6MTV9.THEZ7MZfd2xj0v2nsy9tJfsiC8bjAPFpDtXEXrxJDoE'}
+INFO 2025-04-25 06:19:40,334 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 06:19:40,341 basehttp "OPTIONS /api/auth/status/ HTTP/1.1" 200 0
+INFO 2025-04-25 06:19:40,344 basehttp "GET /api/auth/status/ HTTP/1.1" 200 71
+INFO 2025-04-25 06:19:43,362 basehttp "GET /api/events/ HTTP/1.1" 200 1260
+INFO 2025-04-25 06:20:09,361 views Received data: {'id': 0, 'name': 'trubochka', 'date': '2025-04-17T11:19', 'location': 'Tualet', 'description': 'sdkjfhsk;dbf', 'created_by': 0, 'category': 'kjshf;sf'}
+INFO 2025-04-25 06:20:09,373 basehttp "POST /api/events/ HTTP/1.1" 201 145
+INFO 2025-04-25 06:20:10,917 basehttp "GET /api/events/ HTTP/1.1" 200 1339
+WARNING 2025-04-25 06:20:27,092 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:20:27,093 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:21:00,415 log Unauthorized: /api/events/
+WARNING 2025-04-25 06:21:00,416 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 06:21:20,277 views Получен запрос на авторизацию: {'username': 'kofe@gmail.com', 'password': '123456'}
+INFO 2025-04-25 06:21:20,461 views Успешный ответ: {'refresh': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTY0ODQ4MCwiaWF0IjoxNzQ1NTYyMDgwLCJqdGkiOiJlYzE0ZDU0OWVhY2M0NjJmYWRlMDQ1ZjQzNDlmOGE3ZiIsInVzZXJfaWQiOjE1fQ.o_CQpbD5-25uDFwniwnAN3IfLRwb9Z8HEzGakD_UNgM', 'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTY1NjgwLCJpYXQiOjE3NDU1NjIwODAsImp0aSI6ImQwMmJkMWM1MmVlNzRkZDc5MzM1NWM5Yzk3MWQwNjE0IiwidXNlcl9pZCI6MTV9._Cuz2LWL2HVkV0tH4PPU4-C0j3G9UIHrOhxI1Be2gEU'}
+INFO 2025-04-25 06:21:20,461 basehttp "POST /api/auth/token/ HTTP/1.1" 200 486
+INFO 2025-04-25 06:21:20,479 basehttp "GET /api/auth/status/ HTTP/1.1" 200 71
+INFO 2025-04-25 06:21:22,042 basehttp "GET /api/events/ HTTP/1.1" 200 1339
+WARNING 2025-04-25 06:21:58,060 log Unauthorized: /api/auth/logout/
+WARNING 2025-04-25 06:21:58,061 basehttp "POST /api/auth/logout/ HTTP/1.1" 401 58
+WARNING 2025-04-25 06:22:01,061 log Unauthorized: /api/events/
+WARNING 2025-04-25 06:22:01,061 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 06:25:13,243 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-25 06:25:13,249 log Unauthorized: /api/events/
+WARNING 2025-04-25 06:25:13,250 basehttp "GET /api/events/ HTTP/1.1" 401 172
