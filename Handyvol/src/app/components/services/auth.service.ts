@@ -8,7 +8,7 @@ import { SKIP_AUTH_INTERCEPTOR } from './auth.tokens';
   providedIn: 'root',
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8000/api/auth/';  // URL для вашего бэкенда
+  private baseUrl = 'http://localhost:8000/api/auth/'; 
 
   constructor(private http: HttpClient) {}
 
@@ -19,7 +19,7 @@ export class AuthService {
 
   // Метод для проверки, авторизован ли пользователь
   isAuthenticated(): boolean {
-    return !!localStorage.getItem('authToken');  // Проверка наличия authToken в localStorage
+    return !!localStorage.getItem('authToken'); 
   }
 
   // Метод для получения данных о пользователе (потребуется авторизация)
@@ -50,16 +50,16 @@ export class AuthService {
         console.log('Ответ от сервера:', response);
         
         if (response && response.access) {
-          // Сохраняем токен доступа в localStorage
+
           localStorage.setItem('authToken', response.access);
           console.log('Токен сохранен в localStorage:', localStorage.getItem('authToken'));
           
-          // Проверим сразу после сохранения
+
           setTimeout(() => {
             console.log('Токен из localStorage после задержки:', localStorage.getItem('authToken'));
           }, 100);
           
-          // Сохраняем refresh токен, если он есть
+
           if (response.refresh) {
             localStorage.setItem('refreshToken', response.refresh);
           }

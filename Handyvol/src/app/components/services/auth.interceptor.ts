@@ -21,6 +21,7 @@ intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<an
         Authorization: `Bearer ${token}` 
       }
     });
+    
     console.log('Request with auth header:', request.headers.get('Authorization'));
   }
   
