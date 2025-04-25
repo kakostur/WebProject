@@ -1,1 +1,55 @@
-
+<footer class="custom-footer">
+    <div class="container">
+      <div class="row">
+        <!-- Head Office -->
+        <div class="col-md-4 mb-4">
+          <h5>Our Head Office</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Tole bi 59, Almaty</p>
+          <p><i class="bi bi-telephone-fill"></i> +7 752 243 451</p>
+          <p><i class="bi bi-envelope-fill"></i> smeiirim06&#64;gmail.com</p>
+          <div class="social-icons mt-3">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="https://facebook.com/profile.php?id=61559983841331"><i class="bi bi-facebook"></i></a>
+            <a href="https://youtube.com/channel/UC9ezIA2yYSZngvOUYgJQ06A?si=osRp9uRTTorODnSf"><i class="bi bi-youtube"></i></a>
+            <a href="https://instagram.com/meiirim_s_"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/in/..."><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Popular Links -->
+        <div class="col-md-4 mb-4">
+          <h5>Popular Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Organizations</a></li>
+            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="modal-background" *ngIf="showLoginModal || showRegisterModal"></div>
+        <div class="modal" *ngIf="showLoginModal || showRegisterModal">
+          <button class="close" (click)="closeModals()">×</button>
+          <ng-container *ngIf="showLoginModal">
+            <app-login></app-login>
+          </ng-container>
+          <ng-container *ngIf="showRegisterModal">
+            <app-register></app-register>
+          </ng-container>
+        </div>
+        <!-- Newsletter -->
+        <div class="col-md-4 mb-4">
+          <h5>Newsletter</h5>
+          <form>
+            <input type="email" class="form-control mb-2" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-warning w-100" (click)="openRegister()">Subscribe</button>
+          </form>
+          <small class="d-block mt-2">We respect your inbox. No spam.</small>
+        </div>
+      </div>
+      <div class="text-center pt-3 border-top mt-4">
+        <p class="mb-0">© 2025 Handyvol. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
