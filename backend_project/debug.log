@@ -464,3 +464,51 @@ WARNING 2025-04-25 03:17:00,251 basehttp "GET /api/events/ HTTP/1.1" 401 172
 INFO 2025-04-25 03:17:03,421 basehttp "GET /api/faq/ HTTP/1.1" 200 2
 WARNING 2025-04-25 03:38:17,092 log Unauthorized: /api/events/
 WARNING 2025-04-25 03:38:17,094 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 03:56:03,979 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:56:03,980 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 03:58:11,365 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:58:11,369 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 03:58:33,329 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:58:33,329 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 03:58:58,721 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:58:58,721 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 03:59:27,285 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:59:27,286 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 03:59:48,676 log Unauthorized: /api/events/
+WARNING 2025-04-25 03:59:48,679 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:02:14,149 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:02:14,150 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:02:42,722 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:02:42,723 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:04:25,989 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:04:25,990 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:04:30,970 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:04:30,972 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:04:38,438 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:04:38,439 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:05:40,524 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:05:40,525 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:09:31,108 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:09:31,109 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:12:04,353 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:12:04,354 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:13:59,679 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:13:59,681 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 04:14:18,162 log Unauthorized: /api/events/
+WARNING 2025-04-25 04:14:18,165 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 07:43:49,030 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-25 07:43:49,035 log Unauthorized: /api/events/
+WARNING 2025-04-25 07:43:49,035 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 07:44:03,768 log Unauthorized: /api/events/
+WARNING 2025-04-25 07:44:03,768 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 07:49:57,643 log Unauthorized: /api/events/
+WARNING 2025-04-25 07:49:57,643 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 07:57:13,663 log Unauthorized: /api/events/
+WARNING 2025-04-25 07:57:13,664 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 08:07:36,598 log Unauthorized: /api/events/
+WARNING 2025-04-25 08:07:36,599 basehttp "GET /api/events/ HTTP/1.1" 401 172
+INFO 2025-04-25 08:08:13,413 basehttp "OPTIONS /api/events/ HTTP/1.1" 200 0
+WARNING 2025-04-25 08:08:13,417 log Unauthorized: /api/events/
+WARNING 2025-04-25 08:08:13,418 basehttp "GET /api/events/ HTTP/1.1" 401 172
+WARNING 2025-04-25 08:13:22,508 log Unauthorized: /api/events/
+WARNING 2025-04-25 08:13:22,509 basehttp "GET /api/events/ HTTP/1.1" 401 172
